@@ -1,0 +1,103 @@
+{
+	"logo": "Nano.to",
+	"version": "v1.1",
+	"sections": [
+
+	    {
+	      "title": "Get Started",
+	      "file": "/source/index.md"
+	    },
+
+        {
+	      "title": "Username API",
+	      "file": "/source/username-api"
+	    },
+	    
+	    {
+	      "title": "Front-end API",
+	      "file": "/source/qrcode-api"
+	    },
+	    {
+	      "title": "Checkout API",
+	      "file": "/source/checkout-api"
+	    },
+	    {
+	      "title": "Blockchain API",
+	      "file": "/source/developer-api"
+	    },
+	    {
+	      "title": "GPU PoW API",
+	      "file": "/source/pow-api"
+	    },
+	    {
+	      "title": "Twitch API",
+	      "file": "/source/iframe-api"
+	    },
+	    {
+	      "title": "Nano.to Faucet",
+	      "file": "/source/faucet-api"
+	    },
+
+	    {
+	      "title": "Code Credits",
+	      "file": "/source/credits"
+	    }
+
+	],
+	"menu": [
+		
+		{ "title": "Github", "href": "https://github.com" },
+		{ "title": "Github", "href": "https://github.com/fwd/nano" }
+
+	],
+	"redirect": [
+		{ "path": "setup", "file": "/source/setup-node" },
+		{ "path": "docker", "file": "/source/setup-node" },
+		{ "path": "node", "file": "/source/setup-node" },
+		{ "path": "pow", "file": "/source/pow-api" },
+		{ "path": "checkouts", "file": "/source/checkout-api" },
+		{ "path": "checkout", "file": "/source/checkout-api" },
+		{ "path": "qr", "file": "/source/qrcode-api" },
+		{ "path": "qrcode", "file": "/source/qrcode-api" },
+		{ "path": "names", "file": "/source/username-api" },
+		{ "path": "name", "file": "/source/username-api" },
+		{ "path": "username", "file": "/source/username-api" },
+		{ "path": "usernames", "file": "/source/username-api" },
+		{ "path": "developer", "file": "/source/developer-api" },
+		{ "path": "checkout", "file": "/source/checkout-api" },
+		{ "path": "twitch", "file": "/source/iframe-api" },
+		{ "path": "iframe", "file": "/source/iframe-api" },
+		{ "path": "faucet", "file": "/source/faucet-api" },
+		{ "path": "credits", "file": "/source/credits" }
+	],
+	"faq": [
+		{
+			"title": "What does royalty free mean?",
+			"body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+		}
+	],
+	"changelog": [
+		{
+			"title": "Version 1",
+			"date": "12 Oct, 2020", 
+			"changes": [
+				{
+					"title": "Your information here for added new feature",
+					"type": "success",
+					"label": "ADDED"
+				}
+			]
+		},
+		{
+			"title": "Version 1",
+			"date": "12 Oct, 2020", 
+			"changes": [
+				{
+					"title": "Your information here for added new feature",
+					"type": "success",
+					"label": "ADDED"
+				}
+			]
+		}
+	]
+}
