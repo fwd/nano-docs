@@ -46,10 +46,8 @@
 	],
 	"menu": [
 		
-		// { "title": "Github", "href": "https://github.com" },
-		{ "title": "Github", "href": "https://github.com/fwd/nano" }
+		{ "title": "Github", "href": "https://github.com/fwd/nano" },
 		{ "title": "Twitter", "href": "https://twitter.com/nano2dev" }
-		// { "title": "Twitter", "href": "https://twitter.com/nano2dev" }
 
 	],
 	"redirect": [
