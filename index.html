@@ -354,7 +354,7 @@
                         //     window.history.pushState(window.location.pathname, "", '/')
                         // }
                         
-                        // self.redirect(hash)
+                        self.redirect(hash)
 
                     }, 500)
                 }
@@ -407,7 +407,7 @@
                 if (!i) return
                 i.slug = this.slug(i.title)
                 var url = i.file || i.url
-                window.history.pushState(window.location.pathname, "", '/' + i.slug.replace('api', ''))
+                // window.history.pushState(window.location.pathname, "", '/' + i.slug.replace('api', ''))
                 if (url) {
                     axios.get(url.replace('.md', '') + '.md').then((res) => {
                         i.template = res.data
