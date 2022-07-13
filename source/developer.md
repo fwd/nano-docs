@@ -2,23 +2,21 @@
 
 Public data from a live [Nano](https://github.com/nanocurrency/nano-node) Node.  
 
-> [RPC](https://docs.nano.org/commands/rpc-protocol/#node-rpcs) access **not** provided. Run a Node [Setup a Node](https://github.com/fwd/nano-docker) or use a service like [Nano Ninja's API](https://mynano.ninja/api).
-
-### Automatic HTML/JSON
+## Automatic HTML/JSON
 
 If you visit the API urls in the browser, some pages will be HTML. Using a back-end server will always return JSON. Use ``` ?json=true ``` flag in the browser to force JSON response.
 
 > For Chrome users, we recommend a [JSON Formatter Plugin](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en) to clean up raw JSON responses. Makes for cleaner development. We did not build this Chrome plugin.
 
-### Authentication
+## Authentication
 
 No API key is required to interact with Nano.to. 
 
-### Rate Limiting
+## Rate Limiting
 
 On most endpoints, you can expect to have up to 5 requests, per second. **This is plenty for most use cases.** Remember to throttle your requests, and you won't hit the limit.
 
-### Base URL
+## Base URL
 
 ```
 https://nano.to
@@ -108,7 +106,7 @@ Array of pending blocks (payments) for a Nano address.
 https://nano.to/:NANO_ADDRESS_OR_USERNAME/pending
 ```
 
-### Response
+## Response
 
 ```javascript
 [
@@ -184,7 +182,7 @@ Demo: https://nano.to/Moon/history
 https://nano.to/hash/:HASH
 ```
 
-### Response
+## Response
 
 ```javascript
 {
@@ -217,7 +215,7 @@ https://nano.to/NANO_ADDRESS_OR_USERNAME/history/AMOUNT
 
 **Amount must be in whole or decimal numbers (i.e MEGA) not RAW (used by RPC).**
 
-### Response
+## Response
 
 ```javascript
 {
@@ -282,7 +280,7 @@ https://nano.to/reps
 
 As of January 2022, there are over 500 registered Usernames on Nano.to. You're welcomed to use these Usernames in your applications. You may cache the list on your machine for as long as you'd like, or hit our endpoint everytime (up to 5 per second). This specific endpoint is designed for hobby & high demand applications.
 
-> Looking to add Nano.to Usernames to your app? See the [Username Integration Docs](/username-advanced-api). 
+> Looking to add Nano.to Usernames to your app? See the [Username Integration Docs](/username-advanced). 
 
 ```bash
 https://nano.to/known
@@ -311,6 +309,10 @@ https://nano.to/known
 ```
 
 Demo: https://nano.to/known
+
+## RPC Access
+
+> [RPC](https://docs.nano.org/commands/rpc-protocol/#node-rpcs) access **not** provided. Run a Node [Setup a Node](https://github.com/fwd/nano-docker) or use a service like [Nano Ninja's API](https://mynano.ninja/api).
 
 ## Data Deletion Policy
 

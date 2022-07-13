@@ -1,4 +1,4 @@
-## Static Website Hosting
+# Static Website Hosting
 
 Easily host a website (or text file) on your Nano.to Username. **Because you can.**
 

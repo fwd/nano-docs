@@ -9,7 +9,7 @@ If you lease a Nano.to Username, you will receive 20% of daily Nano.to profits, 
 - [Faucet Nanolooker History](https://nanolooker.com/account/nano_1faucet7b6xjyha7m13objpn5ubkquzd6ska8kwopzf1ecbfmn35d1zey3ys)
 - [Faucet Nanolooker History (Old)](https://nanolooker.com/account/nano_3r6xi9bpi6qbaxgm8p48d5fnbjhpdea5z4trdu8qax6uywpxomkxmwqbdty3)
 - [Faucet Status & Estimated Payment](https://nano.to/faucet)
-- [Register Username](/username-api)
+- [Register Username](/username)
 
 ## How To Use
 

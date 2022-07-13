@@ -1,19 +1,15 @@
-# Checkout Pages
+# Checkout
 
-Free, Non-Custodial Checkout Pages, for your Nano Address. 
+Free, non-custodial Checkout UI, for your Nano Address. 
 
 ## Basic Usage
-
-Just share a link. That easy.
 
 - https://nano.to/@moon
 - https://xno.to/@moon?price=100
 - https://ӿ.to/YOUR_ADDRESS
 
 
-You may use any domain when creating your links.
-
-> Looking to code your own Checkout UI? See [QR Code API](/qrcode-api).
+> Looking to code your own Checkout UI? See [QR Code API](/qrcode).
 
 ```
 GET https://nano.to/NANO_ADDRESS_OR_USERNAME?title=Coffee

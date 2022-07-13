@@ -1,4 +1,5 @@
 {
+	"title": "Nano.to Docs",
 	"logo": "Nano.to",
 	"version": "v1.1",
 	"sections": [
@@ -10,37 +11,32 @@
 
         {
 	      "title": "Username API",
-	      "file": "/source/username-api"
+	      "file": "/source/username"
 	    },
 	    
 	    {
 	      "title": "Front-end API",
-	      "file": "/source/qrcode-api"
+	      "file": "/source/qrcode"
 	    },
 	    {
 	      "title": "Checkout API",
-	      "file": "/source/checkout-api"
+	      "file": "/source/checkout"
 	    },
 	    {
 	      "title": "Blockchain API",
-	      "file": "/source/developer-api"
+	      "file": "/source/developer"
 	    },
 	    {
 	      "title": "GPU PoW API",
-	      "file": "/source/pow-api"
+	      "file": "/source/pow"
 	    },
 	    {
 	      "title": "Twitch API",
-	      "file": "/source/iframe-api"
+	      "file": "/source/iframe"
 	    },
 	    {
 	      "title": "Nano.to Faucet",
-	      "file": "/source/faucet-api"
-	    },
-
-	    {
-	      "title": "Code Credits",
-	      "file": "/source/credits"
+	      "file": "/source/faucet"
 	    }
 
 	],
@@ -51,23 +47,24 @@
 
 	],
 	"redirect": [
+		{ "path": "hosting", "file": "/source/hosting" },
 		{ "path": "setup", "file": "/source/setup-node" },
 		{ "path": "docker", "file": "/source/setup-node" },
 		{ "path": "node", "file": "/source/setup-node" },
-		{ "path": "pow", "file": "/source/pow-api" },
-		{ "path": "checkouts", "file": "/source/checkout-api" },
-		{ "path": "checkout", "file": "/source/checkout-api" },
-		{ "path": "qr", "file": "/source/qrcode-api" },
-		{ "path": "qrcode", "file": "/source/qrcode-api" },
-		{ "path": "names", "file": "/source/username-api" },
-		{ "path": "name", "file": "/source/username-api" },
-		{ "path": "username", "file": "/source/username-api" },
-		{ "path": "usernames", "file": "/source/username-api" },
-		{ "path": "developer", "file": "/source/developer-api" },
-		{ "path": "checkout", "file": "/source/checkout-api" },
-		{ "path": "twitch", "file": "/source/iframe-api" },
-		{ "path": "iframe", "file": "/source/iframe-api" },
-		{ "path": "faucet", "file": "/source/faucet-api" },
+		{ "path": "pow", "file": "/source/pow" },
+		{ "path": "checkouts", "file": "/source/checkout" },
+		{ "path": "checkout", "file": "/source/checkout" },
+		{ "path": "qr", "file": "/source/qrcode" },
+		{ "path": "qrcode", "file": "/source/qrcode" },
+		{ "path": "names", "file": "/source/username" },
+		{ "path": "name", "file": "/source/username" },
+		{ "path": "username", "file": "/source/username" },
+		{ "path": "usernames", "file": "/source/username" },
+		{ "path": "developer", "file": "/source/developer" },
+		{ "path": "checkout", "file": "/source/checkout" },
+		{ "path": "twitch", "file": "/source/iframe" },
+		{ "path": "iframe", "file": "/source/iframe" },
+		{ "path": "faucet", "file": "/source/faucet" },
 		{ "path": "credits", "file": "/source/credits" }
 	],
 	"faq": [

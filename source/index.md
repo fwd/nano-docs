@@ -24,7 +24,7 @@ Nano.to is a "Username & Metadata" "Layer-2" blockchain in development by [@Nano
 
 ## Nano Wallets
 
-Before you can use Nano.to, you need Nano Wallet. 
+Before you can use Nano.to, you need a Nano Wallet. 
 
 - [Apple App Store](https://itunes.apple.com/us/app/natrium/id1451425707?ls=1&mt=8)
 - [Google Play Store](https://play.google.com/store/apps/details?id=co.banano.natriumwallet)

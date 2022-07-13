@@ -55,6 +55,6 @@ new Docute({
 
 ---
 
-For more information on how to develop a plugin, please check out [Plugin API](/plugin-api).
+For more information on how to develop a plugin, please check out [Plugin API](/plugin).
 
 Check out [https://github.com/egoist/docute-plugins](https://github.com/egoist/docute-plugins) for a list of Docute plugins by the maintainers and users.

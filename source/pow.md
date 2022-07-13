@@ -51,7 +51,7 @@ https://pow.nano.to/nano_37y6iq8m1z..
 https://pow.nano.to/@esteban
 ```
 
-> Nano.to [Usernames](/username-api) enjoy Free 30 PoW / Per Minute.
+> Nano.to [Usernames](/username) enjoy Free 30 PoW / Per Minute.
 
 ## Curl Example
 

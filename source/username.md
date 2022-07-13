@@ -1,12 +1,12 @@
-# Nano.to Usernames
+# Usernames
 
 Usernames are aliases for your Nano address.
 
 ## Uses for Username
 
-- [Vanity Checkout Pages](/checkout-api)
-- [Static Website Hosting](/hosting-api)
-- [30 Cloud PoW Credits](/pow-api)
+- [Vanity Checkout Pages](/checkout)
+- [Static Website Hosting](/hosting)
+- [30 Cloud PoW Credits](/pow)
 - And More..
 
 ## Third-Party Apps
@@ -19,7 +19,7 @@ To lease a Username, visit https://nano.to and search for your desired Username.
 
 - Only letters, numbers, up to 30 characters long.
 - Multiple Usernames with the same nano address. 
-- Nano.to Faucet pays ~ 0.01 Nano, [every 24 hours](/faucet-api). 
+- Nano.to Faucet pays ~ 0.01 Nano, [every 24 hours](/faucet). 
 
 ## Lease Renewals
 
@@ -42,7 +42,7 @@ To help prevent theft, every Username has a grace period for renewals after expi
 
 ## Nano.to Connected Apps
 
-We actively encourage other developers to add [Nano.to Usernames](/username-advanced-api) to their apps. This makes your Nano address "findable by Username" on a growing list of applications & games. Imagine playing a video game from Steam, and finding your Nano Username and Address on it, because the game supports Nano. Pretty rad!
+We actively encourage other developers to add [Nano.to Usernames](/username-advanced) to their apps. This makes your Nano address "findable by Username" on a growing list of applications & games. Imagine playing a video game from Steam, and finding your Nano Username and Address on it, because the game supports Nano. Pretty rad!
 
 > If privacy is your thing, don't get a Username for a particular address, and avoid the publicity.
 
