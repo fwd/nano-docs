@@ -2,7 +2,7 @@
 
 Show Nano Balance and other information in a colorful iFrame. Ideal for streaming.
 
-**⭐️ This API only works with active Nano.to Usernames only.**
+**⭐️ This API only works with active Nano.to Usernames.**
 
 ## Usage
 
