@@ -1,6 +1,6 @@
-# Nano.to PoW API
+# Nano PoW API
 
-Standalone GPU powered, [proof of work](https://github.com/nanocurrency/nano-pow) (PoW) API for the Nano crypto-currency.
+Standalone GPU powered, [proof of work](https://github.com/nanocurrency/nano-pow) (PoW) API.
 
 Easily scale any Nano application.
 
@@ -34,8 +34,6 @@ axios.post('https://pow.nano.to', {
 
 ## Flexible API
 
-Any of these URLs work. 
-
 **Frontier Hash**
 ```
 https://pow.nano.to/7FA158DADE3082...
@@ -51,8 +49,6 @@ https://pow.nano.to/nano_37y6iq8m1z..
 https://pow.nano.to/@esteban
 ```
 
-> Nano.to [Usernames](/username) enjoy Free 30 PoW / Per Minute.
-
 ## Curl Example
 
 ```
@@ -63,7 +59,7 @@ curl https://pow.nano.to/@fosse
 
 Proof of work is  ```fffffff800000000``` (or higher). Good for any Nano block.
 
-- Providing your own ```difficulty``` is not supported.
+> Providing your own ```difficulty``` is not supported.
 
 ## Rate Limit
 

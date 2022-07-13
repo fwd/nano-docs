@@ -1,4 +1,4 @@
-# Usernames
+# Nano.to Username
 
 Usernames are aliases for your Nano address.
 

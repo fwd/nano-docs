@@ -1,6 +1,6 @@
-# Checkout
+# Checkout UI
 
-Free, non-custodial Checkout UI, for your Nano Address. 
+Free, non-custodial Checkout page, for your Nano Address. 
 
 ## Basic Usage
 
