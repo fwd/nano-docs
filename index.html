@@ -393,6 +393,7 @@
                     self.show = false
                     self.$forceUpdate()
                 }, 100)
+                history.pushState({}, '', '#' + i.slug);
             },
             load(cb) {
                 axios.get('./config.json').then((res) => {

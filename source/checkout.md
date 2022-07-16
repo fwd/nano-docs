@@ -2,7 +2,7 @@
 
 Free hosted checkout pages, for your Nano Address and Nano.to Username.
 
-> Users pays your address directly. Nano.to checks yours address, incoming payments. Random sub-decimal amounts are presented to create unique payments. When payment is successful, Nano.to sends you a Webhook, if configured. User is then redirected to configured success page.
+> Users pays your address directly. Checkout UI is non-custodial. Nano.to checks yours address for incoming payments. Random sub-decimal amounts are used to create unique payments. When the payment is successful, Nano.to sends you a Webhook, if configured. And user is redirected to a configured success page.
 
 ![](images/checkout.png)
 
@@ -214,7 +214,9 @@ Clicking (or Tapping) the QR Code will open Natrium and automatically fill in am
 
 When creating links in Markdown (or HTML), use **two** underscores (\_\_) instead of spaces, and it will read as spaces. Makes for cleaner links.
 
-[https://nano.to/Moon?title=I__Love__You](https://nano.to/Moon?title=I__Love__You)
+```
+https://nano.to/Moon?title=I__Love__Apples
+```
 
 ## Data Deletion Policy
 

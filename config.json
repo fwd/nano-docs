@@ -13,18 +13,17 @@
 	      "title": "Username API",
 	      "file": "/source/username"
 	    },
-	    
 	    {
-	      "title": "Front-end API",
+	      "title": "Nano Price API",
+	      "file": "/source/price"
+	    },
+	    {
+	      "title": "QR Code API",
 	      "file": "/source/qrcode"
 	    },
 	    {
 	      "title": "Checkout API",
 	      "file": "/source/checkout"
-	    },
-	    {
-	      "title": "Blockchain API",
-	      "file": "/source/developer"
 	    },
 	    {
 	      "title": "GPU PoW API",
