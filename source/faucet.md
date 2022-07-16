@@ -2,7 +2,7 @@
 
 If you lease a Nano.to Username, you will receive 20% of daily Nano.to profits, divided by every participating Username. Automatically, every 24 hours. For the duration of the Lease.
 
-> **Note:** There is no daily guarantee. 
+> **Note:** Faucet does not provide a daily guarantee. This a nice bonus. 
 
 ## Quick Links
 
