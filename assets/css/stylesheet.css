@@ -657,7 +657,7 @@ hr {
 /*=== 3.3 Section Divider ===*/
 
 .divider {
-    margin: 2rem 0;
+    margin: 1rem 0;
 }
 /* =================================== */
 
@@ -1497,7 +1497,7 @@ blockquote p {
         border-color: rgba(250, 250, 250, 0.15);
     }
     .navbar-expand-lg.navbar-dropdown-dark .navbar-collapse {
-        background-color: #252A2C;
+        background-color: #181b1f;
     }
     .navbar-expand-lg.navbar-dropdown-primary .navbar-collapse {
         background-color: #0366d6;
@@ -2847,4 +2847,8 @@ ul, li {
 }
 ul {
     margin-bottom: 20px;
+}
+
+.nav .nav-item .nav-link {
+    cursor: pointer;
 }
