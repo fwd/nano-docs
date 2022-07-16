@@ -66,35 +66,5 @@
 		{ "path": "iframe", "file": "/source/iframe" },
 		{ "path": "faucet", "file": "/source/faucet" },
 		{ "path": "credits", "file": "/source/credits" }
-	],
-	"faq": [
-		{
-			"title": "What does royalty free mean?",
-			"body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
-		}
-	],
-	"changelog": [
-		{
-			"title": "Version 1",
-			"date": "12 Oct, 2020", 
-			"changes": [
-				{
-					"title": "Your information here for added new feature",
-					"type": "success",
-					"label": "ADDED"
-				}
-			]
-		},
-		{
-			"title": "Version 1",
-			"date": "12 Oct, 2020", 
-			"changes": [
-				{
-					"title": "Your information here for added new feature",
-					"type": "success",
-					"label": "ADDED"
-				}
-			]
-		}
 	]
 }

@@ -1,15 +1,24 @@
 # Checkout UI
 
-Free, non-custodial Checkout page, for your Nano Address. 
+Free hosted checkout pages, for your Nano Address and Nano.to Username.
+
+> Users pays your address directly. Nano.to checks yours address, incoming payments. Random sub-decimal amounts are presented to create unique payments. When payment is successful, Nano.to sends you a Webhook, if configured. User is then redirected to configured success page.
+
+![](images/checkout.png)
 
 ## Basic Usage
+
+```
+https://nano.to/:YOUR_ADDRESS
+```
+
+**Optional:**
 
 - https://nano.to/@moon
 - https://xno.to/@moon?price=100
 - https://ӿ.to/YOUR_ADDRESS
 
-
-> Looking to code your own Checkout UI? See [QR Code API](/qrcode).
+> Just need the QR Code? See [QR Code API](/qrcode).
 
 ```
 GET https://nano.to/NANO_ADDRESS_OR_USERNAME?title=Coffee
@@ -191,7 +200,7 @@ https://nano.to/checkout/666ee7bf26a?json=true
 
 With ```vanity_start``` and ```vanity_end``` params, you can control how your address is presented.
 
-```
+```js
 https://nano.to/Moon?vanity_start=10&vanity_end=4
 ```
 
@@ -206,12 +215,6 @@ Clicking (or Tapping) the QR Code will open Natrium and automatically fill in am
 When creating links in Markdown (or HTML), use **two** underscores (\_\_) instead of spaces, and it will read as spaces. Makes for cleaner links.
 
 [https://nano.to/Moon?title=I__Love__You](https://nano.to/Moon?title=I__Love__You)
-
-## Nano.to Support
-
-[Nano.to](https://fwd.dev/) offers free email support. Think of us like StackOverflow for Nano. 
-
-Ask Away: [support@nano.to](mailto:support@nano.to?subject=Wallet+API)
 
 ## Data Deletion Policy
 
