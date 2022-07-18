@@ -41,7 +41,7 @@
 	],
 	"menu": [
 		
-		{ "title": "Github", "href": "https://github.com/fwd/nano" },
+		{ "title": "Github", "href": "https://github.com/fwd/nano-docs" },
 		{ "title": "Twitter", "href": "https://twitter.com/nano2dev" }
 
 	],
