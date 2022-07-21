@@ -32,7 +32,9 @@
   <header id="header" class="sticky-top"> 
     <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
       <div class="container-fluid">
-        <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+        <button @click="menu =!menu" id="sidebarCollapse" :class="`navbar-toggler d-block d-md-none ${menu ? 'show' : ''}`" type="button">
+            <span></span><span class="w-75"></span><span class="w-50"></span>
+        </button>
         
         <!-- Logo --> 
         <a class="logo" title="" @click="reload()"> 
@@ -70,22 +72,22 @@
     
     <!-- Sidebar Navigation
     ============================ -->
-    <div class="idocs-navigation">
+    <div :class="`idocs-navigation ${menu ? 'active' : ''}`">
       <ul class="nav flex-column ">
 
         <li v-for="i of config.sections" class="nav-item">
-          <a class="nav-link active" @click="section(i); show = false; scrollTop()">{{ i.title }}</a>
+          <a class="nav-link active" @click="section(i); show = false; scrollTop();">{{ i.title }}</a>
           <ul v-if="active === i" class="nav flex-column">
-            <li v-for="item of active.titles" class="nav-item"><a class="nav-link" @click="scrollTo(item)">{{ item.title }}</a></li>
+            <li v-for="item of active.titles" class="nav-item"><a class="nav-link" @click="scrollTo(item); closeNav()">{{ item.title }}</a></li>
           </ul>
         </li>
 
-        <li @click="show = 'faq'; active = false" v-if="config.faq" class="nav-item">
-            <a class="nav-link" @click="scrollTo('faq'); scrollTop()">{{ config.faqTitle || 'Frequently Asked Questions' }}</a>
+        <li @click="show = 'faq'; active = false; closeNav();" v-if="config.faq" class="nav-item">
+            <a class="nav-link" @click="scrollTo('faq'); scrollTop();">{{ config.faqTitle || 'Frequently Asked Questions' }}</a>
         </li>
 
-        <li @click="show = 'changelog'; active = false" v-if="config.changelog" class="nav-item">
-            <a class="nav-link" @click="scrollTo('changelog'); scrollTop()">{{ config.changeLogTitle || 'Changelog' }}</a>
+        <li @click="show = 'changelog'; active = false; closeNav();" v-if="config.changelog" class="nav-item">
+            <a class="nav-link" @click="scrollTo('changelog'); scrollTop();">{{ config.changeLogTitle || 'Changelog' }}</a>
         </li>
 
 
@@ -204,22 +206,6 @@
             }
         });
 
-        $('.navbar-toggler').on('click', function() {
-            $(this).toggleClass('show');
-        });
-
-        $('#sidebarCollapse').on('click', function () {
-            $('#sidebarCollapse span:nth-child(3)').toggleClass('w-50');
-            $('.idocs-navigation').toggleClass('active');
-        });
-
-        // $('.smooth-scroll, .nav-link, .nav-item').on('click', function(event) {
-        //     event.preventDefault();
-        //     var sectionTo = $(this).attr('href');
-        //     alert('nope!')
-        //     // $('html, body').stop().animate({scrollTop: $(sectionTo).offset().top - 500}, 1000, 'easeInOutExpo');
-        // });
-
         $('.popup-img').each(function() {
             $(this).magnificPopup({
                 type: "image",
@@ -255,6 +241,7 @@
             show: false,
             message: '<%- message %>',
             darkMode: false,
+            menu: false,
             active: false,
             config: {}
         },
@@ -271,6 +258,9 @@
 
         },
         methods: {
+            closeNav() {
+                this.menu = false
+            },
             scrollTop(i) {
                 // console.log(i)
                 // window.location.hash = '#' + i.href
@@ -282,8 +272,9 @@
             scrollTo(i) {
                 // console.log(i)
                 // window.location.hash = '#' + i.href
+                // if 
                 $('html,body').animate({
-                    scrollTop: $('#' + i.href).offset().top - 100
+                    scrollTop: $('#' + i.href).offset() ? $('#' + i.href).offset().top - 100 : 0
                 }, 50, function() {
                     // location.hash = i.href;
                     history.pushState({}, '', '#' + i.href);
@@ -402,6 +393,7 @@
                     self.show = false
                     self.$forceUpdate()
                 }, 100)
+                history.pushState({}, '', '#' + i.slug);
             },
             load(cb) {
                 axios.get('./config.json').then((res) => {
