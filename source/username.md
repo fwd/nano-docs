@@ -2,17 +2,6 @@
 
 Usernames are aliases for your Nano address.
 
-## Uses for Username
-
-- [Vanity Checkout Pages](/checkout)
-- [Static Website Hosting](/hosting)
-- [30 Cloud PoW Credits](/pow)
-- And More..
-
-## Third-Party Apps
-
-- Nautilus Wallet (iOS/Android)
-
 ## Register a Username
 
 To lease a Username, visit https://nano.to and search for your desired Username. 

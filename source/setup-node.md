@@ -1,6 +1,6 @@
 # How to Setup a Nano Node
 
-Installing and operating a Nano Node is easy with [Docker](https://docs.docker.com/get-started/overview/#:~:text=Docker%20is%20an%20open%20platform,ways%20you%20manage%20your%20applications.). Setting up Docker for the first time, not so much. This guide will take you from zero to hero in no time. The Nano Foundation has their own [Official Node Setup](https://docs.nano.org/running-a-node/node-setup/) tutorial. Use that for Advanced insight.
+Installing and operating a Nano Node is easy with Docker.
 
 ## Before we start
 

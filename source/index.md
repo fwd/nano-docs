@@ -9,10 +9,8 @@ We're on a mission to accelerate the use of Nano around the world.
 ## **Quick Links**
 
 - [Usernames](/username)
-- [Checkout Pages](/checkout)
-- [QR Code API](/qrcode)
-- [Blockchain API](/developer)
-- [Cloud PoW API](/pow)
+- [Checkout UI](/checkout)
+- [GPU PoW API](/pow)
 - [Nano.to Faucet](/faucet)
 - [Setup Nano Node](/node)
 

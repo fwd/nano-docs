@@ -2,7 +2,6 @@
 
 Free hosted checkout pages, for your Nano Address and Nano.to Username.
 
-> Users pays your address directly. Checkout UI is non-custodial. Nano.to checks yours address for incoming payments. Random sub-decimal amounts are used to create unique payments. When the payment is successful, Nano.to sends you a Webhook, if configured. And user is redirected to a configured success page.
 
 ![](images/checkout.png)
 

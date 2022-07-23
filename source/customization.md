@@ -6,8 +6,6 @@ Launched **September 15th, 2021**. Platform is in Beta, but stable.
 
 **Anonymous, no account or API key required to use.**
 
-**Note: We did not build or own NANO. We simply built a service on top of it.**
-
 ## Quick Start
 
 Let's say you have following files in `./my-docs` folder:
