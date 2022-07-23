@@ -22,7 +22,7 @@ axios.post('https://pow.nano.to', {
 
 **Response (JSON):**
 
-```js
+```json
 {
     "difficulty": "fffffff8c69dbf5b",
     "multiplier": "1.1073958803041113",
@@ -35,17 +35,20 @@ axios.post('https://pow.nano.to', {
 ## Flexible API
 
 **Frontier Hash**
-```
+
+```text
 https://pow.nano.to/7FA158DADE3082...
 ```
 
 **Nano Address**
-```
+
+```text
 https://pow.nano.to/nano_37y6iq8m1z..
 ```
 
 **Nano.to Username**
-```
+
+```text
 https://pow.nano.to/@esteban
 ```
 

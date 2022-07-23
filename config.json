@@ -13,6 +13,12 @@
 	      "title": "Username API",
 	      "file": "/source/username"
 	    },
+
+		{
+			"title": "Checkout UI",
+			"file": "/source/checkout"
+		},
+
 	    {
 	      "title": "Nano Price API",
 	      "file": "/source/price"
