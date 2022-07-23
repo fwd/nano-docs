@@ -1,47 +1,20 @@
 # Checkout UI
 
-Free hosted checkout pages, for your Nano Address and Nano.to Username.
+Free, **Non-Custodial**, Checkout UI for any Nano address.
 
+![](images/cover.png)
 
-![](images/checkout.png)
-
-## Basic Usage
+## Usage
 
 ```
 https://nano.to/:YOUR_ADDRESS
 ```
 
-**Optional:**
-
-- https://nano.to/@moon
-- https://xno.to/@moon?price=100
-- https://ӿ.to/YOUR_ADDRESS
-
-> Just need the QR Code? See [QR Code API](/qrcode).
-
-```
-GET https://nano.to/NANO_ADDRESS_OR_USERNAME?title=Coffee
-```
-
-Live Demo: [https://xno.to/Moon](https://nano.to/Moon?title=Coffee&price=5&image=https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg)
-
-***HTML***
-
-```html
-<a href="https://nano.to/Moon?title=Coffee&price=5&image=https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg">https://nano.to/Moon</a>
-```
-
-***Markdown***
-
-```markdown
-Live Demo: [https://nano.to/Moon](https://nano.to/Moon?title=Coffee&price=5&image=https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg)
-```
-
-## Options
+## Customize
 
 ```bash
 https://nano.to/Moon?title=Donate
-&price=50
+?price=50
 &donate=false
 &color=white
 &currency=USD
@@ -50,14 +23,12 @@ https://nano.to/Moon?title=Donate
 &description=<p>HTML allowed 😎</p>
 &suggest=Basic:30,Premium:50
 &success_url=https://mywebsite.com/success
-&cancel_url=https://mywebsite.com/
+&cancel_url=https://mywebsite.com
 ```
-
-> ***Note:*** When using **GET**, CSS colors with hashtags ex. #000000 are supported, but replace the **#** with a **$** symbol. This is a URL limitation. This is not an issue with POST requests. See below. 
 
 ***HTML***
 
-```html
+```
 <a href="https://nano.to/ADDRESS_OR_USERNAME">Donate with Nano</a>
 ```
 
@@ -189,8 +160,6 @@ https://nano.to/Moon?pay=100
 
 Pass a ```?json=true``` URL flag to the ```url``` in the Response to get a JSON object of the Checkout. 
 
-> In most cases you do don't need this.
-
 ```
 https://nano.to/checkout/666ee7bf26a?json=true
 ```
@@ -217,6 +186,22 @@ When creating links in Markdown (or HTML), use **two** underscores (\_\_) instea
 https://nano.to/Moon?title=I__Love__Apples
 ```
 
-## Data Deletion Policy
+## Available Domains
 
-Most of the data provided by Nano.to comes from the Nano Blockchain. Nano.to only stores Usernames leases and Checkout metadata. Checkout metadata is stored in-memory and is deleted after 24 hours. It's cheaper to NOT store your data. Who could have guessed. 
+- https://nano.to/@moon
+- https://xno.to/@moon?price=100
+- https://ӿ.to/YOUR_ADDRESS
+
+> Just need the QR Code? See [QR Code API](/qrcode).
+
+## HTML Example
+
+```html
+<a href="https://nano.to/Moon?title=Coffee&price=5&image=https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg">https://nano.to/Moon</a>
+```
+
+## Markdown Example
+
+```markdown
+Live Demo: [https://nano.to/Moon](https://nano.to/Moon?title=Coffee&price=5&image=https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p.jpg)
+```
