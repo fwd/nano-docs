@@ -712,7 +712,7 @@ hr {
     color: #ffffff;
     /*letter-spacing: 0.7px;*/
 }
-.nav-item .nav-link.active {
+.nav .nav-item .nav-link.active {
     /*color: #0c2f55;*/
     /*color: #ffffffad;*/
     /*letter-spacing: 0.7px;*/
@@ -2857,4 +2857,8 @@ ul {
 
 .nav .nav-item .nav-link {
     cursor: pointer;
+}
+
+img[alt="line"] {
+    height: 30px;
 }

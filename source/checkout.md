@@ -4,8 +4,7 @@ Free, **Non-Custodial**, Checkout UI for any Nano address.
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-![](images/cover.png)
-
+![](https://github.com/fwd/nano/raw/master/dist/images/cover2.png)
 
 ## Usage
 
