@@ -2,13 +2,13 @@
 
 Usernames are aliases for your Nano address with-in Nano.to.
 
-## Benefits
+## Uses
 
 - Easier Nano.to API Usage
 - Free 30 GPU PoW per Minute
 - Nano.to Faucet Payments
 
-## Register a Username
+## Register
 
 To "lease" a Username, visit https://nano.to and search for your desired Username. 
 
@@ -16,7 +16,7 @@ To "lease" a Username, visit https://nano.to and search for your desired Usernam
 - Multiple Uernames w/ same Address is allowed.
 - Nano.to Faucet pays ~ 0.001 Nano, [every 24 hours](/faucet). 
 
-## Lease Renewals
+## Renewal
 
 You need to be mindful of when your Username rental expires. 
 
@@ -28,11 +28,11 @@ https://nano.to/:USERNAME/username
 
 Demo: https://nano.to/CryptoLofi/username
 
-## Renewal Grace Period
+## Grace Period
 
 Every Username has a **10 day** grace period for renewals after expiration.
 
-## Nano.to Connected Apps
+## Third-Party Apps
 
 We actively encourage other developers to add [Nano.to Usernames](/username-advanced) to their apps. This makes your Nano address "findable by Username" on a growing list of applications & games. Imagine playing a video game from Steam, and finding your Nano Username and Address on it, because the game supports Nano. Pretty rad!
 
@@ -40,7 +40,7 @@ We actively encourage other developers to add [Nano.to Usernames](/username-adva
 
 - [List of Third-Party Nano.to Apps](/nano-apps)
 
-## Username Rental Support
+## Username Support
 
 Software bugs happen. Be sure to mention the address you tried to pay with, and which Username you were trying to get. 
 
