@@ -6,7 +6,7 @@ Easily scale any Nano application.
 
 ## Basic Usage
 
-```
+```bash
 GET: https://pow.nano.to/:HASH
 ```
 
@@ -14,7 +14,7 @@ or POST request:
 
 ```javascript
 axios.post('https://pow.nano.to', { 
-    hash: 'HASH' 
+    hash: 'HASH'
 }).then((res) => {
     // console.log(res.data)
 })
@@ -24,11 +24,13 @@ axios.post('https://pow.nano.to', {
 
 ```json
 {
-    "difficulty": "fffffff8c69dbf5b",
-    "multiplier": "1.1073958803041113",
-    "work": "6f5a647cfe4a5dc4",
-    "frontier": "E4094A9ABA876DC3E...",
-    "remaining": 4
+    "difficulty": "fffffffd316c7962",
+    "multiplier": "2.8500801896655417",
+    "work": "14b651936a358ddc",
+    "frontier": "8AF8007D1E31294232C62F4495E657C2A3CA80FA2A1B98ADE5B6E1336C722EC6",
+    "remaining": 4,
+    "cached": true,
+    "duration": "0.334s"
 }
 ```
 
@@ -55,7 +57,7 @@ https://pow.nano.to/@esteban
 ## Curl Example
 
 ```
-curl https://pow.nano.to/@fosse
+curl https://pow.nano.to/@fosse | jq '.work'
 ```
 
 ## Difficulty
@@ -67,12 +69,11 @@ Proof of work is  ```fffffff800000000``` (or higher). Good for any Nano block.
 ## Rate Limit
 
 - Free 5 PoW / Per Minute for Testing.
-- Free 30 PoW / Per Minute, for Nano.to Usernames.
-- Pre-pay for Usage @ Ӿ 0.01/PoW (**Coming Soon**)
+- Pre-pay for Usage @ Ӿ 0.001/PoW (**Coming Soon**)
 
 ## Errors Happen
 
-Be ready for them. We recommend you **precache** work. By requesting it, and storing it, before you need it.
+We recommend you **precache** work. By requesting it, and storing it, before you need it.
 
 **Code 400: Bad Request:**
 
