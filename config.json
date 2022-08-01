@@ -36,6 +36,10 @@
 	      "file": "/source/iframe"
 	    },
 	    {
+	      "title": "Setup Nano Node",
+	      "url": "/source/setup-node"
+	    },
+	    {
 	      "title": "Nano.to Faucet",
 	      "file": "/source/faucet"
 	    }

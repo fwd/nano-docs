@@ -5,7 +5,7 @@ Accept Nano on the web, to your own Nano address. Non-custodial.
 ## Basic Usage
 
 **Nano.to Username**
-```js
+```text
 https://nano.to/@esteban?request=100
 ```
 

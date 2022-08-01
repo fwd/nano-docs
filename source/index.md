@@ -1,6 +1,6 @@
 # Welcome to Nano.to
 
-Free, non-custodial API & Username service for the [Nano](https://www.google.com/search?q=nano+currency) blockchain.
+Free Username & non-custodial Checkout API for the [Nano](https://www.google.com/search?q=nano+currency) blockchain.
 
 We're on a mission to accelerate the use of Nano around the world. 
 
@@ -8,11 +8,12 @@ We're on a mission to accelerate the use of Nano around the world.
 
 ## **Quick Links**
 
-- [Usernames](/username)
+- [Username API](/username)
 - [Checkout UI](/checkout)
+- [Blockchain UI](/blockchain)
 - [GPU PoW API](/pow)
 - [Nano.to Faucet](/faucet)
-- [Setup Nano Node](/node)
+- [1-Click Nano Node](/node)
 
 ## About Nano.to
 

@@ -4,13 +4,13 @@ The price updates every 60 seconds. CoinMarketCap is used for price data.
 
 ## Get Request
 
-```js
+```text
 https://nano.to/price
 ```
 
 ## JSON Response
 
-```javascript
+```json
 {
   "symbol": "XNO",
   "price": 0.91,

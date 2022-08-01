@@ -1,4 +1,4 @@
-## Public Blockchain Data
+## Blockchain API
 
 ### Base URL
 ```

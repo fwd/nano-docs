@@ -5,9 +5,7 @@ This endpoint provides a JSON response with everything you need to accept Nano d
 **⭐ Free API. Works with any valid Nano address and Usernames.**
 
 ```
-https://nano.to/ADDRESS_OR_USERNAME
-?request=500
-&memo=donation
+https://nano.to/:ADDRESS?pay=500
 ```
 
 ```js

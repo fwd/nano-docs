@@ -1,6 +1,6 @@
 # Nano PoW API
 
-Standalone GPU powered, [proof of work](https://github.com/nanocurrency/nano-pow) (PoW) API.
+Standalone GPU powered, [proof of work](https://github.com/nanocurrency/nano-pow) (PoW) API for Nano currency.
 
 Easily scale any Nano application.
 

@@ -1,6 +1,6 @@
 # Nano.to Username
 
-Usernames are aliases for your Nano address.
+Usernames are aliases for your Nano address within Nano.to and connected apps.
 
 ## Register a Username
 
@@ -31,13 +31,13 @@ To help prevent theft, every Username has a grace period for renewals after expi
 
 ## Nano.to Connected Apps
 
-We actively encourage other developers to add [Nano.to Usernames](/username-advanced) to their apps. This makes your Nano address "findable by Username" on a growing list of applications & games. Imagine playing a video game from Steam, and finding your Nano Username and Address on it, because the game supports Nano. Pretty rad!
+We actively encourage other developers to add [Nano.to Usernames](/username-advanced) to their apps. This makes your Nano address "findable by Username" on a growing list of applications & games. 
 
 > If privacy is your thing, don't get a Username for a particular address, and avoid the publicity.
 
 - [List of Third-Party Nano.to Apps](/nano-apps)
 
-## Username Rental Support
+## Username Support
 
 Software bugs happen. Be sure to mention the address you tried to pay with, and which Username you were trying to get. 
 

@@ -1,4 +1,4 @@
-<h1 align="center">Nano.to dPoW</h1>
+<h1 align="center">Nano.to PoW Marketplace</h1>
 
 > Make 0.005/NANO per PoW, by leasing your GPU compute power to Nano.to. 
 
