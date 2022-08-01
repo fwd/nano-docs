@@ -1,17 +1,15 @@
-# Nano PoW API
+# Nano.to PoW API
 
-Standalone GPU powered, [proof of work](https://github.com/nanocurrency/nano-pow) (PoW) API for Nano currency.
+Standalone, GPU powered proof of work API for the Nano blockchain.
 
 Easily scale any Nano application.
 
 ## Basic Usage
 
-```bash
+```text
 GET: https://pow.nano.to/:HASH
 ```
-
-or POST request:
-
+**or POST request:**
 ```javascript
 axios.post('https://pow.nano.to', { 
     hash: 'HASH'
@@ -19,9 +17,7 @@ axios.post('https://pow.nano.to', {
     // console.log(res.data)
 })
 ```
-
 **Response (JSON):**
-
 ```json
 {
     "difficulty": "fffffffd316c7962",
