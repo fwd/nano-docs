@@ -12,7 +12,7 @@ GET: https://pow.nano.to/:HASH
 **or POST request:**
 ```javascript
 axios.post('https://pow.nano.to', { 
-    hash: 'HASH'
+    hash: ':HASH'
 }).then((res) => {
     // console.log(res.data)
 })
