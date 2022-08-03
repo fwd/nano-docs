@@ -71,6 +71,9 @@ Proof of work is  ```fffffff800000000``` (or higher). Good for any Nano block.
 
 We recommend you **precache** work. By requesting it, and storing it, before you need it.
 
+- **Error 4XX**: Your fault.
+- **Error 5XX**: Our fault.
+
 **Code 400: Bad Request:**
 
 ```js
