@@ -1,16 +1,4 @@
-# Nano Usernames
-
-<<<<<<< HEAD
-Usernames are aliases for your Nano address within Nano.to and connected apps.
-=======
-Usernames are aliases for your Nano address with-in Nano.to.
->>>>>>> 0c3516848bdf9de65c537959840842a69a6e7d14
-
-## Uses
-
-- Easier Nano.to API Usage
-- Free 30 GPU PoW per Minute
-- Nano.to Faucet Payments
+# Nano.to Usernames
 
 ## Register
 

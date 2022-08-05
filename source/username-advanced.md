@@ -4,10 +4,13 @@ Nano.to Usernames can be registered in-app from other applications. This makes i
 
 ## Base URL
 
-You can use this single endpoint to check for valid usernames. It's adviced to throttle request to at most, 1 per second. 
-
+**NEW:**
 ```
-https://nano.to/lease/:username
+https://name.nano.to/:username
+```
+**OLD:**
+```
+https://name.nano.to/:username
 ```
 
 ```js
@@ -15,7 +18,7 @@ https://nano.to/lease/:username
 
 const axios = require('axios')
 
-axios.get('https://nano.to/lease/fosse2').then((res) => {
+axios.get('https://name.nano.to/fosse2').then((res) => {
 	console.log(res.data)
 })
 ```
@@ -25,7 +28,7 @@ axios.get('https://nano.to/lease/fosse2').then((res) => {
 	"available": true,
 	"username": "fosse2",
 	"premium": false,
-	"checkout": "https://nano.to/checkout/[HOSTED_CHECKOUT_ID]",
+	"checkout": "https://api.nano.to/checkout/[HOSTED_CHECKOUT_ID]",
 	"plans": [
 		{
 			"name": "1 Day",
@@ -40,7 +43,7 @@ axios.get('https://nano.to/lease/fosse2').then((res) => {
 			"expires": "April 11, 2022 10:02 PM",
 			"expires_unix": 1649714537,
 			"id": "[CHECKOUT_ID]",
-			"check_url": "https://nano.to/[NANO.TO ADDRESS]/history/0.4153219?check=[CHECKOUT_ID]"
+			"check_url": "https://api.nano.to/[NANO.TO ADDRESS]/history/0.4153219?check=[CHECKOUT_ID]"
 		},
 		// {...}
 	]
@@ -69,7 +72,7 @@ If you're reading these docs, we assume you have your own means of programmatica
 
 const axios = require('axios')
 
-axios.get('https://nano.to/[NANO.TO ADDRESS]/history/0.4153219?check=[CHECKOUT_ID]').then((res) => {
+axios.get('https://api.nano.to/[NANO.TO ADDRESS]/history/0.4153219?check=[CHECKOUT_ID]').then((res) => {
 	console.log(res.data)
 })
 ```
@@ -79,7 +82,7 @@ axios.get('https://nano.to/[NANO.TO ADDRESS]/history/0.4153219?check=[CHECKOUT_I
 	"id": "6dd1f4o",
 	"completed": true, 
 	"hash": "[BLOCK_HASH]",
-	"success_url": "https://nano.to/hash/[BLOCK_HASH]"
+	"success_url": "https://api.nano.to/hash/[BLOCK_HASH]"
 }
 ```
 
@@ -92,7 +95,7 @@ After a successful purchase, your Username will be immediately available through
 
 const axios = require('axios')
 
-axios.get('https://nano.to/known').then((res) => {
+axios.get('https://name.nano.to/known.json').then((res) => {
 	console.log(res.data)
 })
 ```

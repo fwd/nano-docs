@@ -10,10 +10,11 @@ We're on a mission to accelerate the use of Nano around the world.
 
 - [Username API](/username)
 - [Checkout UI](/checkout)
-- [Blockchain UI](/blockchain)
-- [GPU PoW API](/pow)
+- [USD Price API](/checkout)
+- [Blockchain API](/blockchain)
+- [Cloud GPU API](/pow)
 - [Nano.to Faucet](/faucet)
-- [1-Click Nano Node](/node)
+- [Setup Nano Node](/node)
 
 ## About Nano.to
 

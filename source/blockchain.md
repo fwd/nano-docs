@@ -1,52 +1,11 @@
-## Blockchain API
+# Blockchain API
 
-### Base URL
-```
-https://nano.to
-```
-
-> If your HTTPS request includes a ```user-agent```, which most browsers do, you will get a HTML response. Otherwise a JSON response.
-
-## Get Usernames
-
-As of January 2022, there are over 500 registered Nano.to Usernames. You're welcomed to use Nano Usernames in your application.  
-
-```bash
-GET: https://nano.to/known
-```
-
-```json
-[
-  {
-    "name": "kikio",
-    "address": "nano_37y6iq8m...xpo6dd1f4o",
-    "created": "March 31, 2022",
-    "expires": "April 1, 2022",
-    "created_unix": 1648688880,
-    "expires_unix": 1648775280
-  },
-  {
-    "name": "marvin",
-    "address": "nano_18wd...8roiaoc",
-    "created": "March 30, 2022",
-    "created_unix": 1648677060,
-    "expires_unix": 1648763460
-  },
-  // {...}
-]
-```
-
-Demo: https://nano.to/known
-
-> This specific endpoint is specially designed for high capacity. Rate limit is increased up to 1/s.
-
-
-## Get Nano Price
+## Live USD Price
 
 Nano (XNO) price in USD. The price refreshes every 60 seconds. 
 
 ```bash
-https://nano.to/price
+https://api.nano.to/price
 ```
 
 ```javascript
@@ -65,15 +24,15 @@ https://nano.to/price
 |   json | string | false | Response is JSON data |
 
 
-Demo: https://nano.to/price
+Demo: https://api.nano.to/price
 
 
-## Get Address balance
+## Address Balance
 
 Balance information of any Nano address on the live blockchain.
 
 ```bash
-https://nano.to/NANO_ADDRESS_OR_USERNAME/account
+https://api.nano.to/NANO_ADDRESS_OR_USERNAME/account
 ```
 
 Response
@@ -101,17 +60,17 @@ Response
 |---|---|---|---|
 |   json | string | false | Response is JSON data |
 
-Demo: https://nano.to/Kraken/account
+Demo: https://api.nano.to/Kraken/account
 
-## Get Address Pending
+## Address Pending
 
 Array of pending blocks (payments) for a Nano address.
 
 ```bash
-https://nano.to/NANO_ADDRESS_OR_USERNAME/pending
+https://api.nano.to/NANO_ADDRESS_OR_USERNAME/pending
 ```
 
-### Response
+**Response**
 
 ```javascript
 [
@@ -129,7 +88,7 @@ https://nano.to/NANO_ADDRESS_OR_USERNAME/pending
 ]
 ```
 
-Demo: https://nano.to/Shryder/pending
+Demo: https://api.nano.to/Shryder/pending
 
 **Params**
 
@@ -137,14 +96,14 @@ Demo: https://nano.to/Shryder/pending
 |---|---|---|---|
 |   json | string | false | Response is JSON data |
 
-Demo: https://nano.to/pending/moon
+Demo: https://api.nano.to/pending/moon
 
 ## Get Address History
 
 Array of historical blocks (payments) of any Nano address. For now, API only goes back 50 blocks. If you need the entire history of an Address, this what running your own is for. Contact us if you need assistance: support@nano.to 
 
 ```bash
-https://nano.to/NANO_ADDRESS_OR_USERNAME/history
+https://api.nano.to/NANO_ADDRESS_OR_USERNAME/history
 ```
 
 Response
@@ -179,17 +138,17 @@ Response
 |---|---|---|---|
 |   json | string | false | Response is JSON data |
 
-Demo: https://nano.to/Moon/history
+Demo: https://api.nano.to/Moon/history
 
 ## Block by Hash
 
 Get a specific block (i.e payment) by it's unique hash.
 
 ```bash
-https://nano.to/hash/HASH
+https://api.nano.to/hash/HASH
 ```
 
-### Response
+**Response**
 
 ```javascript
 {
@@ -210,7 +169,7 @@ https://nano.to/hash/HASH
 |---|---|---|---|
 |   json | string | false | Response is JSON data |
 
-Demo: https://nano.to/hash/A341FBD3942B411D98BAC16241E5BC149DBE0D54D9BB23A873BC2A2C2B92B113
+Demo: https://api.nano.to/hash/A341FBD3942B411D98BAC16241E5BC149DBE0D54D9BB23A873BC2A2C2B92B113
 
 ## Get Payment By Amount
 
@@ -219,7 +178,7 @@ Check if a Nano address has received a block (i.e payment) with a specific amoun
 > Fun fact: Nano.to uses multiple nodes to check your address's history & pending for potential payments. At any given time, one node may not have your ```pending``` history up to date. We found using multiple nodes eliminates this problem.
 
 ```bash
-https://nano.to/NANO_ADDRESS_OR_USERNAME/history/AMOUNT
+https://api.nano.to/NANO_ADDRESS_OR_USERNAME/history/AMOUNT
 ```
 
 **Amount must be in whole or decimal numbers (i.e MEGA) not RAW (used by RPC).**
@@ -247,7 +206,7 @@ https://nano.to/NANO_ADDRESS_OR_USERNAME/history/AMOUNT
 }
 ```
 
-If no transaction is found, the response will be:
+**When No block found:**
 
 ```js
 {
@@ -257,17 +216,49 @@ If no transaction is found, the response will be:
 }
 ```
 
-**Params**
+**Params:**
 
 |  name |  type | default |  description
 |---|---|---|---|
 |   json | string | false | Response is JSON data |
 
+## Nano.to Usernames
 
-## Get List Of Public Representatives
+As of January 2022, there are over 500 registered Nano.to Usernames. You're welcomed to use Nano Usernames in your application.  
 
 ```bash
-https://nano.to/reps
+GET: https://nano.to/known.json
+```
+
+```json
+[
+  {
+    "name": "kraken",
+    "address": "nano_37y6iq8m...xpo6dd1f4o",
+    "created": "March 31, 2022",
+    "expires": "April 1, 2022",
+    "created_unix": 1648688880,
+    "expires_unix": 1648775280
+  },
+  {
+    "name": "marvin",
+    "address": "nano_18wd...8roiaoc",
+    "created": "March 30, 2022",
+    "created_unix": 1648677060,
+    "expires_unix": 1648763460
+  },
+  // {...}
+]
+```
+
+Link: https://nano.to/known.json
+
+> This specific endpoint is specially designed for high capacity. Rate limit is increased up to 1/s.
+
+## Public Representatives
+
+```bash
+https://api.nano.to/reps
 ```
 
 ```json
