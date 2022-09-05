@@ -9,15 +9,15 @@
 	      "file": "/source/index.md"
 	    },
 
-        {
-	      "title": "Username API",
-	      "file": "/source/username"
+	    {
+		"title": "Username API",
+		"file": "/source/username"
 	    },
-
-		{
-			"title": "Checkout UI",
-			"file": "/source/checkout"
-		},
+		
+            {
+		"title": "Checkout UI",
+		"url": "https://raw.githubusercontent.com/fwd/nano-to/master/readme.md"
+            },
 
 	    {
 	      "title": "Nano Price API",
