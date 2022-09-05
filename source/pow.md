@@ -12,7 +12,7 @@ GET: https://pow.nano.to/:HASH
 **or POST request:**
 ```javascript
 axios.post('https://pow.nano.to', { 
-    hash: ':HASH'
+    hash: 'HASH'
 }).then((res) => {
     // console.log(res.data)
 })
@@ -21,9 +21,9 @@ axios.post('https://pow.nano.to', {
 ```json
 {
     "difficulty": "fffffffd316c7962",
-    "multiplier": "2.8500801896655417",
+    "multiplier": "2.8500...",
     "work": "14b651936a358ddc",
-    "frontier": "8AF8007D1E31294232C62F4495E657C2A3CA80FA2A1B98ADE5B6E1336C722EC6",
+    "frontier": "8AF8007D1E31...",
     "remaining": 4,
     "cached": true,
     "duration": "0.334s"
@@ -50,7 +50,7 @@ https://pow.nano.to/nano_37y6iq8m1z..
 https://pow.nano.to/@esteban
 ```
 
-## Curl Example
+## CURL Example
 
 ```
 curl https://pow.nano.to/@fosse | jq '.work'
@@ -60,16 +60,16 @@ curl https://pow.nano.to/@fosse | jq '.work'
 
 Proof of work is  ```fffffff800000000``` (or higher). Good for any Nano block.
 
-> Providing your own ```difficulty``` is not supported.
+> Providing your own ```difficulty``` is not supported. 
 
 ## Rate Limit
 
-- Free 5 PoW / Per Minute for Testing.
-- Pre-pay for Usage @ Ӿ 0.001/PoW (**Coming Soon**)
+- Unlimited 5 PoW / Per Minute.
+- Prepaid PoW @ Ӿ 0.001/PoW (**Coming Soon**)
 
 ## Errors Happen
 
-We recommend you **precache** work. By requesting it, and storing it, before you need it.
+**Precache** work by requesting it, and storing it, before you need it.
 
 - **Error 4XX**: Your fault.
 - **Error 5XX**: Our fault.
@@ -115,4 +115,4 @@ We recommend you **precache** work. By requesting it, and storing it, before you
 
 - Email: support@nano.to
 - Twitter: [@nano2dev](https://twitter.com/nano2dev)
-- @nano2dev on [Nano Discord](https://discord.com/invite/RNAE2R9) 
+- @nano2dev on [Nano's Discord](https://discord.com/invite/RNAE2R9) 
