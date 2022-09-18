@@ -1,24 +1,18 @@
 # Nano.to Usernames
 
-## Register
-
-To "lease" a Username, visit https://nano.to and search for your desired Username. 
+To register a Username, visit https://nano.to and search for your desired Username. 
 
 - Letters, numbers, and up to 30 characters.
 - Multiple Uernames w/ same Address is allowed.
 - Nano.to Faucet pays ~ 0.001 Nano, [every 24 hours](/faucet). 
 
-## Renewal
+## Username Renewal 
 
-You need to be mindful of when your Username rental expires. 
+You can add time to your Username by visting:
 
-Nano.to Username lease information is public, like the Blockchain. You can check the lease of any username, including your own by visting this URL in the browser or via code.
-
-```text
-https://nano.to/:USERNAME/username
 ```
-
-Demo: https://nano.to/CryptoLofi/username
+https://api.nano.to/:USERNAME/renew?redirect=true
+```
 
 ## Grace Period
 
