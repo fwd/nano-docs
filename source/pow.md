@@ -41,9 +41,9 @@ axios.post('https://pow.nano.to', {
 
 ## Free API Key
 
-API keys offer more stable responses and and 10 Free PoW / Minute instead of 5. 
+API keys offer more stable API response, and 10 Free PoW / Minute instead of 5. 
 
-To get a key visit: https://pow.nano.to - and click 'Free API Key' in top right. 
+Visit: https://pow.nano.to - and click 'Free API Key' in top right. 
 
 **Usage:**
 ```
