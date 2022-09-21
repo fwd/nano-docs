@@ -6,13 +6,14 @@ Easily scale any Nano application.
 
 ## Basic Usage
 
-```text
-GET: https://pow.nano.to/:HASH
+```python
+https://pow.nano.to/:HASH
 ```
+
 **or POST request:**
 ```javascript
 axios.post('https://pow.nano.to', { 
-    hash: 'HASH'
+    hash: ':HASH'
 }).then((res) => {
     // console.log(res.data)
 })
@@ -20,40 +21,21 @@ axios.post('https://pow.nano.to', {
 **Response (JSON):**
 ```json
 {
-    "difficulty": "fffffffd316c7962",
-    "multiplier": "2.8500...",
-    "work": "14b651936a358ddc",
-    "frontier": "8AF8007D1E31...",
+    "difficulty": "fffffffbc3b93c36",
+    "multiplier": "1.888817235874546",
+    "work": "157ad78255c73cae",
+    "frontier": "277FD6365DF608D601F18F464926B600B15F6CD705A90E2239F55E9F86E7B38F",
     "remaining": 4,
-    "cached": true,
-    "duration": "0.334s"
+    "cached": false,
+    "duration": "0.201s",
+    "server": "Nano.to/GPU-4"
 }
-```
-
-## Flexible API
-
-**Frontier Hash**
-
-```text
-https://pow.nano.to/7FA158DADE3082...
-```
-
-**Nano Address**
-
-```text
-https://pow.nano.to/nano_37y6iq8m1z..
-```
-
-**Nano.to Username**
-
-```text
-https://pow.nano.to/@esteban
 ```
 
 ## CURL Example
 
 ```
-curl https://pow.nano.to/@fosse | jq '.work'
+curl https://pow.nano.to/:HASH | jq '.work'
 ```
 
 ## Difficulty
@@ -65,7 +47,8 @@ Proof of work is  ```fffffff800000000``` (or higher). Good for any Nano block.
 ## Rate Limit
 
 - Unlimited 5 PoW / Per Minute.
-- Prepaid PoW @ Ӿ 0.001/PoW (**Coming Soon**)
+- Unlimited 10 PoW / Per Minute with [Free API Key](https://pow.nano.to/).
+- [Prepaid PoW](https://pow.nano.to) @ Ӿ 0.01/PoW
 
 ## Errors Happen
 
