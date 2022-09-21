@@ -13,11 +13,12 @@ https://pow.nano.to/:HASH
 **or POST request:**
 ```javascript
 axios.post('https://pow.nano.to', { 
-    hash: ':HASH'
+    hash: 'HASH'
 }).then((res) => {
     // console.log(res.data)
 })
 ```
+
 **Response (JSON):**
 ```json
 {
@@ -32,6 +33,33 @@ axios.post('https://pow.nano.to', {
 }
 ```
 
+## Rate Limit
+
+- Unlimited 5 PoW / Per Minute.
+- Unlimited 10 PoW / Per Minute with Free API Key.
+- [Prepaid PoW](https://pow.nano.to) @ Ӿ 0.01/PoW
+
+## Free API Key
+
+API keys offer more stable responses and and 10 Free PoW / Minute instead of 5. 
+
+To get a key visit: https://pow.nano.to - and click 'Free API Key' in top right. 
+
+**Usage:**
+```
+https://pow.nano.to/:HASH?key=API_KEY
+```
+
+**or POST request:**
+```javascript
+axios.post('https://pow.nano.to', { 
+    hash: 'HASH',
+    key: 'API_KEY'
+}).then((res) => {
+    // console.log(res.data)
+})
+```
+
 ## CURL Example
 
 ```
@@ -43,12 +71,6 @@ curl https://pow.nano.to/:HASH | jq '.work'
 Proof of work is  ```fffffff800000000``` (or higher). Good for any Nano block.
 
 > Providing your own ```difficulty``` is not supported. 
-
-## Rate Limit
-
-- Unlimited 5 PoW / Per Minute.
-- Unlimited 10 PoW / Per Minute with [Free API Key](https://pow.nano.to/).
-- [Prepaid PoW](https://pow.nano.to) @ Ӿ 0.01/PoW
 
 ## Errors Happen
 
@@ -67,7 +89,7 @@ Proof of work is  ```fffffff800000000``` (or higher). Good for any Nano block.
 }
 ```
 
-**Code 429: Exhausted Credits:**
+**Code 429: Exhausted Credits (No API Key):**
 
 ```js
 {
