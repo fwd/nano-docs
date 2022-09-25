@@ -56,24 +56,16 @@ const axios = require('axios')
 
 axios.post('https://nano.to/NANO_ADDRESS_OR_USERNAME', {
     "title": "New Order",
-    "currency": "USD", // any valid ISO string
     "plans": [
         { "name": "Fries", "price": 5 },
         { "name": "Burger", "price": 10 },
         { "name": "Happy Meal", "price": 15 },
         { "name": "Cookies 🍪", "price": 3 }
     ],
-    "business": {
-        "name": "McDonalds",
-        "logo": "https://www.tailorbrands.com/wp-content/uploads/2020/07/mcdonalds-logo.jpg"
-    },
     "image": "https://files.muzli.space/2d7af141fab097859ef66de8d7c50932.jpeg", 
-    "color": "black,white",
-    "background": "#00000,#311ac5",
     "success_url": "https://mywebsite.com/success?id={{id}}&anotherParam=hello",
     "cancel_url": "https://google.com",
     "webhook_url": "https://mywebsite.com/super-secret-webhook",
-    "webhook_secret": "my-super-secret",
     "metadata": { "userId": "joe-mama" }
 })
 ```
@@ -94,32 +86,20 @@ The recommended way to be notified of incoming payments is by passing a 'webhook
 
 ```javascript
 {
-    id: '6e9d1f58c40',
-    status: 'complete',
-    amount: 1,
-    method: {
-        symbol: 'nano',
-        address: 'YOUR_ADDRESS',
-        name: 'Nano',
-        rate: '5.43262',
-        amount: '0.18621',
-        value: '1.01',
-        raw: false
+    "id": "cd645837",
+    "block": {
+        "hash": "C55ECECACE4D37F44514594AB7441147FE6C4F62C9D7750588DF32F452F94D61",
+        "account": "nano_3u5ejwy5f6ts6xbco5oregywp4w1hfs6k4ncjp4rw7fupd7gy6oqp5b4ypsn",
+        "amount": "646000000000000000000000000000"
     },
-    plan: {
-        price: 1,
-        name: '1 Month'
+    "plan": {
+        "title": "Tip",
+        "value": "0.646"
     },
-    block: {
-        type: 'pending',
-        amount: '0.18621',
-        hash: '6EE79D2BA2A8995179..',
-        source: 'THEIR_ADDRESS',
-        amount_raw: '1862100000000..'
+    "metadata": {
+        "userId": "joe-mama2"
     },
-    metadata: {
-        id: 'joe-mama'
-    }
+    "checkout": "https://api.nano.to/checkout/cd645837"
 }
 ```
 
