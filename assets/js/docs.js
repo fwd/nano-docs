@@ -87,7 +87,6 @@ var app = new Vue({
         var self = this
 
         if (localStorage.getItem('darkMode') == 'true' || localStorage.getItem('darkMode') !== 'false' && (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.className += 'dark-mode'
             localStorage.setItem('darkMode', true)
         }
 
@@ -150,7 +149,8 @@ var app = new Vue({
                 this.section(data.sections[0])
 
                 var found = data.sections.find(a => {
-                    return ('#' + self.slug(a.title).toLowerCase()) === hash.replace('/', '#')
+                    var url = a.file || a.url
+                    return ('#' + self.slug(a.title).toLowerCase()) === hash.replace('/', '#') || url.includes(`pages/${hash.replace('/', '').replace('.md', '') + '.md'}`)
                 })
 
                 if (found) {
@@ -181,15 +181,17 @@ var app = new Vue({
             return 
         },
         toggleDarkMode() {
-            if (this.darkMode) {
-                this.darkMode = false
+            if (localStorage.getItem('darkMode') == 'true') {
+                // this.darkMode = false
                 localStorage.setItem('darkMode', false)
-                window.location.reload()
+                document.documentElement.classList.remove('dark-mode');
             } else {
-                this.darkMode = true
+                // this.darkMode = true
+                // document.documentElement.classList.remove('dark-mode');
                 document.documentElement.className += ' dark-mode'
                 localStorage.setItem('darkMode', true)
             }
+            // window.location.reload()
         },
         generateLinkMarkup($contentElement) {
           const headings = [...$contentElement.querySelectorAll('h1, h2')]
