@@ -1,7 +1,6 @@
 {
 	"title": "Nano.to Docs",
 	"logo": "Nano.to",
-	"version": "v1.1",
 	"sections": [
 
 	    {
@@ -10,45 +9,44 @@
 	    },
 
 	    {
-		"title": "Username API",
-		"file": "/source/username"
+			"title": "Username API",
+			"file": "/source/username"
 	    },
 		
-            {
-		"title": "Checkout UI",
-		"url": "https://raw.githubusercontent.com/fwd/nano-to/master/readme.md"
-            },
+        {
+			"title": "Checkout UI",
+			"url": "https://raw.githubusercontent.com/fwd/nano-to/master/readme.md"
+        },
 
 	    {
-	      "title": "Nano Price API",
-	      "file": "/source/price"
+	    	"title": "Nano Price API",
+	    	"file": "/source/price"
 	    },
+
 	    {
-	      "title": "QR Code API",
-	      "file": "/source/qrcode"
+			"title": "QR Code API",
+			"file": "/source/qrcode"
 	    },
+	    
 	    {
-	      "title": "GPU PoW API",
-	      "file": "/source/pow"
+			"title": "GPU PoW API",
+			"file": "/source/pow"
 	    },
+	    
 	    {
-	      "title": "Twitch API",
-	      "file": "/source/iframe"
+			"title": "Twitch API",
+			"file": "/source/iframe"
 	    },
+	    
 	    {
-	      "title": "Setup Nano Node",
-	      "url": "/source/setup-node"
+			"title": "Setup Nano Node",
+			"url": "/source/setup-node"
 	    },
+
 	    {
-	      "title": "Nano.to Faucet",
-	      "file": "/source/faucet"
+			"title": "Nano.to Faucet",
+			"file": "/source/faucet"
 	    }
-
-	],
-	"menu": [
-		
-		{ "title": "Github", "href": "https://github.com/fwd/nano-docs" },
-		{ "title": "Twitter", "href": "https://twitter.com/nano2dev" }
 
 	],
 	"redirect": [
