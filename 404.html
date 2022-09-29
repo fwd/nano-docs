@@ -46,9 +46,13 @@ DON'T EDIT THIS FILE. USE CONFIG.JSON INSTEAD.
             <a v-if="logoIsImage" class="logo" title="" @click="reload()">
                 <img :src="config.logo" :style="`max-width: ${config.logoSize || config.size || '100'}px; vertical-align: ${config.logoAlign || config.align || 'middle'};`" alt="">
             </a>
-            <a v-if="!logoIsImage" class="logo" title="" @click="reload()">{{ config.logo }}</a>
-            <span v-if="config.version" class="text-2 ml-2">{{ config.version }}</span>
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav">
+            <div>
+              <a v-if="!logoIsImage" class="logo" title="" @click="reload()">
+              {{ config.logo }}
+              </a>
+              <span v-if="config.version">{{ config.version }}</span>
+            </div>
+            <button v-if="config.menu && config.menu.length" class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav">
               <span></span>
               <span></span>
               <span></span>
@@ -134,6 +138,7 @@ DON'T EDIT THIS FILE. USE CONFIG.JSON INSTEAD.
     <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)">
       <i class="fa fa-chevron-up"></i>
     </a>
+    <script>if (localStorage.getItem('darkMode') == 'true') document.documentElement.className += 'dark-mode'</script>
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/highlight.js/highlight.min.js"></script>
