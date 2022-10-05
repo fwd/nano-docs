@@ -30,7 +30,7 @@
 	    
 	    {
 			"title": "GPU PoW API",
-			"file": "/source/pow"
+			"file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/pow.md"
 	    },
 	    
 	    {
