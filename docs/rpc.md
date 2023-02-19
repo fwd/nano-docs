@@ -32,14 +32,22 @@ axios.post('https://rpc.nano.to', {
 **Response (JSON):**
 ```json
 {
-    "difficulty": "fffffffbc3b93c36",
-    "multiplier": "1.888817235874546",
-    "work": "157ad78255c73cae",
-    "frontier": "277FD6365DF608D601F18F464926B600B15F6CD705A90E2239F55E9F86E7B38F",
-    "remaining": 4,
-    "cached": false,
-    "duration": "0.201s",
-    "server": "Nano.to/GPU-4"
+    "block_count": "175503263",
+    "cemented_count": "175503240",
+    "unchecked_count": "158",
+    "account_count": "30998653",
+    "bandwidth_cap": "10485760",
+    "peer_count": "217",
+    "protocol_version": "19",
+    "uptime": "3941513",
+    "genesis_block": "991CF190094C00F0B68E2E5F75F6BEE95A2E0BD93CEAA4A6734DB9F19B728948",
+    "major_version": "24",
+    "minor_version": "0",
+    "patch_version": "0",
+    "pre_release_version": "0",
+    "maker": "0",
+    "timestamp": "1676833902409",
+    "active_difficulty": "fffffff800000000"
 }
 ```
 
