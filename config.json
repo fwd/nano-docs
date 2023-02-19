@@ -5,43 +5,52 @@
 
 	    {
 	      "title": "Get Started",
-	      "file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/welcome.md"
+	      "file": "/docs/welcome.md"
 	    },
 
 	    {
-			"title": "Usernames",
-			"file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/username.md"
+			"title": "Nano.to Username",
+			"file": "/docs/username.md"
 	    },
 		
         {
-			"title": "Checkouts",
-			"url": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/checkout.md"
+			"title": "Nano Checkout",
+			"url": "/docs/checkout.md"
         },
-	    
+	 
 	    {
-			"title": "Public PoW API",
-			"file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/pow.md"
+			"title": "Public RPC",
+			"url": "/docs/rpc.md"
 	    },
 	    
 	    {
-			"title": "Public RPC API",
-			"url": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/rpc.md"
+			"title": "Proof of Work",
+			"file": "/docs/pow.md"
 	    },
+
+	    {
+			"title": "NanoPay.js - Browser",
+			"file": "/docs/pow.md"
+	    }
+	    
 
 	],
 	"redirect": [
-		{ "path": "name", "file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/username-integration.md" },
-		{ "path": "setup", "file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/node.md" },
-		{ "path": "docker", "file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/node.md" },
-		{ "path": "node", "file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/node.md" },
-		{ "path": "pow", "file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/pow.md" },
-		{ "path": "checkouts", "file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/checkout.md" },
-		{ "path": "checkout", "file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/checkout.md" },
-		{ "path": "names", "file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/username.md" },
-		{ "path": "name", "file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/username.md" },
-		{ "path": "username", "file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/username.md" },
-		{ "path": "usernames", "file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/username.md" },
-		{ "path": "checkout", "file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/checkout.md" },
-		{ "path": "faucet", "file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/faucet.md" }
+		{ "path": "name", "file": "/docs/username-integration.md" },
+		{ "path": "setup", "file": "/docs/node.md" },
+		{ "path": "docker", "file": "/docs/node.md" },
+		{ "path": "node", "file": "/docs/node.md" },
+		{ "path": "pow", "file": "/docs/pow.md" },
+		{ "path": "pow-api", "file": "/docs/pow.md" },
+		{ "path": "rpc", "file": "/docs/rpc.md" },
+		{ "path": "rpc-api", "file": "/docs/rpc.md" },
+		{ "path": "checkouts", "file": "/docs/checkout.md" },
+		{ "path": "checkout", "file": "/docs/checkout.md" },
+		{ "path": "names", "file": "/docs/username.md" },
+		{ "path": "name", "file": "/docs/username.md" },
+		{ "path": "username", "file": "/docs/username.md" },
+		{ "path": "usernames", "file": "/docs/username.md" },
+		{ "path": "checkout", "file": "/docs/checkout.md" },
+		{ "path": "faucet", "file": "/docs/faucet.md" }
 	]
 }
