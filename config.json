@@ -9,12 +9,12 @@
 	    },
 
 	    {
-			"title": "Nano.to Username",
+			"title": "Username",
 			"file": "/docs/username.md"
 	    },
 		
         {
-			"title": "Nano Checkout",
+			"title": "Checkout",
 			"url": "/docs/checkout.md"
         },
 	 
@@ -29,7 +29,7 @@
 	    },
 
 	    {
-			"title": "NanoPay.js - Browser",
+			"title": "NanoPay.js",
 			"file": "/docs/pow.md"
 	    }
 	    
