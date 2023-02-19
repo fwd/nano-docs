@@ -22,17 +22,16 @@
 			"title": "Public RPC",
 			"url": "/docs/rpc.md"
 	    },
-	    
+
 	    {
-			"title": "Proof of Work",
-			"file": "/docs/pow.md"
+			"title": "Public PoW",
+			"url": "/docs/pow.md"
 	    },
 
 	    {
 			"title": "NanoPay.js",
 			"file": "/docs/pow.md"
 	    }
-	    
 
 	],
 	"redirect": [

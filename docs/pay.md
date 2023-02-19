@@ -1,24 +1,31 @@
-# Nano.to PoW
+# NanoPay.js
 
-Distributed GPU service for the Nano blockchain.
+Feature-packed non-custodial Nano browser library. 
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-**Limit:** 10 Free / Minute or [Dedicated GPU](https://pow.nano.to).
+Supported Actions: 
+
+- account_info
+- pending
+- account_history
+- receivable
+- process
+- work_generate
+- work_validate
+- telemetry
+- representatives_online
+- account_key
+- nano\_to\_raw
+- raw\_to\_nano
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
 ## Basic Usage
 
-```python
-https://pow.nano.to/:HASH
-```
-
-**POST request:**
-
-```javascript
-axios.post('https://pow.nano.to', { 
-    hash: 'HASH'
+```js
+axios.post('https://rpc.nano.to', { 
+    action: "telemetry"
 }).then((res) => {
     // console.log(res.data)
 })
@@ -40,40 +47,14 @@ axios.post('https://pow.nano.to', {
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-**Usage:**
-```
-https://pow.nano.to/:HASH?key=API_KEY
-```
+## Rate Limit
 
-**POST request:**
-```javascript
-axios.post('https://pow.nano.to', { 
-    hash: 'HASH',
-    key: 'API_KEY'
-}).then((res) => {
-    // console.log(res.data)
-})
-```
-
-![line](https://github.com/fwd/n2/raw/master/.github/line.png)
-
-## CURL Example
-
-```
-curl https://pow.nano.to/:HASH | jq '.work'
-```
-
-![line](https://github.com/fwd/n2/raw/master/.github/line.png)
-
-## Difficulty
-
-Proof of work is  ```fffffff800000000``` (or higher). Good for any Nano block.
+- 60 / Per Minute (1 / Second)
+- Unlimited [Prepaid RPC](https://pow.nano.to) @ Ӿ 0.001/CALL
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
 ## Errors Happen
-
-**Precache** work by requesting it, and storing it, before you need it.
 
 - **Error 4XX**: Your fault.
 - **Error 5XX**: Our fault.
@@ -83,7 +64,7 @@ Proof of work is  ```fffffff800000000``` (or higher). Good for any Nano block.
 ```js
 { 
     "error": 400,  
-    "message": "Missing Hash.",
+    "message": "Bad action provided.",
     "docs": 'https://docs.nano.to/pow'
 }
 ```
@@ -97,12 +78,12 @@ Proof of work is  ```fffffff800000000``` (or higher). Good for any Nano block.
 }
 ```
 
-**Code 500: No GPU available:**
+**Code 500: No Node available:**
 
 ```js
 {
     "error": 500, 
-    "message": "No GPU available. Try again in a few seconds."
+    "message": "No Node available. Try again in a few seconds."
 }
 ```
 

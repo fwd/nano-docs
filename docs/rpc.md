@@ -1,23 +1,21 @@
-# Nano.to RPC API
+# Public RPC
 
-Get access to a public Nano node, without having to host one yourself. 
+Access to a public Nano node, without paying to host a node. 
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-Supported Actions: 
-
-- account_info
+**Supported Actions:**
 - pending
-- account_history
-- receivable
 - process
-- work_generate
-- work_validate
 - telemetry
-- representatives_online
+- receivable
 - account_key
+- account_info
 - nano\_to\_raw
 - raw\_to\_nano
+- [work_generate](/pow)
+- work_validate
+- account_history
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 

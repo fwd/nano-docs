@@ -1,16 +1,14 @@
 ## Getting Started
 
-Nano.to Usernames fund Nano.to and are publicly versioned controlled on Github. 
-
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
 ## Register 
 
-Register a Usernames by visiting https://nano.to and searching for desired name. 
+Visit [nano.to](https://nano.to) and check for your desired username.
 
 - Letters, numbers, and up to 30 characters.
-- Multiple Usernames w/ same Address is allowed.
-- Usernames bring far too many benefits, to list.
+- Multiple Usernames with the same address are allowed.
+- Usernames bring too many benefits, to list.
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
@@ -22,7 +20,7 @@ You can extend registration at anytime.
 https://nano.to/:USERNAME/renew
 ```
 
-> Only original address may add time. If you need assistance, contact: [support@nano.to](mailto:support@nano.to)
+> Only original address may add time. If you need assistance, contact: [support@nano.to](mailto:support@nano.to) - we handle things on github.
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
@@ -32,15 +30,15 @@ Usernames have **10 day** after expiration, regardless of duration leased. Only 
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-## Dataset
+## Username Dataset
 
-We encourage other to add support for [Nano.to Usernames](https://nano.to/known.json) on their apps. This makes your Nano address "findable by Username" on a growing list of applications, games and sercices. 
+We encourage developers to add [Nano.to Usernames](https://nano.to/known.json) to apps. 
 
 ```pthon
 https://nano.to/known.json
 ```
 
-> If privacy is your thing, don't get a Username for a particular address, and avoid the publicity.
+> If you want privacy, don't get a Username for a particular address.
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
