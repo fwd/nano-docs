@@ -9,34 +9,24 @@
 	    },
 
 	    {
-			"title": "Username API",
+			"title": "Usernames",
 			"file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/username.md"
 	    },
 		
-        {
-			"title": "Checkout UI",
-			"url": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/checkout.md"
-        },
-
-	    {
-	    	"title": "Nano Price API",
-	    	"file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/price.md"
-	    },
+		{
+				"title": "Checkouts",
+				"url": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/checkout.md"
+		},
 	    
 	    {
-			"title": "GPU PoW API",
+			"title": "Nano.to PoW API",
 			"file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/pow.md"
 	    },
 	    
 	    {
-			"title": "Setup Nano Node",
-			"url": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/node.md"
+			"title": "Public RPC API",
+			"url": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/rpc.md"
 	    },
-
-	    {
-			"title": "Nano.to Faucet",
-			"file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/faucet.md"
-	    }
 
 	],
 	"redirect": [
