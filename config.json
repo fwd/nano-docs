@@ -9,12 +9,12 @@
 	    },
 
 	    {
-			"title": "Username",
+			"title": "Usernames",
 			"file": "/docs/username.md"
 	    },
 		
         {
-			"title": "Checkout",
+			"title": "Checkout UI",
 			"url": "/docs/checkout.md"
         },
 	 
