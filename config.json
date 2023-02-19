@@ -13,13 +13,13 @@
 			"file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/username.md"
 	    },
 		
-		{
-				"title": "Checkouts",
-				"url": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/checkout.md"
-		},
+        {
+			"title": "Checkouts",
+			"url": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/checkout.md"
+        },
 	    
 	    {
-			"title": "Nano.to PoW API",
+			"title": "Public PoW API",
 			"file": "https://raw.githubusercontent.com/fwd/nano-to/master/docs/pow.md"
 	    },
 	    
