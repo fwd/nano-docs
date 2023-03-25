@@ -1,8 +1,8 @@
-## Getting Started 
+## Nano.to Checkout
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-Non-custodial Checkout UI publicy hosted on Github. 
+Non-custodial Checkout UI publicly hosted on Github. 
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
