@@ -14,23 +14,18 @@
 	    },
 		
         {
-			"title": "Checkout UI",
+			"title": "Checkout",
 			"url": "/docs/checkout.md"
         },
 	 
 	    {
-			"title": "Public RPC",
+			"title": "Node RPC",
 			"url": "/docs/rpc.md"
 	    },
 
 	    {
-			"title": "Public PoW",
+			"title": "PoW RPC",
 			"url": "/docs/pow.md"
-	    },
-
-	    {
-			"title": "NanoPay.js",
-			"file": "/docs/pow.md"
 	    }
 
 	],
