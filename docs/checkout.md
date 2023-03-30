@@ -94,7 +94,7 @@ axios.post('https://api.nano.to', {
   "action": "checkout",
   "title": "Hello World",
   "address": "@faucet",
-  "random": true,
+  "random": "true",
   "cancel_url": "https://example.com/cancel",
   "success_url": "https://example.com/success",
   "success_message": "{{title}} Units purchased for {{value}} NANO. Thanks, come again.",
@@ -111,7 +111,7 @@ axios.post('https://api.nano.to', {
   ],
   "webhook_url": "https://example/webhook/secret",
   "metadata": {
-    "secret": "joe-mama"
+    "secret": "joe-doe"
   }
 }).then((res) => {
   console.log(res.data);
@@ -124,7 +124,7 @@ axios.post('https://api.nano.to', {
 {
     "id": "CHECKOUT_ID",
     "browser": "https://nano.to/CHECKOUT_ID",
-    "check": "https://api.nano.to/check/CHECKOUT_ID"
+    "check": "https://api.nano.to/check/CHECKOUT_ID",
     "json": "https://api.nano.to/checkout/CHECKOUT_ID",
 }
 ```
@@ -146,7 +146,7 @@ axios.post('https://api.nano.to', {
         "value_raw": "1062390000000000000000000000000"
     },
     "metadata": {
-        "secret": "joe-mama"
+        "secret": "joe-doe"
     },
     "checkout": "https://api.nano.to/checkout/CHECKOUT_ID"
 }
