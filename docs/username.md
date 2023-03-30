@@ -8,9 +8,22 @@ Visit [nano.to](https://nano.to) and check for your desired username.
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
+## Register via API
+
+```
+curl -d '{
+  "action": "lease",
+  "username": "AwesomeNano"
+}' \
+-H "Content-Type: application/json" \
+"https://api.nano.to"
+```
+
+See [Developer Page](https://api.nano.to) for full API docs.
+
 ## Renew Any Time
 
-You can extend registration at anytime.
+You can extend registration at anytime. 
 
 ```python
 https://nano.to/:USERNAME/renew
