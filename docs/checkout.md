@@ -159,3 +159,14 @@ axios.post('https://api.nano.to', {
 - @nano2dev on [Nano's Discord](https://discord.com/invite/RNAE2R9) 
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+
+
+## License
+
+**Limited Commercial Use:**
+
+- ✅ Personal & Open Source
+- ✅ Nano.to Usernames / Checkout UI is a means to an end.
+- ❌ Nano.to Usernames / Checkout UI is re-branded, monetized.
+
+Contact [@nano2dev](mailto:support@nano.to) for Usage/Licensing questions.
