@@ -107,62 +107,71 @@ https://api.nano.to
 **POST Example:**
 
 ```js
-const http = require('axios')
+const axios = require('axios');
 
-http.post('https://api.nano.to', {
-  address: '@moon', // or address
-  webhook_url: 'https://example.com/secret/endpoint',
-  success_url: 'https://example.com/success?hash={{hash}}',
-  metadata: { userId: 'joe-mama', password: "Slava Ukraini" },
+axios.post('https://api.nano.to', {
+  "action": "checkout",
+  "title": "Hello World",
+  "address": "@faucet",
+  "random": true,
+  "cancel_url": "https://example.com/cancel",
+  "success_url": "https://example.com/success",
+  "success_message": "{{title}} Units purchased for {{value}} NANO. Thanks, come again.",
+  "plans": [
+    {
+      "title": "100 Units",
+      "value": 100
+    },
+    {
+      "title": "1,000,000 Units",
+      "value": 1000000,
+      "discount": 10
+    }
+  ],
+  "webhook_url": "https://example/webhook/secret",
+  "metadata": {
+    "secret": "joe-mama"
+  }
 }).then((res) => {
-  console.log( res.data )
-})
+  console.log(res.data);
+});
 ```
-
-**Parameters:**
-
-- **webhook_url** (string) : URL to receive succesful payment metadata.
-- **metadata** (object) : Object with any kind of JSON data.
-
 
 **Response:**
 
 ```json
 {
-  "id": "f745ffa3",
-  "browser": "https://nano.to/id_f745ffa3",
-  "json": "https://api.nano.to/checkout/f745ffa3",
-  "check": "https://api.nano.to/checkout/f745ffa3/check"
+    "id": "CHECKOUT_ID",
+    "browser": "https://nano.to/CHECKOUT_ID",
+    "check": "https://api.nano.to/check/CHECKOUT_ID"
+    "json": "https://api.nano.to/checkout/CHECKOUT_ID",
 }
 ```
 
-> Perform a GET request on ```check``` URL to confirm payment, or redirect user to ```browser``` for included UI.
- 
-**Webhook POST Body:**
+**Private Webhook:**
 
 ```json
 {
-  "id": "CHECKOUT_ID",
-  "block": {
-    "hash": "PAYMENT_BLOCK_HASH",
-    "account": "SENDER_ADDRESS",
-    "amount": "0.0109913",
-    "amount_raw": "10991300000000000000000000000"
-  },
-  "plan": {
-    "title": "Default",
-    "value": "0.0109913",
-    "value_raw": "10991300000000000000000000000"
-  },
-  "metadata": {
-    "userId": "joe-mama",
-    "password": "Slava Ukraini"
-  },
-  "checkout": "https://api.nano.to/checkout/CHECKOUT_ID"
+    "block": {
+        "hash": "786DD3F82BFEAF80A668EB87498531DE114F1A9BB7AF30558B4136AB69F5133E",
+        "account": "PAYER_ADDRESS",
+        "amount": "1.06239",
+        "amount_raw": "1062390000000000000000000000000"
+    },
+    "plan": {
+        "title": "100 Units",
+        "value": "1.06239",
+        "discount": false,
+        "value_raw": "1062390000000000000000000000000"
+    },
+    "metadata": {
+        "secret": "joe-mama"
+    },
+    "checkout": "https://api.nano.to/checkout/CHECKOUT_ID"
 }
 ```
 
-## Support
+## Nano.to Support
 
 - Email: support@nano.to
 - Twitter: [@nano2dev](https://twitter.com/nano2dev)
