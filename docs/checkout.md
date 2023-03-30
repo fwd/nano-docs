@@ -2,7 +2,7 @@
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-Non-custodial Checkout UI publicly hosted on Github. 
+Non-custodial Checkout API hosted on Github. 
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
