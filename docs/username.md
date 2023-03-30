@@ -53,6 +53,6 @@ https://nano.to/known.json
 
 - ✅ Personal & Open Source
 - ✅ Nano.to Usernames / Checkout UI is a means to an end.
-- ❌ Nano.to Usernames / Checkout UI is re-branded, monetized. Or *worse*. Made Custodial.
+- ❌ Nano.to Usernames / Checkout UI is re-branded, monetized.
 
 Contact [@nano2dev](mailto:support@nano.to) for Usage/Licensing questions.
