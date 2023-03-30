@@ -4,6 +4,8 @@
 
 Non-custodial Checkout API hosted on Github. 
 
+> Checks ```pending``` and ```history``` of any given Nano address and alerts applications and infrastructure. 
+
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
 **Nano Address:**
@@ -18,10 +20,6 @@ https://nano.to/Fosse
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-
-### How Does it Work
-
-Checks the ```pending``` and ```history``` of your Nano address and alerts your applications and infrastructure. 
 
 ### Single Panel
 
