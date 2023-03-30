@@ -92,18 +92,6 @@ https://nano.to/@Basedlemahieu?goal=100:Funding Goal
 
 ### Checkout via POST
 
-**Nano.to Checkout UI** is hosted on Github, and does not require a server. 
-
-However, when you want to create more complex Checkouts, Nano.to has a secure API for this case.
-
-**Base URL:**
-
-```
-https://api.nano.to
-```
-
-**POST Example:**
-
 ```js
 const axios = require('axios');
 
@@ -146,7 +134,7 @@ axios.post('https://api.nano.to', {
 }
 ```
 
-**Private Webhook:**
+**Webhook:**
 
 ```json
 {
