@@ -1,23 +1,27 @@
-# In-App Username API
- 
-Offer Nano 'search and pay' in your apps. Receive 20% from Username purchases.
-
-## Base URL
+# Username API
 
 ```
 https://api.nano.to/:USERNAME/lease
 ```
 
-**NodeJS Example:**
+```shell
+curl -d '{
+  "action": "lease",
+  "username": "AwesomeNano"
+}' \
+-H "Content-Type: application/json" \
+"https://api.nano.to"
+```
 
 ```js
-// npm install axios
+const axios = require('axios');
 
-const axios = require('axios')
-
-axios.get('https://api.nano.to/fosse72/lease').then((res) => {
-    console.log(res.data)
-})
+axios.post('https://api.nano.to', {
+  "action": "lease",
+  "username": "AwesomeNano"
+}).then((res) => {
+  console.log(res.data);
+});
 ```
 
 **Available:**
@@ -30,7 +34,6 @@ axios.get('https://api.nano.to/fosse72/lease').then((res) => {
   check_url: 'https://api.nano.to/check/CHECKOUT_ID',
   lease: 'USERNAME',
   available: true,
-  history: 10,
   plans: [
     {
       value: '0.105112',
@@ -61,15 +64,7 @@ axios.get('https://api.nano.to/fosse72/lease').then((res) => {
 }
 ```
 
-**Unavailable:**
-
-```js
-{ 
-  available: false
-}
-```
-
-## Send Funds & Check Payment URL
+## Pay & Check Payment URL
 
 Once you've sent funds for desired plan, do a GET request on the ```check_url``` in the response, to confirm payment. 
 
@@ -103,7 +98,7 @@ axios.get('https://api.nano.to/check/CHECKOUT_ID').then((res) => {
 }
 ```
 
-**Payment Not Found:**
+**Not Found:**
 
 ```js
 { 
@@ -112,7 +107,7 @@ axios.get('https://api.nano.to/check/CHECKOUT_ID').then((res) => {
 }
 ```
 
-## Dataset API
+## Public Dataset
 
 ```
 https://nano.to/known.json
@@ -145,7 +140,54 @@ axios.get('https://nano.to/known.json').then((res) => {
 ]
 ```
 
-> Note: It may take up to 5 minutes for dataset to updated globally, when Usernames are purchased.
+```
+GET: https://nano.to?nostr=esteban,atxmj
+```
+
+**Response:**
+
+```
+[
+    {
+      "status": "active",
+      "github": "nano2dev",
+      "name": "esteban",
+      "address": "nano_1m747htgqw5f...hmz1zaqoj1puj7h96oj",
+      "created": "September 13, 2021",
+      "expires": "October 7, 2024",
+      "created_unix": 1631584140,
+      "expires_unix": 1728273600
+    },
+    {
+      "name": "atxmj",
+      "address": "nano_1dctqbmqxf....91aurmuho48jx3c",
+      "created": "November 29, 2021",
+      "expires": "November 29, 2023",
+      "created_unix": 1638200760,
+      "expires_unix": 1701234000
+    }
+]
+```
+
+```
+GET: https://nano.to?search=nano_1bank1q3q7x8rim...r51qsdkm8g45
+```
+
+**Response:**
+
+```
+[
+  {
+    "name": "bank",
+    "status": "active",
+    "address": "nano_1bank1q3q7x8rim...r51qsdkm8g45",
+    "created": "October 10, 2022",
+    "expires": "October 14, 2023",
+    "created_unix": 1665418910,
+    "expires_unix": 1697332800
+  }
+]
+```
 
 ## Username Renewals
 
@@ -182,11 +224,7 @@ axios.get('https://api.nano.to/USERNAME/renew').then((res) => {
 
 Every weekend, certain plans cost 50% less. Nano.to API automatically updates pricing. No code changes required on your behalf.
 
-## Referral Payments
-
-Coming soon. Earn up to 20% from any Username sale done through your app. 
-
-## Referral Beta, Questions or Comments 
+## Nano.to Support
 
 - Email: support@nano.to
 - Twitter: [@nano2dev](https://twitter.com/nano2dev)
