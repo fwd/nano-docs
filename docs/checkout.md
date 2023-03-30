@@ -2,9 +2,7 @@
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-Non-custodial Checkout API hosted on Github. 
-
-> Checks ```pending``` and ```history``` of any given Nano address and alerts applications and infrastructure. 
+Non-custodial Checkout API hosted on Github. Alerts your applications and/or infrastructure when configured. 
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
