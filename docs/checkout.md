@@ -22,7 +22,7 @@ https://nano.to/Fosse
 ### Single Panel
 
 ```python
-https://nano.to/@Fosse?amount=50&random=true
+https://nano.to/@Fosse?amount=50
 ```
 
 <img src="https://github.com/fwd/nano/raw/master/dist/images/single-ui.png" alt="Single Panel UI" />
@@ -62,7 +62,6 @@ https://nano.to/@Keeri
 - **selected** (string) : Title of Plan to select by default.
 - **goal** (string) : Show a funding meter based off balance.
 - **image** (image/url) : Display Image. Image URL.
-- **random** (boolean) : Add random decimal to amount. Ex + 0.00XXXX
 - **color** (string) : Text color. Ex red:blue
 - **background** (string) : Background color. Ex white:gray
 - **highlight** (string) : Box backgrounds value. Ex blue:red
@@ -70,13 +69,11 @@ https://nano.to/@Keeri
 - **logo** (image/url) : Replace QR Code logo. Image URL.
 - **cancel** (string) : Redirect URL when pressed 'Cancel'
 - **redirect** (string) : Redirect URL on success.
-
-**Coming Soon:**
 - **currency** (string) : ISO Currency Symbol. Ex JPY
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-### Checkout Funding UI
+### Funding UI
 
 Easily show a meter of progress for any Nano fundraiser. 
 
@@ -88,7 +85,7 @@ https://nano.to/@Basedlemahieu?goal=100:Funding Goal
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-### Checkout via POST
+### Checkout with POST
 
 ```js
 const axios = require('axios');
