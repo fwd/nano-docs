@@ -1,8 +1,4 @@
-## Getting Started
-
-![line](https://github.com/fwd/n2/raw/master/.github/line.png)
-
-## Register 
+## Nano.to Usernames
 
 Visit [nano.to](https://nano.to) and check for your desired username.
 
@@ -12,7 +8,7 @@ Visit [nano.to](https://nano.to) and check for your desired username.
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-## Renewal 
+## Renew Any Time
 
 You can extend registration at anytime.
 
@@ -42,7 +38,7 @@ https://nano.to/known.json
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-## Support
+## Nano.to Support
 
 - Email: support@nano.to
 - Twitter: [@nano2dev](https://twitter.com/nano2dev)
@@ -56,7 +52,7 @@ https://nano.to/known.json
 **Limited Commercial Use:**
 
 - ✅ Personal & Open Source
-- ✅ Commercial use where Nano.to Usernames and/or Checkout is **NOT** the end-product.
-- ❌ Commercial use where Nano.to Usernames and/or Checkout **IS** the end-product.
+- ✅ Nano.to Usernames / Checkout UI is a means to an end.
+- ❌ Nano.to Usernames / Checkout UI is re-branded, monetized. Or *worse*. Made Custodial.
 
 Contact [@nano2dev](mailto:support@nano.to) for Usage/Licensing questions.
