@@ -189,7 +189,7 @@ GET: https://nano.to?search=nano_1bank1q3q7x8rim...r51qsdkm8g45
 ]
 ```
 
-## Username Renewals
+## Renewal API
 
 Renewals are just as easy. Lease can be extended at any time, but only by original address.
 
