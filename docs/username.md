@@ -3,23 +3,27 @@
 Visit [nano.to](https://nano.to) and check for your desired username.
 
 - Letters, numbers, and up to 30 characters.
-- Multiple Usernames with the same address are allowed.
+- Multiple Usernames with same address are OK.
 - Usernames bring too many benefits, to list.
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-## Register via API
+## Register Online
+
+- [Nano.to](https://nano.to)
+
+## Register via RPC
 
 ```
 curl -d '{
-  "action": "lease",
-  "username": "AwesomeNano"
+  "action": "get_name",
+  "name": "NanoBull"
 }' \
 -H "Content-Type: application/json" \
-"https://api.nano.to"
+"https://rpc.nano.to"
 ```
 
-See [Developer Page](https://api.nano.to) for full API docs.
+See [Developer Page](https://rpc.nano.to) for full API docs.
 
 ## Renew Any Time
 
