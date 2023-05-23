@@ -63,13 +63,13 @@ https://nano.to/known.json
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
+## Usage License
 
-## License
-
-**Limited Commercial Use:**
+**Limited Commercial**
 
 - ✅ Personal & Open Source
-- ✅ Nano.to Usernames / Checkout UI is a means to an end.
-- ❌ Nano.to Usernames / Checkout UI is re-branded, monetized.
+- ✅ Commercial use where Nano.to Usernames / Checkout is a means.
+- ❌ Commercial use where Nano.to Usernames / Checkout is re-sold.
 
-Contact [@nano2dev](mailto:support@nano.to) for Usage/Licensing questions.
+Contact [support@nano.to](mailto:support@nano.to) for questions.
+
