@@ -23,7 +23,7 @@ curl -d '{
 "https://rpc.nano.to"
 ```
 
-See [Developer Page](https://rpc.nano.to) for full API docs.
+See [Developer Page](https://rpc.nano.to/#get_name) for full API docs.
 
 ## Renew Any Time
 
