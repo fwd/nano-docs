@@ -1,17 +1,13 @@
-## Nano.to Checkout
+## Checkout Docs
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-Non-custodial Checkout API hosted on Github. Alerts your applications and/or infrastructure when configured. 
-
-![line](https://github.com/fwd/n2/raw/master/.github/line.png)
-
-**Nano Address:**
+**Basic Usage:**
 ```python
 https://nano.to/:ADDRESS
 ```
 
-**Nano.to Username:**
+**Username Support:**
 ```python
 https://nano.to/Fosse
 ```
@@ -42,8 +38,8 @@ https://nano.to/@Moon?plans=Tip:0.133,Small:1,Medium:10,Large:20,Gigantic:100
 ## Customize Colors
 
 ```python
-https://nano.to/@Keeri
-?background=$0057b7:$ffd700
+https://nano.to/Moon
+?background=$0057b7:$ffd700 // Slava
 &color=$FFF:$000
 &highlight=white
 &vanity=$0057b7
@@ -57,7 +53,7 @@ https://nano.to/@Keeri
 
 ### Available Options
 
-- **amount** (number) : Single panel with price. No plans.
+- **amount**, **p** (number) : Single panel with price. No plans.
 - **plans** (string) : Plans separated by commas. Ex. Tip:30,Small:5
 - **selected** (string) : Title of Plan to select by default.
 - **goal** (string) : Show a funding meter based off balance.
@@ -69,7 +65,7 @@ https://nano.to/@Keeri
 - **logo** (image/url) : Replace QR Code logo. Image URL.
 - **cancel** (string) : Redirect URL when pressed 'Cancel'
 - **redirect** (string) : Redirect URL on success.
-- **currency** (string) : ISO Currency Symbol. Ex JPY
+- **currency**, **c** (string) : ISO Currency Symbol. Ex JPY
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
@@ -84,6 +80,8 @@ https://nano.to/@Basedlemahieu?goal=100:Funding Goal
 <img src="https://github.com/fwd/nano/raw/master/dist/images/funding.png" alt="Single Panel UI" />
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+
+> Set Username defaults by cloning Nano.to on Github and set them in known.json.
 
 ### Checkout with POST
 
