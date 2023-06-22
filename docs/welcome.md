@@ -7,13 +7,13 @@ We're on a mission to accelerate the use of Nano around the world.
 ## **Quick Links**
 
 - [**Live Nano Node**](https://rpc.nano.to)
-  - [**Offline.js**](https://github.com/fwd/nano-offline#offlinejs) - Non-custodial JS Nano Wallet.
-  - [**Paywall.js**](https://github.com/fwd/nano-wall#nanowalljs) - Non-custodial Nano Paywall
-  - [**Goal.js**](https://github.com/fwd/nano-goal#nanogoaljs) - Visualize Nano Funding
-- [**Nano.to RPC-2**](https://api.nano.to) 
+  - [**@Nano/Wallet**](https://github.com/fwd/nano-offline#offlinejs) - Non-custodial JS Nano Wallet.
+  - [**HTMLPaywall.js**](https://github.com/fwd/nano-wall#nanowalljs) - Non-custodial Nano Paywall
+  - [**GoalUI.js**](https://github.com/fwd/nano-goal#nanogoaljs) - Visualize Nano Funding
+- [**Hosted on Github**](https://api.nano.to) 
   - [**Usernames**](https://docs.nano.to/usernames#getting-started) 
   - [**Checkout UI**](https://docs.nano.to/checkout#getting-started) 
-- [**NanoDocker**](https://github.com/fwd/nano-docker) - 1 Click Live Nano Node
+- [**Ubuntu**](https://github.com/fwd/nano-docker) - **NanoDocker** 1 Click Live Nano Node
 
 ## About Nano.to
 
