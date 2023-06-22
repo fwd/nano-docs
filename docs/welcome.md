@@ -30,6 +30,7 @@ Before you can use Nano and Nano.to, you need a Nano Wallet.
 - [Apple App Store](https://itunes.apple.com/us/app/natrium/id1451425707?ls=1&mt=8)
 - [Google Play Store](https://play.google.com/store/apps/details?id=co.banano.natriumwallet)
 - [In-Browser Wallet](https://nault.cc/)
+- [Nault.Pro by Nano2Dev](https://nault.pro/) - A wallet for serious individuals. 
 - [More Wallets](https://hub.nano.org/i/wallets/2)
 
 ## Nano.to Support
