@@ -21,7 +21,7 @@ We're on a mission to accelerate the use of Nano around the world.
 
 **Nano.to** is a non-custodial Username and Checkout service hosted on Github. 
 
-Our non-custodial software make Nano development a delight.
+Our non-custodial software solutions make Nano development a delight.
 
 ## Nano Wallets
 
