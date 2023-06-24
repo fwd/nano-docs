@@ -10,8 +10,7 @@ We're on a mission to accelerate the use of Nano around the world.
   - [**@Nano/Wallet**](https://github.com/fwd/nano-offline#offlinejs) - Non-custodial JS Nano Wallet.
   - [**HTMLPaywall.js**](https://github.com/fwd/nano-wall#nanowalljs) - Non-custodial Nano Paywall
   - [**GoalUI.js**](https://github.com/fwd/nano-goal#nanogoaljs) - Visualize Nano Funding
-- [**Hosted on Github**](https://api.nano.to) 
-  - [**Usernames**](https://docs.nano.to/usernames#getting-started) 
+  - [**Nano.to Usernames**](https://docs.nano.to/usernames#getting-started) 
   - [**Checkout UI**](https://docs.nano.to/checkout#getting-started) 
 - [**Ubuntu**](https://github.com/fwd/nano-docker) - **NanoDocker** 1 Click Live Nano Node
 
