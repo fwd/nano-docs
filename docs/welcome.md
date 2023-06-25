@@ -28,4 +28,4 @@ Before you can use Nano and Nano.to, you need a Nano Wallet.
 
 - Email: support@nano.to
 - Twitter: [twitter.com/@nano2dev](https://twitter.com/nano2dev)
-- Mastodon: [xno.social/@nano2dev](https://twitter.com/nano2dev)
+- Mastodon: [xno.social/@nano2dev](https://xno.social/nano2dev)
