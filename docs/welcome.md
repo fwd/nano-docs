@@ -6,13 +6,8 @@ We're on a mission to accelerate the use of Nano around the world.
 
 ## **Quick Links**
 
-- [**Live Nano Node**](https://rpc.nano.to)
-  - [**@Nano/Wallet**](https://github.com/fwd/nano-offline#offlinejs) - Non-custodial JS Nano Wallet.
-  - [**HTMLPaywall.js**](https://github.com/fwd/nano-wall#nanowalljs) - Non-custodial Nano Paywall
-  - [**GoalUI.js**](https://github.com/fwd/nano-goal#nanogoaljs) - Visualize Nano Funding
-  - [**Nano.to Usernames**](https://docs.nano.to/usernames#getting-started) 
-  - [**Checkout UI**](https://docs.nano.to/checkout#getting-started) 
-- [**Ubuntu**](https://github.com/fwd/nano-docker) - **NanoDocker** 1 Click Live Nano Node
+  - [**Usernames**](/usernames) - Non-custodial JS Nano Wallet.
+  - [**Checkout UI**](/checkout) - Non-custodial Nano Paywall
 
 ## About Nano.to
 
@@ -20,19 +15,17 @@ We're on a mission to accelerate the use of Nano around the world.
 
 **Nano.to** is a non-custodial Username and Checkout service hosted on Github. 
 
-Our non-custodial software solutions make Nano development a delight.
-
 ## Nano Wallets
 
 Before you can use Nano and Nano.to, you need a Nano Wallet. 
 
 - [Apple App Store](https://itunes.apple.com/us/app/natrium/id1451425707?ls=1&mt=8)
 - [Google Play Store](https://play.google.com/store/apps/details?id=co.banano.natriumwallet)
-- [In-Browser Wallet](https://nault.cc/)
-- [Nault.Pro by Nano2Dev](https://nault.pro/) - A wallet for serious individuals. 
+- [In-Browser Wallet](https://nault.pro/) 
 - [More Wallets](https://hub.nano.org/i/wallets/2)
 
 ## Nano.to Support
 
 - Email: support@nano.to
-- Twitter: [@nano2dev](https://twitter.com/nano2dev)
+- Twitter: [twitter.com/@nano2dev](https://twitter.com/nano2dev)
+- Mastodon: [xno.social/@nano2dev](https://twitter.com/nano2dev)
