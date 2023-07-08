@@ -2,12 +2,12 @@
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-**Basic Usage:**
+**Usage:**
 ```python
 https://nano.to/:ADDRESS
 ```
 
-**Username Support:**
+**Usernames:**
 ```python
 https://nano.to/Fosse
 ```
@@ -39,7 +39,7 @@ https://nano.to/@Moon?plans=Tip:0.133,Small:1,Medium:10,Large:20,Gigantic:100
 
 ```python
 https://nano.to/Moon
-?background=$0057b7:$ffd700 // Slava
+?background=$0057b7:$ffd700
 &color=$FFF:$000
 &highlight=white
 &vanity=$0057b7
@@ -53,7 +53,7 @@ https://nano.to/Moon
 
 ### Available Options
 
-- **amount**, **p** (number) : Single panel with price. No plans.
+- **amount**, **p** (number) : Single panel, No plans.
 - **plans** (string) : Plans separated by commas. Ex. Tip:30,Small:5
 - **selected** (string) : Title of Plan to select by default.
 - **goal** (string) : Show a funding meter based off balance.
