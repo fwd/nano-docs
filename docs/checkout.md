@@ -18,7 +18,7 @@ https://nano.to/Fosse
 ### Single Panel
 
 ```python
-https://nano.to/@Fosse?amount=50
+https://nano.to/Fosse?amount=50
 ```
 
 <img src="https://github.com/fwd/nano/raw/master/dist/images/single-ui.png" alt="Single Panel UI" />
@@ -28,7 +28,7 @@ https://nano.to/@Fosse?amount=50
 ### Double Panel
 
 ```python
-https://nano.to/@Moon?plans=Tip:0.133,Small:1,Medium:10,Large:20,Gigantic:100
+https://nano.to/Moon?plans=Tip:0.133,Small:1,Medium:10,Large:20,Gigantic:100
 ```
 
 <img src="https://github.com/fwd/nano/raw/master/dist/images/double-ui.png" alt="Single Panel UI" />
@@ -164,7 +164,7 @@ axios.post('https://api.nano.to', {
 **Limited Commercial Use:**
 
 - ✅ Personal & Open Source
-- ✅ Nano.to Usernames / Checkout UI is a means to an end.
-- ❌ Nano.to Usernames / Checkout UI is re-branded, monetized.
+- ✅ Commercial use where Nano.to Usernames / Checkout is a means.
+- ❌ Commercial use where Nano.to Usernames / Checkout is re-sold.
 
 Contact [@nano2dev](mailto:support@nano.to) for Usage/Licensing questions.
