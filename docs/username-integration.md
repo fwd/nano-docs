@@ -1,8 +1,10 @@
-# Username API
+# Nano.to Name API
 
-```
-https://api.nano.to/:USERNAME/lease
-```
+**Online UI:**
+
+- [https://nano.to](https://nano.to)
+
+**cURL**
 
 ```shell
 curl -d '{
@@ -12,6 +14,8 @@ curl -d '{
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
 ```
+
+**NodeJS**
 
 ```js
 const axios = require('axios');
@@ -64,7 +68,7 @@ axios.post('https://rpc.nano.to', {
 }
 ```
 
-## Pay & Check Payment URL
+## Pay & Check
 
 Once you've sent funds for desired plan, do a GET request on the ```check_url``` in the response, to confirm payment. 
 
@@ -189,7 +193,7 @@ GET: https://nano.to?search=nano_1bank1q3q7x8rim...r51qsdkm8g45
 ]
 ```
 
-## Renewal API
+# Renew Name
 
 Renewals are just as easy. Lease can be extended at any time, but only by original address.
 
@@ -220,6 +224,85 @@ axios.get('https://api.nano.to/USERNAME/renew').then((res) => {
 }
 ```
 
+# Update Name
+
+**Online UI:**
+
+- [https://nano.to](https://nano.to)
+
+**cURL**
+
+```shell
+curl -d '{
+  "action": "update_name",
+  "name": "NanoBull",
+  "title": "Software Developer",
+  "rep_address": "nano_3t6k35gi95xu6tergt6p...xtoncuohr3"
+}' \
+-H "Content-Type: application/json" \
+"https://rpc.nano.to"
+```
+
+**Response**
+
+```json
+{
+    "id": "f2b27af7",
+    "address": "nano_37y6iq8m1zx...9jrcwhkmoxpo61f4o",
+    "browser": "http://nano.to/pay_f2b27af7",
+    "check": "https://api.nano.to/check/f2b27af7",
+    "update_name": "@development",
+    "amount": "0.00884",
+    "created_at": 1691665245170
+}
+```
+
+**NodeJS Example**
+
+```js
+const axios = require('axios');
+
+axios.post('https://rpc.nano.to', {
+  "action": "update_name",
+  "name": "NanoBull",
+  "title": "Software Developer",
+  "rep_address": "nano_3t6k35gi95xu6tergt6p...xtoncuohr3"
+}).then((res) => {
+  console.log(res.data);
+});
+```
+
+**Browser Example**
+```
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+axios.post('https://rpc.nano.to', {
+  "action": "update_name",
+  "name": "NanoBull",
+  "title": "Software Developer",
+  "rep_address": "nano_3t6k35gi95xu6tergt6p...xtoncuohr3"
+}).then((res) => {
+  console.log(res.data)
+})
+</script>
+```
+
+**Optional:**
+
+- title
+- address
+- github
+- twitter
+- mastodon
+- location
+- website
+- for_sale
+- goal_ui
+- rep_address
+- donation_address
+- metadata
+
 ## Weekend Discount
 
 Every weekend, certain plans cost 50% less. Nano.to API automatically updates pricing. No code changes required on your behalf.
@@ -229,3 +312,13 @@ Every weekend, certain plans cost 50% less. Nano.to API automatically updates pr
 - Email: support@nano.to
 - Twitter: [@nano2dev](https://twitter.com/nano2dev)
 - @nano2dev on [Nano's Discord](https://discord.com/invite/RNAE2R9)
+
+
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+
+## Sponsor (DigitalOcean)
+
+<a align="center" target="_blank" href="https://m.do.co/c/f139acf4ddcb"><img style="object-fit: contain;
+    max-width: 100%;" src="https://github.com/fwd/fwd/raw/master/ads/digitalocean_new.png" width="970" /></a>
+
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
