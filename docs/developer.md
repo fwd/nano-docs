@@ -77,9 +77,7 @@ Once you've sent funds for desired plan, do a GET request on the ```check_url```
 
 const axios = require('axios')
 
-axios.get('https://api.nano.to/check/CHECKOUT_ID').then((res) => {
-    console.log(res.data)
-})
+const check = await axios.post('https://api.nano.to/check/CHECKOUT_ID')
 ```
 
 **Success:**
