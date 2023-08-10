@@ -37,27 +37,9 @@ Usernames have **10 day** after expiration, regardless of duration leased. Only 
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-## Username Dataset
+## Developer API
 
-We encourage developers to add [Nano.to Usernames](https://nano.to/known.json) to apps. 
-
-```pthon
-https://nano.to/known.json
-```
-
-> If you want privacy, don't get a Username for a particular address.
-
-![line](https://github.com/fwd/n2/raw/master/.github/line.png)
-
-We encourage developers to add [Nano.to Usernames](https://nano.to/known.json) to apps. 
-
-```pthon
-https://nano.to/known.json
-```
-
-> If you want privacy, don't get a Username for a particular address.
-
-![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+See our [Developer Page](/developer) for complete docs.
 
 ## Nano.to Support
 
