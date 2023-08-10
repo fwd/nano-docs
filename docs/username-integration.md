@@ -6,19 +6,19 @@ https://api.nano.to/:USERNAME/lease
 
 ```shell
 curl -d '{
-  "action": "lease",
-  "username": "AwesomeNano"
+  "action": "get_name",
+  "name": "AwesomeNano"
 }' \
 -H "Content-Type: application/json" \
-"https://api.nano.to"
+"https://rpc.nano.to"
 ```
 
 ```js
 const axios = require('axios');
 
-axios.post('https://api.nano.to', {
-  "action": "lease",
-  "username": "AwesomeNano"
+axios.post('https://rpc.nano.to', {
+  "action": "get_name",
+  "name": "AwesomeNano"
 }).then((res) => {
   console.log(res.data);
 });
