@@ -1,249 +1,177 @@
-# How to Setup a Nano Node
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-Installing and operating a Nano Node is easy with Docker.
+<img src="https://repository-images.githubusercontent.com/501828214/eb7fe2ec-792e-415c-9eaf-365cdfc87aac"/>
 
-## Before we start
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-Operating System: Ubuntu 18+
- 
-Minimum Recommended Specs: 
+## ❯ Quick
 
-- 4 vCPU
+```bash
+curl -sL "https://raw.github.com/fwd/nano-docker/master/install.sh" | sh
+```
+
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+
+## ❯ Custom
+
+```bash
+git clone https://github.com/fwd/nano-docker.git
+```
+
+```bash
+cd nano-docker && sudo ./setup.sh -f -t V25.1 -m -p 8080
+```
+
+#### Flags
+- **-f**: Fast Sync (Default: True)
+- **-t**: Node Version (Default: Latest)
+- **-m**: Node [Monitor](https://github.com/NanoTools/nanoNodeMonitor) (Default: False)
+- **-p**: Node Monitor Port (Default: 80)
+- **-q**: Console Output (Default: False)
+- **-s**: Print Private Key (Default: False)
+- **-v**: Alias of **-t**. Because life.
+
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+
+## Requirements
+
+**Software:**
+
+- Ubuntu/Debian ✅
+- Other Linux ❌ 
+- Mac ❌ (Run Ubuntu in VM)
+- Window ❌ (Run Ubuntu in VM)
+
+**Minimum Hardware:**
+
+- 4 CPU
 - 8GB RAM
-- 160GB SSD
-- 1TB Data
+- 320 GB SSD (Ledger: ~110GB 7Zip, Expandable attached storage recommended)
+- 1TB BANDWIDTH
 - ON 24/7
 
->We assume you know how to "Spin up" a cloud server. If not, read this [article](https://docs.digitalocean.com/products/droplets/how-to/create/) first. 
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-<a href="https://m.do.co/c/f139acf4ddcb" target="_blank">
+## Sponsor (DigitalOcean)
 
-> Free $100 in DigitalOcean Credits (3 months of Node hosting), with this Nano.to referral link.
+<a align="center" target="_blank" href="https://m.do.co/c/f139acf4ddcb"><img style="object-fit: contain;
+    max-width: 100%;" src="https://github.com/fwd/fwd/raw/master/ads/digitalocean_new.png" width="970" /></a>
 
-</a>
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-## 1. Prepare Server
+Optional Reading: [How To Setup a Server on Digital Ocean](https://docs.digitalocean.com/products/droplets/how-to/create/)
 
-SSH into the newly created Ubuntu server and prepare for install.
+---
 
-```
-sudo apt-get -y update
-sudo apt-get -y upgrade
-```
+### Understand The Magic 🪄 (Optional)
 
-Make sure you have these basic tools:
+#### 1. Install [Docker](https://docs.docker.com/engine/install/ubuntu)
 
-```
-sudo apt-get -y install curl p7zip-full
-```
+```bash
+# Install Basic Tools
+sudo apt-get -y install jq curl p7zip-full
 
-## 2. Install [Docker](https://docs.docker.com/engine/install/ubuntu/)
-
-
-Add Docker’s official GPG key:
-
-```
+# Add Docker PGP Key
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-```
 
-Set up official repository:
-
-```
+# Add Remote Docker Repo
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Run Update (Fetch latest packages)
+sudo apt-get update
+
+# Finally, Install Docker and Dependencies.
+sudo apt-get -y install jq docker-ce docker-ce-cli containerd.io
 ```
 
-Install Docker:
+#### 2. Install [Docker Compose](https://docs.docker.com/compose/)
 
-```
-sudo apt-get -y install docker-ce docker-ce-cli containerd.io
-```
-
-## 3. Install [Docker Composer](https://docs.docker.com/compose/install/)
-
-Download Official release:
-
-```
+```bash
+# Download latest script.
 curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-```
 
-Make it executable:
-
-```
+# Make it executable
 sudo chmod +x /usr/local/bin/docker-compose
-```
 
-Make it global:
-
-```
+# Make it a global
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 ```
 
-## 4. Install [Nano Node Docker](https://github.com/lephleg/nano-node-docker)
+#### 3. Install This Repo
 
-Clone the Github:
+```bash
+# Move to HOME, and clone repo
+cd ~ && git clone https://github.com/fwd/nano-docker.git
 
-```
-cd ~ && git clone https://github.com/lephleg/nano-node-docker.git
-```
+# For "Docker" reasons. We need to move in the cloned dir.
+cd ~/nano-docker
 
-Move into the directory:
-
-```
-cd nano-node-docker
-```
-
-Run setup with flags:
-
-```
-sudo ./setup.sh -f -s -t V23.1
+# Leave -v blank for latest version
+sudo ./setup.sh -s
 ```
 
-<table>
-    <tr>
-        <th width="20px">Flag</th>
-        <th width="180px">Argument</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td><b>-t</b></td>
-        <td>Docker image tag</td>
-        <td>Indicates the explicit tag for the <a href="https://hub.docker.com/r/nanocurrency/nano/tags" target="_blank">nanocurrency Docker image</a>. Required.</td>
-    </tr>
-    <tr>
-        <td><b>-d</b></td>
-        <td>your domain name</td>
-        <td>Sets the domain name to be used. Required for SSL-enabled setups.</td>
-    </tr>
-    <tr>
-        <td><b>-e</b></td>
-        <td>your email address</td>
-        <td>Sets your email for Let's Encrypt certificate notifications. Optional for SSL-enabled setups.</td>
-    </tr>
-    <tr>
-        <td><b>-f</b></td>
-        <td>-</td>
-        <td>Enables fast-syncing by fetching the latest ledger and placing it into <i>/root/Nano/</i> inside <b>nano-node</b>
-            container.</td>
-    </tr>
-    <tr>
-        <td><b>-q</b></td>
-        <td>-</td>
-        <td>Quiet mode. Hides any output.</td>
-    </tr>
-    <tr>
-        <td><b>-s</b></td>
-        <td>-</td>
-        <td>Prints the unecrypted seed of the node wallet during the setup (<b>WARNING:</b> in most cases you may want to avoid this
-            for security purposes).</td>
-    </tr>
-</table>
+#### 4. Configure Node
 
-**Optional: Setup SSL (Let's Encrypt)**
+- [Unlock](https://docs.nano.org/running-a-node/wallet-setup/#update-configuration) Wallet RPC.
+- Set up Node on localhost port 7076. Use '[::1]:7076' for IPv6.
+- Node Websocket set up on localhost port 7078. Use '[::1]:7078' for IPv6.
+- <u>**Node **not** accessible from Internet. Bring your own "Proxy".**</u>
+- See [setup.sh](/setup.sh) for complete setup script.
 
-> Adding SSL is usually the most difficult step. If you encounter issues, see [Nano Node Docker](https://github.com/lephleg/nano-node-docker) on Github. 
+#### 5. Talk to Node
 
-For development and local use, HTTP is just fine. [Cloudflare](https://www.cloudflare.com/) is also a quick solution.
-
-Setup SSL by passing the ```-d``` and ```-e``` flags.
-
-```
-sudo ./setup.sh -t V23.1 -d mydomain.com -e myemail@example.com
+```bash
+Usage:
+$ curl -g -d '{ "action": "version" }' '[::1]:7076'
+$ curl -g -d '{ "action": "block_count" }' '[::1]:7076'
+$ curl -g -d '{ "action": "telemetry" }' '[::1]:7076'
 ```
 
-
-## 5. Congratulations 🎉
-
-![](../assets/screenshot.png)
-
-If you followed the previous steps correctly, you should have a fully functional Nano Node running. 
-
-## Next Steps
-
-You have two choices. 
-
-- **A)** Leave it alone as a [Voting Representative](https://docs.nano.org/running-a-node/overview/), and don't touch it further.
-
-- **B)** Build entire Applications on top of the Node. See below.
-
-> Tip: Multiple Nodes, for different things are common.
-
-## Build with Nano
-
-There's more to a Nano Node, than just being a Rep. 
-
-A Nano Node is a fully functional "Accountant". 
-
-Think about that for a second. 
-
-When you're coding and your Users need a 'balance'. **Just use the Blockchain**. Assign each User a custodial address from your Node. They can easily deposit by paying it, and you can "charge" the account on-demand. 
-
-To "talk" with your "Accountant", use standard HTTP. We can use ```curl``` to test.
+#### Node Docker IP
 
 ```
-curl -g -d '{ "action": "telemetry" }' '[::1]:7076'
+docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)
 ```
 
-> Using ```curl``` we sent a **POST** request to our local network **[::1]** on port **7076**, where the Node is running thanks to Docker.
-
-- Full list of RPC commands @ [Official RPC Docs](https://docs.nano.org/commands/rpc-protocol). 
-
-## Move Nano via RPC
-
-Before you can actually create custodial addresses and move Nano, you need to enable the [Wallet RPC](https://docs.nano.org/commands/rpc-protocol/#wallet-rpcs). It's disabled by default for security.
-
-Edit the following file:
-
 ```
-nano ~/nano-node-docker/nano-node/Nano/config-rpc.toml
+nano-node - 172.XX.X.X
 ```
 
-Change ```enable_control``` to ```true```:
+## Further Reading
 
-```
-enable_control = true
-```
+- [Official Node CLI Docs](https://docs.nano.org/commands/rpc-protocol)
+- [Common RPC Errors](https://docs.nano.to/rpc-errors)
+- [Nano.to Docs](https://docs.nano.to)
+- [**More Packages**](https://github.com/fwd/nano-packages)
 
-Press ```CRLT + X``` to exit, then **'Y'** to save the file. 
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-- Full list of Wallet RPC commands @ [Official Wallet RPC Docs](https://docs.nano.org/commands/rpc-protocol)
+## Contributing
 
-## Upgrade Node
+Give a ⭐️ if this project helped you!
 
-Because we used Docker to set it up, upgrading and downgrading is easy.
+Contributions, issues and feature requests are welcome at [issues page](https://github.com/fwd/nano-docker/issues).
 
-Navigate to original install path:
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-```
-cd ~/nano-node-docker 
-```
+## Nano.to Support
 
-Run setup again, with desired version.
+- Email: support@nano.to
+- Twitter: [@nano2dev](https://twitter.com/nano2dev)
+- Discord: [Nano.to Discord](https://discord.gg/HgqDCkzP) 
 
-```
-sudo ./setup.sh -t V23
-```
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-Done!
+## License
 
-- [List of all Node Versions](https://hub.docker.com/r/nanocurrency/nano/tags)
+MIT License
 
-## Debugging
+Copyright [@nano2dev](https://twitter.com/nano2dev).
 
-Errors will happen. We keep a [List of Possible RPC Errors](/rpc-errors). Have no fear. We have your back.
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-## Support
+## ❯ Stargazers
 
-Stuck on something? Join the [Official Discord](https://discord.com/invite/RNAE2R9) for community support.
-
-## Credits
-
-* **[Nanocurrency](https://github.com/nanocurrency/nano-node)**
-* **[Docker Official Docs](https://docs.docker.com/engine/install/ubuntu/)**
-* **[Docker Composer Official Docs](https://docs.docker.com/compose/install/)**
-* **[NANO Node Docker](https://github.com/lephleg/nano-node-docker)**
-* **[NANO Node Monitor](https://github.com/NanoTools/nanoNodeMonitor)**
-* **[jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy)**
-* **[JrCs/docker-letsencrypt-nginx-proxy-companion](https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion)**
-* **[v2tec/watchtower](https://github.com/v2tec/watchtower)**
+[![Stargazers over time](https://starchart.cc/fwd/nano-docker.svg)](https://starchart.cc/fwd/nano-docker)
