@@ -1,18 +1,14 @@
-## Nano.to Usernames
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-Visit [nano.to](https://nano.to) and check for your desired username.
-
-- Letters, numbers, and up to 30 characters.
-- Multiple Usernames with same address are OK.
-- Usernames bring too many benefits, to list.
+## Nano.to Names
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-## Register Online
+**Register Online**
 
 - [Nano.to](https://nano.to)
 
-## Register via RPC
+**Or RPC**
 
 ```
 curl -d '{
@@ -23,9 +19,7 @@ curl -d '{
 "https://rpc.nano.to"
 ```
 
-See [Developer Page](https://rpc.nano.to/#get_name) for full API docs.
-
-## Renew Any Time
+## Renewals
 
 You can extend registration at anytime. 
 
@@ -44,6 +38,16 @@ Usernames have **10 day** after expiration, regardless of duration leased. Only 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
 ## Username Dataset
+
+We encourage developers to add [Nano.to Usernames](https://nano.to/known.json) to apps. 
+
+```pthon
+https://nano.to/known.json
+```
+
+> If you want privacy, don't get a Username for a particular address.
+
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
 We encourage developers to add [Nano.to Usernames](https://nano.to/known.json) to apps. 
 
