@@ -13,10 +13,10 @@
 			"file": "/docs/username.md"
 	    },
 		
-        {
-			"title": "Checkout",
-			"url": "/docs/checkout.md"
-        },
+	{
+		"title": "Checkout",
+		"url": "/docs/checkout.md"
+	},
 	 
 	    {
 			"title": "Node RPC",
@@ -30,6 +30,8 @@
 
 	],
 	"redirect": [
+		{ "path": "packages", "file": "/docs/packages.md" },
+                { "path": "errors", "file": "/docs/rpc-errors.md" },
 		{ "path": "name", "file": "/docs/username-integration.md" },
 		{ "path": "setup", "file": "/docs/node.md" },
 		{ "path": "docker", "file": "/docs/node.md" },
