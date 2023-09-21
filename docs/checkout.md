@@ -15,7 +15,7 @@ https://nano.to/:ADDRESS
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
 
-### Single Panel
+## Single Panel
 
 ```python
 https://nano.to/Fosse?amount=50
@@ -25,7 +25,7 @@ https://nano.to/Fosse?amount=50
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-### Double Panel
+## Double Panel
 
 ```python
 https://nano.to/Moon?plans=Tip:0.133,Small:1,Medium:10,Large:20,Gigantic:100
@@ -49,7 +49,7 @@ https://nano.to/Moon
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-### Available Options
+## Available Options
 
 - **amount**, **p** (number) : Single panel, No plans.
 - **plans** (string) : Plans separated by commas. Ex. Tip:30,Small:5
@@ -67,7 +67,7 @@ https://nano.to/Moon
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-### Funding UI
+## Funding UI
 
 Easily show a meter of progress for any Nano fundraiser. 
 
@@ -81,7 +81,7 @@ https://nano.to/@Basedlemahieu?goal=100:Funding Goal
 
 > Set Username defaults by cloning Nano.to on Github and set them in known.json.
 
-### Private Webhook
+## Private Webhook
 
 ```js
 const axios = require('axios');
@@ -148,7 +148,7 @@ axios.post('https://rpc.nano.to', {
 }
 ```
 
-## Notify 
+## Alerts 
 
 ```js
 const axios = require('axios');
