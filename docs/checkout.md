@@ -47,8 +47,6 @@ https://nano.to/Moon
 &logo=https://nano.to/dist/logo/cyber.png
 ```
 
-<img src="https://github.com/fwd/nano/raw/master/dist/images/slava-ui.png" alt="Single Panel UI" />
-
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
 ### Available Options
