@@ -7,7 +7,7 @@
 https://nano.to/Fosse
 ```
 
-**Usage:**
+**Free Usage:**
 ```python
 https://nano.to/:ADDRESS
 ```
