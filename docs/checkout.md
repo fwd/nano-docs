@@ -63,6 +63,7 @@ https://nano.to/Moon
 - **cancel** (string) : Redirect URL when pressed 'Cancel'
 - **redirect** (string) : Redirect URL on success.
 - **currency**, **c** (string) : ISO Currency Symbol. Ex JPY
+- **notify**, (string) : Email(s) or Discord Webhook URL.
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
@@ -85,7 +86,7 @@ https://nano.to/@Basedlemahieu?goal=100:Funding Goal
 ```js
 const axios = require('axios');
 
-axios.post('https://api.nano.to', {
+axios.post('https://rpc.nano.to', {
   "action": "checkout",
   "title": "Hello World",
   "address": "@faucet",
@@ -146,6 +147,39 @@ axios.post('https://api.nano.to', {
     "checkout": "https://api.nano.to/checkout/CHECKOUT_ID"
 }
 ```
+
+## Notify 
+
+```js
+const axios = require('axios');
+
+axios.post('https://rpc.nano.to', {
+  "action": "checkout",
+  "address": "@faucet",
+  "random": "true",
+  "notify": "john@apple.com",
+}).then((res) => {
+  console.log(res.data);
+});
+```
+
+![line](https://github.com/fwd/nano-docs/raw/master/images/email.jpeg)
+
+
+```js
+const axios = require('axios');
+
+axios.post('https://rpc.nano.to', {
+  "action": "checkout",
+  "address": "@faucet",
+  "random": "true",
+  "notify": "https://discord.com/api/webhooks/11165660...",
+}).then((res) => {
+  console.log(res.data);
+});
+```
+
+![line](https://github.com/fwd/nano-docs/raw/master/images/discord.jpeg)
 
 ## Nano.to Support
 
