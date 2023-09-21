@@ -7,8 +7,9 @@ We're on a mission to accelerate the use of Nano around the world.
 ## **Quick Links**
 
   - [**Usernames**](/usernames) - Non-custodial JS Nano Wallet.
-  - [**Checkout UI**](/checkout) - Non-custodial Nano Paywall
+  - [**Checkout**](/checkout) - Non-custodial Nano Paywall
   - [**Nault Pro**](https://nault.pro) - Nano.to's Nault Fork
+  - [**Common RPC Errors**](/rpc-errors.md) - Nano.to's Nault Fork
 
 ## About Nano.to
 
