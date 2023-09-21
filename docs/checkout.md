@@ -157,6 +157,7 @@ axios.post('https://rpc.nano.to', {
   "action": "checkout",
   "address": "@faucet",
   "random": "true",
+  "note": "Nano Bird Feeder",
   "notify": "john@apple.com",
 }).then((res) => {
   console.log(res.data);
@@ -176,6 +177,7 @@ axios.post('https://rpc.nano.to', {
   "action": "checkout",
   "address": "@faucet",
   "random": "true",
+  "note": "Nano Pizza App",
   "notify": "https://discord.com/api/webhooks/11165660...",
 }).then((res) => {
   console.log(res.data);
