@@ -2,14 +2,14 @@
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-**Usage:**
-```python
-https://nano.to/:ADDRESS
-```
-
 **Usernames:**
 ```python
 https://nano.to/Fosse
+```
+
+**Usage:**
+```python
+https://nano.to/:ADDRESS
 ```
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
@@ -55,7 +55,6 @@ https://nano.to/Moon
 
 - **amount**, **p** (number) : Single panel, No plans.
 - **plans** (string) : Plans separated by commas. Ex. Tip:30,Small:5
-- **selected** (string) : Title of Plan to select by default.
 - **goal** (string) : Show a funding meter based off balance.
 - **image** (image/url) : Display Image. Image URL.
 - **color** (string) : Text color. Ex red:blue
@@ -83,7 +82,7 @@ https://nano.to/@Basedlemahieu?goal=100:Funding Goal
 
 > Set Username defaults by cloning Nano.to on Github and set them in known.json.
 
-### Checkout with POST
+### Private Webhook
 
 ```js
 const axios = require('axios');
