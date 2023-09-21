@@ -163,7 +163,10 @@ axios.post('https://rpc.nano.to', {
 });
 ```
 
-![line](https://github.com/fwd/nano-docs/raw/master/images/email.jpeg)
+<img src="https://github.com/fwd/nano-docs/raw/master/images/email.jpeg" alt="line" style="
+    height: auto;
+    max-width: 510px;
+">
 
 
 ```js
@@ -179,7 +182,10 @@ axios.post('https://rpc.nano.to', {
 });
 ```
 
-![line](https://github.com/fwd/nano-docs/raw/master/images/discord.jpeg)
+<img src="https://github.com/fwd/nano-docs/raw/master/images/discord.jpeg" alt="line" style="
+    height: auto;
+    max-width: 510px;
+">
 
 ## Nano.to Support
 
