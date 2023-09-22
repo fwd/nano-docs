@@ -6,11 +6,11 @@ We're on a mission to accelerate the use of Nano around the world.
 
 ## **Quick Links**
 
-  - [**Usernames**](/usernames) - Non-custodial JS Nano Wallet.
-  - [**Checkout**](/checkout) - Non-custodial Nano Paywall
+  - [**Usernames**](/usernames) - Non-custodial Name service.
+  - [**Checkout**](/checkout) - Non-custodial Checkout service.
   - [**Nault Pro**](https://nault.pro) - Nano.to's Nault Fork
   - [**Setup Nano Node**](https://github.com/fwd/nano-docker) - Docker Image
-  - [**Nano.to Pro RPC**](https://rpc.nano.to) - High Performance Blockchain RPC
+  - [**Blockchain RPC**](https://rpc.nano.to) - High Performance Blockchain RPC
   - [**Common RPC Errors**](/errors) - Nano.to's Nault Fork
   - [**Everything Nano**](/packages) - Nano.to's Nault Fork
 
