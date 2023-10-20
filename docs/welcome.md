@@ -32,7 +32,7 @@ Before you can use Nano and Nano.to, you need a Nano Wallet.
 ## Nano Currency Platforms
 
   - [**Metrics.Bar**](https://metrics.bar) - From the makers of Nano.to, Google Analytics Alternative
-  - [**ӿ.to**](https://ӿ.to) - From the makers of Nano.to, Linktree Alternative
+  - [**ӿ.to**](https://ӿ.to) - Nano Twitter Alternative
 
 ## Nano.to Support
 
