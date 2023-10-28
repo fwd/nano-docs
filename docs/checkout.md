@@ -51,7 +51,9 @@ https://nano.to/Moon
 
 ## Available Options
 
+- **title** (string) : Replace checkout title.
 - **amount**, **p** (number) : Single panel, No plans.
+- **body** (string) : Custom checkout text body.
 - **plans** (string) : Plans separated by commas. Ex. Tip:30,Small:5
 - **goal** (string) : Show a funding meter based off balance.
 - **image** (image/url) : Display Image. Image URL.
