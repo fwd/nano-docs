@@ -1,5 +1,7 @@
 ## Checkout
 
+Free, non-custodial Checkout UI for the Nano blockchain.
+
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
 **Usernames:**
@@ -7,13 +9,12 @@
 https://nano.to/Fosse
 ```
 
-**Free Usage:**
+**Address:**
 ```python
 https://nano.to/:ADDRESS
 ```
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
-
 
 ## Single Panel
 
@@ -61,11 +62,12 @@ https://nano.to/Moon
 - **background** (string) : Background color. Ex white:gray
 - **highlight** (string) : Box backgrounds value. Ex blue:red
 - **qrcode** (string) : Replace QR Code color. Ex white:black
+- **active** (string) : Background color of active plan.
 - **logo** (image/url) : Replace QR Code logo. Image URL.
 - **cancel** (string) : Redirect URL when pressed 'Cancel'
 - **redirect** (string) : Redirect URL on success.
 - **currency**, **c** (string) : ISO Currency Symbol. Ex JPY
-- **notify**, (string) : Email(s) or Discord Webhook URL.
+- **notify**, (string) : Email(s) or Discord Webhook URL
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
@@ -198,7 +200,6 @@ axios.post('https://rpc.nano.to', {
 - @nano2dev on [Nano's Discord](https://discord.com/invite/RNAE2R9) 
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
-
 
 ## License
 
