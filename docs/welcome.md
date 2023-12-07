@@ -11,8 +11,8 @@ We're on a mission to accelerate the use of Nano around the world.
   - [**Nault Pro**](https://nault.pro) - Nano.to's Nault Fork
   - [**Setup Nano Node**](https://github.com/fwd/nano-docker) - Docker Image
   - [**Blockchain RPC**](https://rpc.nano.to) - High Performance Blockchain RPC
-  - [**Common RPC Errors**](/errors) - Nano.to's Nault Fork
-  - [**Everything Nano**](/packages) - Nano.to's Nault Fork
+  - [**Common RPC Errors**](/errors) - Nano Node Troubleshooting
+  - [**Everything Nano**](/packages) - All Known Nano Links
 
 ## About Nano.to
 
@@ -29,10 +29,9 @@ Before you can use Nano and Nano.to, you need a Nano Wallet.
 - [In-Browser Wallet](https://nault.pro/) 
 - [More Wallets](https://hub.nano.org/i/wallets/2)
 
-## Nano Currency Platforms
+## Nano Currency Supported Platforms
 
   - [**Metrics.Bar**](https://metrics.bar) - From the makers of Nano.to, Google Analytics Alternative
-  - [**ӿ.to**](https://ӿ.to) - Nano Twitter Alternative
 
 ## Nano.to Support
 
