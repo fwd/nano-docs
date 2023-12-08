@@ -152,6 +152,35 @@ axios.post('https://rpc.nano.to', {
 }
 ```
 
+## Unique Payments
+
+If you'd like to create unique Checkouts, you have to options
+
+- Unique Nano Address
+- Unique Payment Amounts
+
+When creating a Checkout add 'X' to the amount and the API will replace them with random numbers. 
+
+```bash
+
+curl -d '{
+  "action": "checkout",
+  "address": "@Development",
+  "amount": "0.001000000XXXXXXXX"
+}' \
+-H "Content-Type: application/json" \
+"https://rpc.nano.to"
+
+```
+
+```json
+{
+  "id": "8c1eb40e",
+  "amount": "0.00100000084648542"
+  ...
+}
+```
+
 ## Alerts 
 
 ```js
