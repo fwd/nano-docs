@@ -111,8 +111,8 @@ curl -d '{
 ## Security
 
 - Seed is *only* provided during creation, if ```seed``` field is present.
-- Provide ```approved``` (array or string) to limits accounts which can be sent to. 
-- Provide ```expiration``` (number or string) field to reduce expiration time. In days. Max 90.
+- Provide ```approved``` (array or string) to limit accounts which can be sent to. 
+- Provide ```expiration``` (number or string) to reduce expiration time. In days. Max 90.
 
 ```bash
 curl -d '{
