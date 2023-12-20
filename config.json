@@ -13,10 +13,10 @@
 			"file": "/docs/username.md"
 	    },
 		
-	{
-		"title": "Checkout",
-		"url": "/docs/checkout.md"
-	},
+		{
+			"title": "Checkout",
+			"url": "/docs/checkout.md"
+		},
 	 
 	    {
 			"title": "Node RPC",
@@ -26,12 +26,17 @@
 	    {
 			"title": "PoW RPC",
 			"url": "/docs/pow.md"
+	    },
+
+	    {
+			"title": "Nano.to Cloud",
+			"url": "/docs/cloud.md"
 	    }
 
 	],
 	"redirect": [
 		{ "path": "packages", "file": "/docs/packages.md" },
-                { "path": "errors", "file": "/docs/rpc-errors.md" },
+        { "path": "errors", "file": "/docs/rpc-errors.md" },
 		{ "path": "name", "file": "/docs/username-integration.md" },
 		{ "path": "setup", "file": "/docs/node.md" },
 		{ "path": "docker", "file": "/docs/node.md" },
@@ -39,6 +44,7 @@
 		{ "path": "pow", "file": "/docs/pow.md" },
 		{ "path": "pow-api", "file": "/docs/pow.md" },
 		{ "path": "rpc", "file": "/docs/rpc.md" },
+		{ "path": "cloud", "file": "/docs/cloud.md" },
 		{ "path": "rpc-api", "file": "/docs/rpc.md" },
 		{ "path": "checkouts", "file": "/docs/checkout.md" },
 		{ "path": "checkout", "file": "/docs/checkout.md" },
