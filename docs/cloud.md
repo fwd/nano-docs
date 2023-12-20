@@ -1,12 +1,12 @@
-# Cloud Wallets
+# Nano Cloud Wallets
 
-**Ephemeral (*temporary*) Nano Cloud Wallets.** 
+**Custodial, Ephemeral (*temporary*) Nano Cloud Wallets.** 
 
-The goal of this API is to expedite Nano API Development & Prototyping. 
+The goal of this API is to expedite Nano Development & Prototyping.
 
 Examples below are in cURL, but you can use any HTTP library that supports POST. 
 
-**After 90 days wallets expire, and all funds are send to configured ```refund_address```.**
+**After 90 days, wallets expire and all funds are sent to  ```refund_address```.**
 
 ## Get Started
 
@@ -28,7 +28,7 @@ curl -d '{
   "balance": 0,
   "address": "nano_1cxmn9dzx8kmkbcpedwi...4bzoh3pafk9grxndk88inkbe",
   "api_key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C",
-  "refund_address": "nano_1faucet7b6xjyha7m13objpn5ubkquzd6ska8kwopzf1ecbfmn35d1zey3ys",
+  "refund_address": "nano_1faucet7b6xjy...ska8kwopzf1ecbfmn35d1zey3ys",
   "expiration": "in 3 months",
   "expiration_unix": 1710873173
 }
@@ -104,7 +104,7 @@ curl -d '{
 
 ```json
 { 
-  "hash": "652B9EFBE95C8E5495E1604E5EE5530D1F1FD4360BFD6ECEE337CE27514B2226"
+  "hash": "652B9EFBE95C8E5495E1604E5...ECEE337CE27514B2226"
 }
 ```
 
