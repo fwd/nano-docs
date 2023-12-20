@@ -1,6 +1,6 @@
-# Nano Cloud Wallets
+# Cloud Wallets
 
-**Custodial, Ephemeral (*temporary*) Nano Cloud Wallets.** 
+**Ephemeral (*temporary*) Nano Cloud Wallets.** 
 
 The goal of this API is to expedite Nano Development & Prototyping.
 

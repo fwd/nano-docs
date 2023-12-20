@@ -9,6 +9,11 @@
 	    },
 
 	    {
+			"title": "Cloud Wallets",
+			"url": "/docs/cloud.md"
+	    },
+	 
+	    {
 			"title": "Usernames",
 			"file": "/docs/username.md"
 	    },
@@ -17,11 +22,6 @@
 			"title": "Checkout",
 			"url": "/docs/checkout.md"
 		},
-	 
-	    {
-			"title": "Cloud Wallets",
-			"url": "/docs/cloud.md"
-	    },
 	 
 	    {
 			"title": "Node RPC",
