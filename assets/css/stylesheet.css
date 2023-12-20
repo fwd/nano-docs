@@ -2870,6 +2870,6 @@ img[alt="line"] {
 
 @media (max-width:  769px) {
     code.hljs {
-        width: -webkit-fit-content;
+/*        width: -webkit-fit-content;*/
     }
 }
