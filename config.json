@@ -19,6 +19,11 @@
 		},
 	 
 	    {
+			"title": "Nano.to Cloud",
+			"url": "/docs/cloud.md"
+	    },
+	 
+	    {
 			"title": "Node RPC",
 			"url": "/docs/rpc.md"
 	    },
@@ -28,15 +33,11 @@
 			"url": "/docs/pow.md"
 	    },
 
-	    {
-			"title": "Nano.to Cloud",
-			"url": "/docs/cloud.md"
-	    }
-
 	],
 	"redirect": [
 		{ "path": "packages", "file": "/docs/packages.md" },
         { "path": "errors", "file": "/docs/rpc-errors.md" },
+        { "path": "rpc-errors", "file": "/docs/rpc-errors.md" },
 		{ "path": "name", "file": "/docs/username-integration.md" },
 		{ "path": "setup", "file": "/docs/node.md" },
 		{ "path": "docker", "file": "/docs/node.md" },
@@ -45,6 +46,7 @@
 		{ "path": "pow-api", "file": "/docs/pow.md" },
 		{ "path": "rpc", "file": "/docs/rpc.md" },
 		{ "path": "cloud", "file": "/docs/cloud.md" },
+		{ "path": "ephemeral", "file": "/docs/cloud.md" },
 		{ "path": "rpc-api", "file": "/docs/rpc.md" },
 		{ "path": "checkouts", "file": "/docs/checkout.md" },
 		{ "path": "checkout", "file": "/docs/checkout.md" },
