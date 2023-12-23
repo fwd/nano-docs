@@ -6,7 +6,7 @@ The goal of this API is to expedite Nano Development & Prototyping.
 
 Examples below are in cURL, but you can use any HTTP library that supports POST. 
 
-**After 90 days, wallets expire and all funds are sent to  ```refund_address```.**
+**After expiration, all funds are sent to  ```refund_address```.**
 
 ## Get Started
 
