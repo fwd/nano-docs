@@ -36,13 +36,13 @@ curl -d '{
 ## Available Params
 
 - **```balance```:** (*string or bool*) get account balance and pending. Requires ```api_key```. Returns object. 
-- **```receive```:** (*string or bool*) receive all pending blocks. Requires ```api_key```. Returns array of hashes.
+- **```receive```:** (*string or bool*) receive *all* pending blocks. Requires ```api_key```. Returns array of hashes.
 - **```send```:** (string, *@username or address*) Send funds. Requires ```api_key```. Returns object with hash.
 - **```refund_address```** (*array or string*) account(s) that receive funds on expiration. 
-  - If array, funds are split evenly between accounts.
-- **```approved```** (*array or string*) to limit accounts which can be sent to. 
-- **```public```** (*string or bool*) hides ```api_key``` from response. Ideal for client-side use.
-- **```seed```:** (*string or bool*) Return ```privateKey``` in create response. Only provided once.
+    - If array, funds are split evenly between accounts. 
+- **```approved```** (*array or string*) Limit accounts which can be sent to. 
+- **```public```** (*string or bool*) Hide ```api_key``` from initial response. Ideal for client-side use.
+- **```seed```:** (*string or bool*) Return ```privateKey``` in initial response. Only provided once.
 - **```expire```** (*number or string*) Control when the address expires. Min 5 minutes. Max 90 days.
     - 5 minutes
     - 1 hour
