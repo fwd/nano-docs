@@ -13,7 +13,7 @@ Examples below are in cURL, but you can use any HTTP library that supports POST.
 ```bash
 curl -d '{
   "action": "cloud_wallet",
-  "refund_address": ["@faucet", "@bank"],
+  "refund_address": "YOUR_ADDRESS",
   "expire": "5 minutes"
 }' \
 -H "Content-Type: application/json" \
@@ -27,7 +27,7 @@ curl -d '{
   "balance": 0,
   "address": "nano_1cxmn9dzx8kmkbcpedwi...4bzoh3pafk9grxndk88inkbe",
   "api_key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C",
-  "refund_address": "nano_1faucet7b6xjy...ska8kwopzf1ecbfmn35d1zey3ys",
+  "refund_address": "YOUR_ADDRESS",
   "expiration": "in 3 months",
   "expiration_unix": 1710873173
 }
