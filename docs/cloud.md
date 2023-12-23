@@ -10,12 +10,11 @@ Examples below are in cURL, but you can use any HTTP library that supports POST.
 
 ## Get Started
 
-**Create Wallet:**
-
 ```bash
 curl -d '{
   "action": "cloud_wallet",
-  "refund_address": "@faucet"
+  "refund_address": ["@faucet", "@bank"],
+  "expire": "5 minutes"
 }' \
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
@@ -34,6 +33,23 @@ curl -d '{
 }
 ```
 
+## Available Params
+
+- **```balance```:** (*string or bool*) get account balance and pending. Requires ```api_key```. Returns object. 
+- **```receive```:** (*string or bool*) receive all pending blocks. Requires ```api_key```. Returns array of hashes.
+- **```send```:** (string, *@username or address*) Send funds. Requires ```api_key```. Returns object with hash.
+- **```refund_address```** (*array or string*) account(s) that receive funds on expiration. If array, funds are split evenly between accounts.
+- **```approved```** (*array or string*) to limit accounts which can be sent to. 
+- **```public```** (*string or bool*) hides ```api_key``` from response. Ideal for client-side use.
+- **```seed```:** (*string or bool*) Return ```privateKey``` in create response. Only provided once.
+- **```expire```** (*number or string*) Control when the address expires. Min 1 minute. Max 90 days.
+    - 5 minutes
+    - 1 hour
+    - 1 day
+    - 3 months
+
+---
+
 ## Receive
 
 ```bash
@@ -50,11 +66,11 @@ curl -d '{
 
 ```json
 [
-	{
-		"hash": "533A1D3F0DD7B4138493...7085DDE0DE175ACCCA6412",
-		"amount": "100000000000000000000000000",
-		"source": "nano_1bank1q3q7x8ri....8kggtfaosg8kyr51qsdkm8g45"
-	}
+  {
+    "hash": "533A1D3F0DD7B4138493...7085DDE0DE175ACCCA6412",
+    "amount": "100000000000000000000000000",
+    "source": "nano_1bank1q3q7x8ri....8kggtfaosg8kyr51qsdkm8g45"
+  }
 ]
 ```
 
@@ -108,22 +124,31 @@ curl -d '{
 }
 ```
 
-## Security
+## Public
 
-- Seed is *only* provided during creation, if ```seed``` field is present.
-- Provide ```approved``` (array or string) to limit accounts which can be sent to. 
-- Provide ```expiration``` (number or string) to reduce expiration time. In days. Max 90.
+**For use client-side. No secret API key is returned.**
 
 ```bash
 curl -d '{
   "action": "cloud_wallet",
-  "refund_address": "@faucet", 
-  "seed": "true",
-  "approved": [ "@bank", "@faucet", "nano_1c3fdz..." ],
-  "expiration": 30
+  "public": "true",
+  "refund_address": ["@faucet", "@bank"],
+  "expire": "5 minutes"
 }' \
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
+```
+
+**Response:**
+
+```json
+{
+  "balance": 0,
+  "address": "nano_1cxmn9dzx8kmkbcpedwi...4bzoh3pafk9grxndk88inkbe",
+  "refund_address": ["nano_1faucet7b6xjy...ska8kwopzf1ecbfmn35d1zey3ys", "nano_1bank7b6xjy...ska8kwopzf1ecbfmn35d1zey3ys"],
+  "expiration": "in 5 minutes",
+  "expiration_unix": 1710873173
+}
 ```
 
 ## Nano.to Support
