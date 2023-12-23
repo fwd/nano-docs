@@ -43,7 +43,7 @@ curl -d '{
 - **```approved```** (*array or string*) to limit accounts which can be sent to. 
 - **```public```** (*string or bool*) hides ```api_key``` from response. Ideal for client-side use.
 - **```seed```:** (*string or bool*) Return ```privateKey``` in create response. Only provided once.
-- **```expire```** (*number or string*) Control when the address expires. Min 1 minute. Max 90 days.
+- **```expire```** (*number or string*) Control when the address expires. Min 5 minutes. Max 90 days.
     - 5 minutes
     - 1 hour
     - 1 day
