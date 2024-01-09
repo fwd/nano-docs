@@ -28,7 +28,7 @@ curl -d '{
   "address": "nano_1cxmn9dzx8kmkbcpedwi...4bzoh3pafk9grxndk88inkbe",
   "api_key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C",
   "refund_address": "YOUR_ADDRESS",
-  "expiration": "in 3 months",
+  "expiration": "in 5 minutes",
   "expiration_unix": 1710873173
 }
 ```
