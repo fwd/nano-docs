@@ -38,8 +38,9 @@ curl -d '{
 - **```balance```:** (*string or bool*) get account balance and pending. Requires ```api_key```. Returns object. 
 - **```receive```:** (*string or bool*) receive *all* pending blocks. Requires ```api_key```. Returns array of hashes.
 - **```send```:** (string, *@username or address*) Send funds. Requires ```api_key```. Returns object with hash.
+- **```vanity```:** (*string or bool*) Generate custom address. Up to 5 characters. Requires ```api_key```. 
 - **```refund_address```** (*array or string*) account(s) that receive funds on expiration. 
-    - If array, funds are split evenly between accounts. 
+    - If array, funds are split evenly between accounts.
 - **```approved```** (*array or string*) Limit accounts which can be sent to. 
 - **```public```** (*string or bool*) Hide ```api_key``` from initial response. Ideal for client-side use.
 - **```seed```:** (*string or bool*) Return ```privateKey``` in initial response. Only provided once.
@@ -48,6 +49,7 @@ curl -d '{
     - 1 hour
     - 1 day
     - 3 months
+- **```delete```:** (*string or bool*) Manually expire address. Requires ```api_key```.
 
 ---
 
@@ -91,16 +93,16 @@ curl -d '{
 
 ```json
 {
-	"balance": "90000000000000000000000000",
-	"pending": "0",
-	"receivable": "0",
-	"balance_nano": "0.00009",
-	"pending_nano": "0",
-	"receivable_nano": "0",
-	"address": "nano_1cxmn9dzx8kmkbcpedwi...4bzoh3pafk9grxndk88inkbe",
-	"expiration": "in 3 months",
-	"expiration_unix": 1710873173,
-	"nanolooker": "https://nanolooker.com/account/nano_1cxmn9dzx8kmkbcpedwi...4bzoh3pafk9grxndk88inkbe"
+  "balance": "90000000000000000000000000",
+  "pending": "0",
+  "receivable": "0",
+  "balance_nano": "0.00009",
+  "pending_nano": "0",
+  "receivable_nano": "0",
+  "address": "nano_1cxmn9dzx8kmkbcpedwi...4bzoh3pafk9grxndk88inkbe",
+  "expiration": "in 3 months",
+  "expiration_unix": 1710873173,
+  "nanolooker": "https://nanolooker.com/account/nano_1cxmn9dzx8kmkbcpedwi...4bzoh3pafk9grxndk88inkbe"
 }
 ```
 
@@ -122,6 +124,28 @@ curl -d '{
 ```json
 { 
   "hash": "652B9EFBE95C8E5495E1604E5...ECEE337CE27514B2226"
+}
+```
+
+## Delete
+
+Manually trigger expiration.
+
+```bash
+curl -d '{
+  "action": "cloud_wallet",
+  "delete": "true",
+  "key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C"
+}' \
+-H "Content-Type: application/json" \
+"https://rpc.nano.to"
+```
+
+**Response:**
+
+```json
+{ 
+  "deleted": true
 }
 ```
 
