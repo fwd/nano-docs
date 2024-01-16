@@ -1,14 +1,12 @@
-![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+# Nano Names
 
-## Nano.to Names
-
-![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+Open Source, non-custodial name service for the Nano blockchain.
 
 **Register Online**
 
 - [Nano.to](https://nano.to)
 
-**Or RPC**
+**Or via API**
 
 ```
 curl -d '{
@@ -19,15 +17,25 @@ curl -d '{
 "https://rpc.nano.to"
 ```
 
+## Updates
+
+You can update your data anytime. 
+
+```python
+https://nano.to/:USERNAME/update
+```
+
+> Only original address may update.
+
 ## Renewals
 
-You can extend registration at anytime. 
+You can extend registration anytime. 
 
 ```python
 https://nano.to/:USERNAME/renew
 ```
 
-> Only original address may add time. If you need assistance, contact: [support@nano.to](mailto:support@nano.to) - we handle things on github.
+> Only original address may add time.
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
