@@ -2,9 +2,13 @@
 
 **Ephemeral Nano Cloud Wallets.** 
 
-Secure programmatic wallets for the Nano blockchain. Wallets have limited lifespan. After expiration, funds are sent back to refund_address. This RPC is free, no platform fee is charged. 
+Secure, programmatic wallets for the Nano blockchain. 
 
-Examples below are in cURL, but you can use any HTTP library that supports POST. 
+***Wallets have limited lifespan. After expiration, all funds are sent to refund_address.*** 
+
+This API is free, no fees are added to your transactions. **Rate limited to 30 requests per minute.** 
+
+A commercial-grade, high-throughput version of this API is in development.
 
 ## Get Started
 
