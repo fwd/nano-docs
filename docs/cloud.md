@@ -1,7 +1,5 @@
 # Cloud Wallets
 
-**Ephemeral Nano Cloud Wallets.** 
-
 Secure, programmatic wallets for the Nano blockchain. 
 
 ***Wallets have limited lifespan. After expiration, all funds are sent to refund_address.*** 
