@@ -51,6 +51,7 @@ curl -d '{
     - 1 hour
     - 1 day
     - 3 months
+- **```swap_usdt```** (*number or string*) Control when the address expires. Min 5 minutes. Max 90 days.
 
 ---
 
@@ -73,7 +74,9 @@ curl -d '{
   {
     "hash": "533A1D3F0DD7B4138493...7085DDE0DE175ACCCA6412",
     "amount": "100000000000000000000000000",
-    "source": "nano_1bank1q3q7x8ri....8kggtfaosg8kyr51qsdkm8g45"
+    "amount_nano": "1",
+    "source": "nano_1bank1q3q7x8ri....8kggtfaosg8kyr51qsdkm8g45",
+    "username": "@bank"
   }
 ]
 ```
