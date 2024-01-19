@@ -73,7 +73,7 @@ curl -d '{
 [
   {
     "hash": "533A1D3F0DD7B4138493...7085DDE0DE175ACCCA6412",
-    "amount": "100000000000000000000000000",
+    "amount": "1000000000000000000000000000000",
     "amount_nano": "1",
     "source": "nano_1bank1q3q7x8ri....8kggtfaosg8kyr51qsdkm8g45",
     "username": "@bank"
