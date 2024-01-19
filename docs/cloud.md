@@ -51,7 +51,7 @@ curl -d '{
     - 1 hour
     - 1 day
     - 3 months
-- **```swap_usdt```** (*number or string*) Control when the address expires. Min 5 minutes. Max 90 days.
+- **```swap```** (*string*) Easily swap Nano to any Crypto. Coming soon.
 
 ---
 
