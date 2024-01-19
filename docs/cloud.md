@@ -1,20 +1,19 @@
 # Cloud Wallets
 
-**Ephemeral (*temporary*) Nano Cloud Wallets.** 
+**Ephemeral Nano Cloud Wallets.** 
 
-The goal of this API is to expedite Nano Development & Prototyping.
+Secure programmatic wallets for the Nano blockchain. Wallets have limited lifespan. After expiration, funds are sent back to refund_address. This RPC is free, no platform fee is charged. 
 
 Examples below are in cURL, but you can use any HTTP library that supports POST. 
-
-**After expiration, all funds are sent to  ```refund_address```.**
 
 ## Get Started
 
 ```bash
 curl -d '{
   "action": "cloud_wallet",
+  "vanity": "1temp",
   "refund_address": "YOUR_ADDRESS",
-  "expire": "5 minutes"
+  "expire": "10 minutes"
 }' \
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
@@ -25,10 +24,10 @@ curl -d '{
 ```json
 {
   "balance": 0,
-  "address": "nano_1cxmn9dzx8kmkbcpedwi...4bzoh3pafk9grxndk88inkbe",
+  "address": "nano_1temp9dzx8kmkbcpedwi...4bzoh3pafk9grxndk88inkbe",
   "api_key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C",
   "refund_address": "YOUR_ADDRESS",
-  "expiration": "in 5 minutes",
+  "expiration": "in 10 minutes",
   "expiration_unix": 1710873173
 }
 ```
@@ -39,7 +38,7 @@ curl -d '{
 - **```receive```:** (*string or bool*) receive *all* pending blocks. Requires ```api_key```. Returns array of hashes.
 - **```send```:** (string, *@username or address*) Send funds. Requires ```api_key```. Returns object with hash.
 - **```refund_address```** (*array or string*) account(s) that receive funds on expiration. 
-    - If array, funds are split evenly between accounts.
+    - If array, funds are split evenly between accounts. 
 - **```approved```** (*array or string*) Limit accounts which can be sent to. 
 - **```public```** (*string or bool*) Hide ```api_key``` from initial response. Ideal for client-side use.
 - **```seed```:** (*string or bool*) Return ```privateKey``` in initial response. Only provided once.
@@ -176,7 +175,7 @@ curl -d '{
 }
 ```
 
-## Nano.to Support
+## Dedicated Support
 
 - Email: support@nano.to
 - Discord: [Nano.to Discord](https://discord.gg/DG7UEyp4gX)
