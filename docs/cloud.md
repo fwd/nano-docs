@@ -15,7 +15,8 @@ curl -d '{
   "action": "cloud_wallet",
   "vanity": "1temp",
   "refund_address": "YOUR_ADDRESS",
-  "expire": "10 minutes"
+  "expire": "10 minutes",
+  "password": "my-super-secret-password"
 }' \
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
@@ -30,7 +31,8 @@ curl -d '{
   "api_key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C",
   "refund_address": "YOUR_ADDRESS",
   "expiration": "in 10 minutes",
-  "expiration_unix": 1710873173
+  "expiration_unix": 1710873173,
+  "encryption": true
 }
 ```
 
