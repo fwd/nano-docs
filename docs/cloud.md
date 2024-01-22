@@ -4,8 +4,6 @@ Secure programmatic wallets for the Nano blockchain.
 
 ***Wallets are encrypted with AES-256. This API is free, no platform fee is charged.*** 
 
-This API is free, no fees are added to your transactions. 
-
 **Rate limit: 30 requests per minute.** 
 
 > A commercial-grade, high-throughput version of this API is in development.
