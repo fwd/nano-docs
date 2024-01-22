@@ -2,11 +2,13 @@
 
 Secure programmatic wallets for the Nano blockchain. 
 
-***Wallets have limited lifespan. After expiration, all funds are sent to refund_address.*** 
+***Wallets are encrypted with AES-256. This API is free, no platform fee is charged.*** 
 
-This API is free, no fees are added to your transactions. **Rate limited to 30 requests per minute.** 
+This API is free, no fees are added to your transactions. 
 
-A commercial-grade, high-throughput version of this API is in development.
+**Rate limit: 30 requests per minute.** 
+
+> A commercial-grade, high-throughput version of this API is in development.
 
 ## Get Started
 
@@ -16,7 +18,7 @@ curl -d '{
   "vanity": "1temp",
   "refund_address": "YOUR_ADDRESS",
   "expire": "10 minutes",
-  "password": "my-super-secret-password"
+  "password": "my-secret-passphrase"
 }' \
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
@@ -64,7 +66,8 @@ curl -d '{
 curl -d '{
   "action": "cloud_wallet",
   "receive": "all",
-  "key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C"
+  "key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C",
+  "password": "my-secret-passphrase"
 }' \
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
@@ -90,7 +93,8 @@ curl -d '{
 curl -d '{
   "action": "cloud_wallet",
   "balance": "true",
-  "key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C"
+  "key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C",
+  "password": "my-secret-passphrase"
 }' \
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
@@ -120,7 +124,8 @@ curl -d '{
   "action": "cloud_wallet",
   "send": "@bank",
   "amount": "0.00001",
-  "key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C"
+  "key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C",
+  "password": "my-secret-passphrase"
 }' \
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
@@ -142,7 +147,8 @@ Manually trigger expiration.
 curl -d '{
   "action": "cloud_wallet",
   "delete": "true",
-  "key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C"
+  "key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C",
+  "password": "my-secret-passphrase"
 }' \
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
