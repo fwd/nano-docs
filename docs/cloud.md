@@ -48,7 +48,7 @@ curl -d '{
 - **```seed```:** (*string or bool*) Return *privateKey* in initial response. Only provided once.
 - **```vanity```:** (*string or bool*) Generate custom address. Up to 5 characters. Requires *api_key*. 
 - **```delete```:** (*string or bool*) Manually expire address. Requires *api_key*.
-- **```password```** (*string*) Encrypts *privateKey*. String is *not* saved and must be provided with *api_key*.
+- **```password```** (*string*) Encrypts *privateKey*. String must be provided with *api_key*.
 - **```expire```** (*number or string*) Control when the address expires. Min 5 minutes. Max 90 days.
     - 5 minutes
     - 1 hour
