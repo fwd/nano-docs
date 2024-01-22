@@ -49,7 +49,7 @@ curl -d '{
 - **```vanity```:** (*string or bool*) Generate custom address. Up to 5 characters.
 - **```delete```:** (*string or bool*) Manually expire address. Requires *api_key*.
 - **```password```** (*string*) Encrypts *privateKey* using AES-256. 
-    - Encrypted wallets don't expire. You must perform *expire* request, along with ``api_key`` and ``password``.
+    - Encrypted wallets don't expire. You must perform ``"delete": "true"`` request, along with ``api_key`` and ``password``.
 - **```expire```** (*number or string*) Control when the address expires. Min 5 minutes. Max 90 days.
     - 5 minutes
     - 1 hour
