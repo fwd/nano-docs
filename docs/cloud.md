@@ -32,23 +32,24 @@ curl -d '{
   "refund_address": "YOUR_ADDRESS",
   "expiration": "in 10 minutes",
   "expiration_unix": 1710873173,
-  "encryption": true
+  "encryption": "AES-256"
 }
 ```
 
 ## Available Params
 
-- **```balance```:** (*string or bool*) get account balance and pending. Requires *api_key*. Returns object. 
-- **```receive```:** (*string or bool*) receive *all* pending blocks. Requires *api_key*. Returns array of hashes.
-- **```send```:** (string, *@username or address*) Send funds. Requires *api_key*. Returns object with hash.
 - **```refund_address```** (*array or string*) account(s) that receive funds on expiration. 
-    - If array, funds are split evenly between accounts. 
+   - If array, funds are split evenly between accounts. 
+- **```balance```:** (*string or bool*) get account balance and pending. Requires *api_key*. Returns object. 
+- **```receive```:** (*string or bool*) receive *all* pending blocks. Requires *api_key*. Returns array of blocks.
+- **```send```:** (string, *@username or address*) Send funds. Requires *api_key*. Returns object with hash.
 - **```approved```** (*array or string*) Limit accounts which can be sent to. 
-- **```public```** (*string or bool*) Hide *api_key* from initial response. Ideal for client-side use.
+- **```public```** (*string or bool*) Hide *api_key* from initial response. For use client-side.
 - **```seed```:** (*string or bool*) Return *privateKey* in initial response. Only provided once.
-- **```vanity```:** (*string or bool*) Generate custom address. Up to 5 characters. Requires *api_key*. 
+- **```vanity```:** (*string or bool*) Generate custom address. Up to 5 characters.
 - **```delete```:** (*string or bool*) Manually expire address. Requires *api_key*.
-- **```password```** (*string*) Encrypts *privateKey*. String must be provided with *api_key*.
+- **```password```** (*string*) Encrypts *privateKey* using AES-256. 
+    - Encrypted wallets don't expire. You must perform *expire* request, along with ``api_key`` and ``password``.
 - **```expire```** (*number or string*) Control when the address expires. Min 5 minutes. Max 90 days.
     - 5 minutes
     - 1 hour
