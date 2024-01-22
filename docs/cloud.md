@@ -36,22 +36,22 @@ curl -d '{
 
 ## Available Params
 
-- **```balance```:** (*string or bool*) get account balance and pending. Requires ```api_key```. Returns object. 
-- **```receive```:** (*string or bool*) receive *all* pending blocks. Requires ```api_key```. Returns array of hashes.
-- **```send```:** (string, *@username or address*) Send funds. Requires ```api_key```. Returns object with hash.
+- **```balance```:** (*string or bool*) get account balance and pending. Requires *api_key*. Returns object. 
+- **```receive```:** (*string or bool*) receive *all* pending blocks. Requires *api_key*. Returns array of hashes.
+- **```send```:** (string, *@username or address*) Send funds. Requires *api_key*. Returns object with hash.
 - **```refund_address```** (*array or string*) account(s) that receive funds on expiration. 
     - If array, funds are split evenly between accounts. 
 - **```approved```** (*array or string*) Limit accounts which can be sent to. 
-- **```public```** (*string or bool*) Hide ```api_key``` from initial response. Ideal for client-side use.
-- **```seed```:** (*string or bool*) Return ```privateKey``` in initial response. Only provided once.
-- **```vanity```:** (*string or bool*) Generate custom address. Up to 5 characters. Requires ```api_key```. 
-- **```delete```:** (*string or bool*) Manually expire address. Requires ```api_key```.
+- **```public```** (*string or bool*) Hide *api_key* from initial response. Ideal for client-side use.
+- **```seed```:** (*string or bool*) Return *privateKey* in initial response. Only provided once.
+- **```vanity```:** (*string or bool*) Generate custom address. Up to 5 characters. Requires *api_key*. 
+- **```delete```:** (*string or bool*) Manually expire address. Requires *api_key*.
+- **```password```** (*string*) Encrypts *privateKey*. String is *not* saved and must be provided with *api_key*.
 - **```expire```** (*number or string*) Control when the address expires. Min 5 minutes. Max 90 days.
     - 5 minutes
     - 1 hour
     - 1 day
     - 3 months
-- **```swap```** (*string*) Easily swap Nano to any Crypto. Coming soon.
 
 ---
 
