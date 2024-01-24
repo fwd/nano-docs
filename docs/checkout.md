@@ -1,6 +1,6 @@
-## Checkout API
+## Nano Checkout
 
-Free, non-custodial Checkout UI for the Nano blockchain.
+Free non-custodial Checkout API for the Nano blockchain.
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
@@ -82,8 +82,6 @@ https://nano.to/@Basedlemahieu?goal=100:Funding Goal
 <img src="https://github.com/fwd/nano/raw/master/dist/images/funding.png" alt="Single Panel UI" />
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
-
-> Set Username defaults by cloning Nano.to on Github and set them in known.json.
 
 ## Private Webhook
 
