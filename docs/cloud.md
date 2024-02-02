@@ -52,7 +52,7 @@ Secure programmatic wallets for the Nano blockchain.
     </tbody>
 </table>
 
-> A commercial-grade, high-capacity (> 1M) version of this API is in development, expected Q1 2025.
+> A commercial-grade, high-capacity version (> 1M) of this API is in development, expected Q1 2025.
 
 ## Get Started
 
