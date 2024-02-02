@@ -1,12 +1,8 @@
 # Cloud Wallets
 
-Secure programmatic wallets for the Nano blockchain. 
+Secure programmatic wallets for the Nano blockchain. Wallets are encrypted. This API is free up to 1000 sends per address or 100 addresses per IP, 0.001 NANO per send after.
 
-***Wallets are encrypted with AES-256. This API is free, no platform fee is charged.*** 
-
-**Rate limit: 30 requests per minute.** 
-
-> A commercial-grade, high-throughput version of this API is in development.
+> A commercial-grade, high-throughput version of this API is in development. [Contact us](mailto:support@nano.to) for volume pricing.
 
 ## Get Started
 
@@ -15,8 +11,7 @@ curl -d '{
   "action": "cloud_wallet",
   "vanity": "1temp",
   "refund_address": "YOUR_ADDRESS",
-  "expire": "10 minutes",
-  "password": "my-secret-passphrase"
+  "expire": "5 minutes",
 }' \
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
@@ -49,7 +44,7 @@ curl -d '{
 - **```vanity```:** (*string or bool*) Generate custom address. Up to 5 characters.
 - **```delete```:** (*string or bool*) Manually expire address. Requires *api_key*.
 - **```password```** (*string*) Encrypts *privateKey* using AES-256. 
-    - Encrypted wallets don't expire. You must perform ``"delete": "true"`` request, along with ``api_key`` and ``password``.
+    - Note: Encrypted wallets don't expire. You must perform ``"delete": "true"`` request, along with ``api_key`` and ``password``.
 - **```expire```** (*number or string*) Control when the address expires. Min 5 minutes. Max 90 days.
     - 5 minutes
     - 1 hour
