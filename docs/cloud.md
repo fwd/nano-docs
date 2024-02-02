@@ -5,12 +5,52 @@ Secure programmatic wallets for the Nano blockchain.
 
 ## Usage Pricing
 
-| Monthly API Calls    | Cost Per Send |
-| -------- | ------- |
-| 0 - 1K | FREE    |
-| 1K - 10K | 0.0001 NANO |
-| 10K - 100K | 0.0005 NANO |
-| 100K - 1M | 0.001 NANO |
+<table>
+    <thead>
+        <tr>
+            <th>
+                Monthly API Calls
+            </th>
+            <th>
+                Cost Per Send
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                0 - 1K
+            </td>
+            <td>
+                FREE
+            </td>
+        </tr>
+        <tr>
+            <td>
+                1K - 10K
+            </td>
+            <td>
+                0.0001 NANO
+            </td>
+        </tr>
+        <tr>
+            <td>
+                10K - 100K
+            </td>
+            <td>
+                0.0005 NANO
+            </td>
+        </tr>
+        <tr>
+            <td>
+                100K - 1M
+            </td>
+            <td>
+                0.001 NANO
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 > A commercial-grade, high-capacity (> 1M) version of this API is in development, expected Q1 2025.
 
