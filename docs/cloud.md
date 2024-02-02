@@ -2,7 +2,6 @@
 
 Secure programmatic wallets for the Nano blockchain. 
 
-> A commercial-grade, high-capacity version of this API is in development, expected Q1 2025.
 
 ## Usage Pricing
 
@@ -12,6 +11,8 @@ Secure programmatic wallets for the Nano blockchain.
 | 1K - 10K | 0.0001 NANO |
 | 10K - 100K | 0.0005 NANO |
 | 100K - 1M | 0.001 NANO |
+
+> A commercial-grade, high-capacity (> 1M) version of this API is in development, expected Q1 2025.
 
 ## Get Started
 
