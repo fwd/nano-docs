@@ -2873,3 +2873,8 @@ img[alt="line"] {
 /*        width: -webkit-fit-content;*/
     }
 }
+
+table {
+    min-width: 370px;
+    color: initial;
+}

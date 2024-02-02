@@ -74,3 +74,7 @@
 .dark-mode .fwd-content {
     background: #2f3136;
 }
+
+.dark-mode table {
+    color: #FFF;
+}
