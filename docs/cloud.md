@@ -2,7 +2,6 @@
 
 Secure programmatic wallets for the Nano blockchain. 
 
-
 ## Usage Pricing
 
 <table>
@@ -52,7 +51,7 @@ Secure programmatic wallets for the Nano blockchain.
     </tbody>
 </table>
 
-> A commercial-grade, high-capacity version (> 1M) of this API is in development, expected Q1 2025.
+> A commercial-grade, high-capacity version (>1M) of this API is in development, expected Q2 2025.
 
 ## Get Started
 
@@ -81,22 +80,21 @@ curl -d '{
 }
 ```
 
-## Available Params
+## All Options
 
-- **```refund_address```** (*array or string*) account(s) that receive funds on expiration. 
-   - If array, funds are split evenly between accounts. 
 - **```balance```:** (*string or bool*) get account balance and pending. Requires *api_key*. Returns object. 
 - **```receive```:** (*string or bool*) receive *all* pending blocks. Requires *api_key*. Returns array of blocks.
 - **```send```:** (string, *@username or address*) Send funds. Requires *api_key*. Returns object with hash.
+- **```public```** (*string or bool*) Hide *api_key* from response. For use with [NanoPay.js](https://blog.nano.to/NanoPay).
+- **```seed```:** (*string or bool*) Return *privateKey* with first response. Provided only once.
+- **```vanity```:** (*string or bool*) Generate custom address. Up to 5 characters.
+- **```delete```:** (*string or bool*) Manually expire address. Requires *api_key*.
+- **```refund_address```** (*array or string*) account(s) that receive funds on expiration. 
 - **```expire```** (*number or string*) Control when the address expires. Min 5 minutes. Max 90 days.
     - 5 minutes
     - 1 hour
     - 1 day
     - 3 months
-- **```public```** (*string or bool*) Hide *api_key* from response. For use with [NanoPay.js](https://blog.nano.to/NanoPay).
-- **```seed```:** (*string or bool*) Return *privateKey* with first response. Provided only once.
-- **```vanity```:** (*string or bool*) Generate custom address. Up to 5 characters.
-- **```delete```:** (*string or bool*) Manually expire address. Requires *api_key*.
 
 ---
 
