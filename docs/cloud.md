@@ -2,7 +2,7 @@
 
 Secure programmatic wallets for the Nano blockchain. 
 
-Rate limit: 1000 send and/or 100 accounts per Domain/IP. [Prepaid API key](https://rpc.nano.to/) required for unlimited.
+Rate limit: 1000 send and/or 100 accounts per Domain/IP. 0.001 NANO per send after.
 
 > A commercial-grade, high-capacity version of this API is in development, expected Q1 2025.
 
