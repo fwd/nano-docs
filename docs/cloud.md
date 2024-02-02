@@ -1,8 +1,10 @@
-# Cloud Wallets
+# Cloud Wallets (Beta)
 
-Secure programmatic wallets for the Nano blockchain. Wallets are encrypted. This API is free up to 1000 sends per address or 100 addresses per IP, 0.001 NANO per send after.
+Secure programmatic wallets for the Nano blockchain. 
 
-> A commercial-grade, high-throughput version of this API is in development. [Contact us](mailto:support@nano.to) for volume pricing.
+Rate limit: 1000 send and/or 100 accounts per Domain/IP. [Prepaid API key](https://rpc.nano.to/) required for unlimited.
+
+> A commercial-grade, high-capacity version of this API is in development, expected Q1 2025.
 
 ## Get Started
 
@@ -38,18 +40,17 @@ curl -d '{
 - **```balance```:** (*string or bool*) get account balance and pending. Requires *api_key*. Returns object. 
 - **```receive```:** (*string or bool*) receive *all* pending blocks. Requires *api_key*. Returns array of blocks.
 - **```send```:** (string, *@username or address*) Send funds. Requires *api_key*. Returns object with hash.
-- **```approved```** (*array or string*) Limit accounts which can be sent to. 
-- **```public```** (*string or bool*) Hide *api_key* from initial response. For use client-side.
-- **```seed```:** (*string or bool*) Return *privateKey* in initial response. Only provided once.
-- **```vanity```:** (*string or bool*) Generate custom address. Up to 5 characters.
-- **```delete```:** (*string or bool*) Manually expire address. Requires *api_key*.
-- **```password```** (*string*) Encrypts *privateKey* using AES-256. 
-    - Note: Encrypted wallets don't expire. You must perform ``"delete": "true"`` request, along with ``api_key`` and ``password``.
 - **```expire```** (*number or string*) Control when the address expires. Min 5 minutes. Max 90 days.
     - 5 minutes
     - 1 hour
     - 1 day
     - 3 months
+- **```public```** (*string or bool*) Hide *api_key* from response. For use with [NanoPay.js](https://blog.nano.to/NanoPay).
+- **```seed```:** (*string or bool*) Return *privateKey* with first response. Provided only once.
+- **```vanity```:** (*string or bool*) Generate custom address. Up to 5 characters.
+- **```delete```:** (*string or bool*) Manually expire address. Requires *api_key*.
+- **```password```** (*string*) Encrypts *privateKey* using AES-256. 
+    - **Note:** Encrypted wallets do not expire. You must use ``delete`` with ``password``.
 
 ---
 
