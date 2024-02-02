@@ -2,9 +2,16 @@
 
 Secure programmatic wallets for the Nano blockchain. 
 
-Rate limit: 1000 send and/or 100 accounts per Domain/IP. 0.001 NANO per send after.
-
 > A commercial-grade, high-capacity version of this API is in development, expected Q1 2025.
+
+## Usage Pricing
+
+| Monthly API Calls    | Cost Per Send |
+| -------- | ------- |
+| 0 - 1K | FREE    |
+| 1K - 10K | 0.0001 NANO |
+| 10K - 100K | 0.0005 NANO |
+| 100K - 1M | 0.001 NANO |
 
 ## Get Started
 
