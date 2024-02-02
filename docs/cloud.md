@@ -49,8 +49,6 @@ curl -d '{
 - **```seed```:** (*string or bool*) Return *privateKey* with first response. Provided only once.
 - **```vanity```:** (*string or bool*) Generate custom address. Up to 5 characters.
 - **```delete```:** (*string or bool*) Manually expire address. Requires *api_key*.
-- **```password```** (*string*) Encrypts *privateKey* using AES-256. 
-    - **Note:** Encrypted wallets do not expire. You must use ``delete`` with ``password``.
 
 ---
 
