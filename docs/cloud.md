@@ -28,7 +28,7 @@ curl -d '{
   "action": "cloud_wallet",
   "vanity": "1temp",
   "refund_address": "YOUR_ADDRESS",
-  "expire": "5 minutes",
+  "expire": "5 minutes"
 }' \
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
