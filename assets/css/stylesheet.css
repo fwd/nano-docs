@@ -735,7 +735,9 @@ pre {
     z-index: 2;
     font-family: 'SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace';
     white-space: pre;
-    margin-bottom: 17px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    border-radius: 5px;
 }
 blockquote {
     background: #efefef;
@@ -2898,3 +2900,7 @@ h2:hover:before {
     bottom: 20px;
 }
 
+h2 {
+/*    margin-top: 35px;*/
+/*    margin-bottom: 40px;*/
+}

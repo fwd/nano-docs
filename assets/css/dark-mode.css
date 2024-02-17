@@ -93,3 +93,7 @@
 .hljs-literal {
     color: #2979ea !important;
 }
+
+.language-json .hljs-attr {
+    color: #e0d34f !important;
+}

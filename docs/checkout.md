@@ -1,6 +1,8 @@
-## Nano Checkout
+## Checkout API
 
-Free non-custodial Checkout API for the Nano blockchain.
+Free, non-custodial Checkout API for the Nano blockchain.
+
+Build elaborate Nano currency applications with ease.
 
 ```js
 const axios = require('axios');
@@ -9,25 +11,16 @@ axios.post('https://rpc.nano.to', {
   "action": "checkout",
   "title": "Hello World",
   "address": "@faucet",
-  "random": "true",
   "cancel_url": "https://example.com/cancel",
   "success_url": "https://example.com/success",
   "success_message": "{{title}} Units purchased for {{value}} NANO. Thanks, come again.",
+  "currency": "USD", // Default is NANO
   "plans": [
-    {
-      "title": "100 Units",
-      "value": 100
-    },
-    {
-      "title": "1,000,000 Units",
-      "value": 1000000,
-      "discount": 10
-    }
+    { "title": "100 Units", "value": "100.00XXXX",  "amount": 100 },
+    { "title": "1,000,000 Units", "value": "1000000.00XXX", "amount": 1000000 }
   ],
   "webhook_url": "https://example/webhook/secret",
-  "metadata": {
-    "secret": "joe-doe"
-  }
+  "metadata": { "secret": "joe-doe" }
 }).then((res) => {
   console.log(res.data);
 });
@@ -35,25 +28,23 @@ axios.post('https://rpc.nano.to', {
 
 **Response:**
 
-```json
+```js
 {
     "id": "CHECKOUT_ID",
     "browser": "https://nano.to/CHECKOUT_ID",
     "check": "https://api.nano.to/check/CHECKOUT_ID",
-    "json": "https://api.nano.to/checkout/CHECKOUT_ID",
+    "json": "https://api.nano.to/checkout/CHECKOUT_ID"
 }
 ```
 
 ## NanoPay.js Support
 
-NanoPay.js supports [Checkout API](/checkout) just pass the Checkout ```id```.
+[NanoPay.js](/nanopay) supports Checkout API, just pass the ```id```.
 
 ```js
 // Pass the checkout.id to NanoPay.js
 NanoPay.open({ 
     checkout: checkout.id,
-    debug: true,
-    qrcode: true, // always show qrcode
     success: (block) => {
         console.log(block)
     }
