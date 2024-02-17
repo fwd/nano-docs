@@ -1,4 +1,4 @@
-# Cloud Wallets (Beta)
+# Cloud Wallets
 
 Secure programmatic wallets for the Nano blockchain.
 
