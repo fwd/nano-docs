@@ -8,33 +8,37 @@
 	      "file": "/docs/welcome.md"
 	    },
 
+	 
+	    {
+			"title": "Username API",
+			"file": "/docs/username.md"
+	    },
+		
+		{
+			"title": "Checkout API",
+			"url": "/docs/checkout.md"
+		},
+
+		{
+			"title": "NanoPay.js",
+			"url": "/docs/nanopay.md"
+	    },
+	
 	    {
 			"title": "Cloud Wallets",
 			"url": "/docs/cloud.md"
 	    },
 	 
 	    {
-			"title": "Usernames",
-			"file": "/docs/username.md"
-	    },
-		
-		{
-			"title": "Checkout",
-			"url": "/docs/checkout.md"
-		},
-	 
-	    {
-			"title": "Node RPC",
+			"title": "Nano Node RPC",
 			"url": "/docs/rpc.md"
-	    },
-
-	    {
-			"title": "PoW RPC",
-			"url": "/docs/pow.md"
 	    }
 
 	],
 	"redirect": [
+		{ "path": "pay", "file": "/docs/nanopay.md" },
+		{ "path": "nanopay", "file": "/docs/nanopay.md" },
+		{ "path": "nanopay.js", "file": "/docs/nanopay.md" },
 		{ "path": "packages", "file": "/docs/packages.md" },
         { "path": "errors", "file": "/docs/rpc-errors.md" },
         { "path": "rpc-errors", "file": "/docs/rpc-errors.md" },
@@ -44,17 +48,18 @@
 		{ "path": "node", "file": "/docs/node.md" },
 		{ "path": "pow", "file": "/docs/pow.md" },
 		{ "path": "pow-api", "file": "/docs/pow.md" },
+		{ "path": "reseller", "file": "/docs/developer.md" },
 		{ "path": "rpc", "file": "/docs/rpc.md" },
 		{ "path": "cloud", "file": "/docs/cloud.md" },
 		{ "path": "ephemeral", "file": "/docs/cloud.md" },
 		{ "path": "rpc-api", "file": "/docs/rpc.md" },
 		{ "path": "checkouts", "file": "/docs/checkout.md" },
 		{ "path": "checkout", "file": "/docs/checkout.md" },
+		{ "path": "api", "file": "/docs/checkout.md" },
 		{ "path": "names", "file": "/docs/username.md" },
 		{ "path": "name", "file": "/docs/username.md" },
 		{ "path": "username", "file": "/docs/username.md" },
 		{ "path": "usernames", "file": "/docs/username.md" },
-		{ "path": "checkout", "file": "/docs/checkout.md" },
 		{ "path": "faucet", "file": "/docs/faucet.md" }
 	]
 }

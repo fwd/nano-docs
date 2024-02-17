@@ -1,6 +1,6 @@
-# Nano.to Name API
+# Nano.to Reseller API
 
-**Online UI:**
+**Online:**
 
 - [https://nano.to](https://nano.to)
 

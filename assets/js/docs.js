@@ -100,7 +100,6 @@ var app = new Vue({
             history.pushState({}, '', `#${item}`);
         },
         pushstate(item) {
-            // var new_path = (window.location.origin + window.location.pathname)
             history.pushState({}, '', `${item.replace('/', '')}`)
         },
         closeNav() {
@@ -214,16 +213,13 @@ var app = new Vue({
         slug(text) {
             return text.toLowerCase().trim().replace(/[^\w\s-]/g, '').trim().replace(/[\s_-]+/g, '-')
         },
-        section(i) {
+        section(i, click) {
             var self = this
             if (!i) return
             i.slug = this.slug(i.title)
             var url = i.file || i.url
             if (url) {
                 var path = url
-                // if (!url.includes('://')) {
-                //     url = window.location.origin + ((window.location.pathname.split('/')[1] ? '/' + window.location.pathname.split('/')[1] : '') + '/') + url
-                // }
                 axios.get(url.replace('.md', '') + '.md').then((res) => {
                     i.template = res.data
                     this.active = i
@@ -239,7 +235,10 @@ var app = new Vue({
                             }) : titles
                         self.active.titles = titles
                         self.$forceUpdate()
-                        if (self.loaded) self.pushstate('/' + i.slug + (window.location.hash ? window.location.hash : ''))
+                        if (self.loaded) {
+                            // console.log( this.active, i )
+                            if (click) self.pushstate('/' + i.slug + (window.location.hash ? window.location.hash : ''))
+                        }
                         if (window.location.hash) {
                             setTimeout(() => {
                                 self.scrollTo(null, window.location.hash.replace('#', ''))

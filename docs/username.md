@@ -6,7 +6,7 @@ Open Source, non-custodial name service for the Nano blockchain.
 
 - [Nano.to](https://nano.to)
 
-**Or via API**
+**Or via RPC**
 
 ```
 curl -d '{
@@ -17,7 +17,90 @@ curl -d '{
 "https://rpc.nano.to"
 ```
 
-## Updates
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+
+## Simple Usage
+
+**Name:**
+```python
+https://nano.to/Fosse
+```
+
+**Raw Address:**
+```python
+https://nano.to/:ADDRESS
+```
+
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+
+## Single Panel
+
+```python
+https://nano.to/Fosse?amount=50
+```
+
+<img src="https://github.com/fwd/nano/raw/master/dist/images/single-ui.png" alt="Single Panel UI" />
+
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+
+## Double Panel
+
+```python
+https://nano.to/Moon?plans=Tip:0.133,Small:1,Medium:10,Large:20,Gigantic:100
+```
+
+<img src="https://github.com/fwd/nano/raw/master/dist/images/double-ui.png" alt="Single Panel UI" />
+
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+
+## Customize Colors
+
+```python
+https://nano.to/Moon
+?background=$0057b7:$ffd700
+&color=$FFF:$000
+&highlight=white
+&vanity=$0057b7
+&qrcode=white:$0057b7
+&logo=https://nano.to/dist/logo/cyber.png
+```
+
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+
+## Available Options
+
+- **title** (string) : Replace checkout title.
+- **amount**, **p** (number) : Single panel, No plans.
+- **body** (string) : Custom checkout text body.
+- **plans** (string) : Plans separated by commas. Ex. Tip:30,Small:5
+- **goal** (string) : Show a funding meter based off balance.
+- **image** (image/url) : Display Image. Image URL.
+- **color** (string) : Text color. Ex red:blue
+- **background** (string) : Background color. Ex white:gray
+- **highlight** (string) : Box backgrounds value. Ex blue:red
+- **qrcode** (string) : Replace QR Code color. Ex white:black
+- **active** (string) : Background color of active plan.
+- **logo** (image/url) : Replace QR Code logo. Image URL.
+- **cancel** (string) : Redirect URL when pressed 'Cancel'
+- **redirect** (string) : Redirect URL on success.
+- **currency**, **c** (string) : ISO Currency Symbol. Ex JPY
+- **notify**, (string) : Email(s) or Discord Webhook URL
+
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+
+## Funding UI
+
+Easily show a meter of progress for any Nano fundraiser. 
+
+```python
+https://nano.to/@Basedlemahieu?goal=100:Funding Goal
+```
+
+<img src="https://github.com/fwd/nano/raw/master/dist/images/funding.png" alt="Single Panel UI" />
+
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+
+## Update Name
 
 You can update your data anytime. 
 
@@ -27,7 +110,7 @@ https://nano.to/:USERNAME/update
 
 > Only original address may update.
 
-## Renewals
+## Renew Name
 
 You can extend registration anytime. 
 
@@ -39,23 +122,19 @@ https://nano.to/:USERNAME/renew
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-## Grace Period
+## Grace Periods
 
 Usernames have **10 day** after expiration, regardless of duration leased. Only the original address may renew.
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-## Developer API
+## Checkout API
 
-See our [Developer Page](/developer) for complete docs.
+If you'd like receive notifications and private webhooks, try the [Checkout API](/checkout)
 
-## Nano.to Support
+## Reseller API
 
-- Email: support@nano.to
-- Twitter: [@nano2dev](https://twitter.com/nano2dev)
-- @nano2dev on [Nano's Discord](https://discord.com/invite/RNAE2R9) 
-
-![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+See our [Developer Page](/developer) for docs on reselling Nano.to Names.
 
 ## Usage License
 
@@ -69,9 +148,8 @@ Contact [support@nano.to](mailto:support@nano.to) for questions.
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-## Sponsor (DigitalOcean)
+## Nano.to Support
 
-<a align="center" target="_blank" href="https://m.do.co/c/f139acf4ddcb"><img style="object-fit: contain;
-    max-width: 100%;" src="https://github.com/fwd/fwd/raw/master/ads/digitalocean_new.png" width="970" /></a>
-
-![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+- Email: support@nano.to
+- Twitter: [@nano2dev](https://twitter.com/nano2dev)
+- @nano2dev on [Nano's Discord](https://discord.com/invite/RNAE2R9) 

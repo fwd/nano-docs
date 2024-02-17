@@ -30,6 +30,8 @@ curl -d '{
 }
 ```
 
+> Provided ```api_key``` is used to authenticate future API calls. Use ```seed``` to return privateKey. This can only be done at wallet creation. And finally, use ```public``` when using Client-side to omit api_key from response
+
 ## All Options
 
 - **```balance```:** (*string or bool*) get account balance and pending. Requires *api_key*. Returns object. 

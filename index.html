@@ -19,7 +19,6 @@ DON'T EDIT THIS FILE. USE CONFIG.JSON INSTEAD.
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
     <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
-    <!-- <link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" /> -->
     <link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css?v=1" />
     <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css?v=3" />
     <link rel="stylesheet" type="text/css" href="assets/css/dark-mode.css?v=3" />
@@ -80,7 +79,7 @@ DON'T EDIT THIS FILE. USE CONFIG.JSON INSTEAD.
         <div :class="`fwd-navigation ${menu ? 'active' : ''}`">
           <ul class="nav flex-column ">
             <li v-for="i of config.sections" class="nav-item">
-              <a :class="`nav-link ${ (!show && !active) || active.title == config.sections[0].title || (active && active.title == i.title) ? 'active' : '' }`" @click="section(i); show = false; scrollTop();">{{ i.title }}</a>
+              <a :class="`nav-link ${ (!show && !active) || active.title == config.sections[0].title || (active && active.title == i.title) ? 'active' : '' }`" @click="section(i, true); show = false; scrollTop();">{{ i.title }}</a>
               <ul v-if="active === i" class="nav flex-column">
                 <li v-for="item of active.titles" class="nav-item">
                   <a :class="`nav-link ${href === slug(item.title) ? 'active' : ''}`" @click="scrollTo(item); closeNav()">{{ item.title }}</a>
