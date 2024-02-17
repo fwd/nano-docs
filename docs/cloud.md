@@ -30,7 +30,7 @@ curl -d '{
 }
 ```
 
-> Provided ```api_key``` is used to authenticate future API calls. Use ```seed``` to return privateKey. This can only be done at wallet creation. And finally, use ```public``` when using Client-side to omit api_key from response
+> Provided ```api_key``` is used to authenticate future API calls. Optionally, you can use ```seed``` to return the privateKey. Or use ```public``` when client-side to omit ```api_key``` from response.
 
 ## All Options
 

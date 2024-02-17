@@ -91,9 +91,13 @@
 .hljs-number,
 .hljs-built_in,
 .hljs-literal {
-    color: #2979ea !important;
+    color: #2979ea;
 }
 
 .language-json .hljs-attr {
+    color: inherit;
+}
+
+.dark-mode .language-json .hljs-attr {
     color: #e0d34f !important;
 }

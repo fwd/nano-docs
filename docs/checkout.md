@@ -35,21 +35,6 @@ axios.post('https://rpc.nano.to', {
 }
 ```
 
-## NanoPay.js Support
-
-[NanoPay.js](/nanopay) supports Checkout API, just pass the ```id```.
-
-```js
-// Pass the checkout.id to NanoPay.js
-NanoPay.open({ 
-    checkout: checkout.id,
-    success: (block) => {
-      console.log(block)
-    }
-})
-```
-
-![](https://camo.githubusercontent.com/d2bdb483a89f85d5d2c9dc2a223e1732a468dd73dc22b7282e6d759333162951/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f465f344b366636586f4141597450453f666f726d61743d6a7067266e616d653d6d656469756d)
 
 ## Private Webhook
 
@@ -76,15 +61,16 @@ NanoPay.open({
 
 ## Unique Payments
 
-If you'd like to create unique Checkouts, you have to options
+If you'd like to receive payments that don't collide with other payments, you have to options:
 
-- Unique Nano Address
-- Unique Payment Amounts
+- [Unique Payment Amount](#unique-amount)
+- [Unique Nano Address](#unique-address)
 
-When creating a Checkout add 'X' to the amount and the API will replace them with random numbers. 
+## Unique Amount
+
+Simply add 'X' to the ```amount``` and the API will replace them with random numbers. 
 
 ```bash
-
 curl -d '{
   "action": "checkout",
   "address": "@Development",
@@ -92,16 +78,77 @@ curl -d '{
 }' \
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
-
 ```
 
-```json
+**Response:**
+```js
 {
   "id": "8c1eb40e",
   "amount": "0.00100000084648542"
-  ...
+  // ...
 }
 ```
+
+## Unique Address
+
+[Cloud Wallets](/cloud) makes generating unique payment addresses easy. 
+
+```js
+const axios = require('axios');
+
+axios.post('https://rpc.nano.to', {
+  "action": "cloud_wallet",
+  "refund_address": "YOUR_ADDRESS",
+  "expire": "5 minutes"
+}).then((cloudWallet) => {
+
+  console.log(cloudWallet.data);
+
+  // {
+  //   "balance": 0,
+  //   "address": "nano_1temp9dzx8kmkbcpedwi...4bzoh3pafk9grxndk88inkbe",
+  //   "api_key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C",
+  //   "refund_address": "YOUR_ADDRESS",
+  //   "expiration": "in 5 minutes",
+  //   "expiration_unix": 1710873173,
+  // }
+
+  axios.post('https://rpc.nano.to', {
+    "action": "checkout",
+    "address": cloudWallet.data.address, // Cloud Wallet Address
+    "random": "true",
+    "amount": "1" // Simple payment amount
+  }).then((checkout) => {
+
+    console.log(checkout.data);
+
+  });
+
+});
+```
+
+> To generate addresses locally, see [Developer Tools](https://hub.nano.org/developer-tools).
+
+## NanoPay Support
+
+[NanoPay.js](/nanopay) supports secure made Checkouts, just pass the ```id```. 
+
+```html
+<script src="https://pay.nano.to/latest.js"></script>
+
+<script>
+  // Pass the checkout.id to NanoPay.js
+  NanoPay.open({ 
+      checkout: checkout.id,
+      success: (block) => {
+        console.log(block)
+      }
+  })
+</script>
+```
+
+![](https://camo.githubusercontent.com/d2bdb483a89f85d5d2c9dc2a223e1732a468dd73dc22b7282e6d759333162951/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f465f344b366636586f4141597450453f666f726d61743d6a7067266e616d653d6d656469756d)
+
 
 ## Payment Alerts 
 
@@ -123,7 +170,6 @@ axios.post('https://rpc.nano.to', {
     height: auto;
     max-width: 510px;
 ">
-
 
 ```js
 const axios = require('axios');

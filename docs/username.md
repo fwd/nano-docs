@@ -1,6 +1,6 @@
 # Nano Names
 
-Open Source, non-custodial name service for the Nano blockchain.
+Open source, non-custodial name service for the Nano blockchain.
 
 **Register Online**
 
@@ -8,7 +8,7 @@ Open Source, non-custodial name service for the Nano blockchain.
 
 **Or via RPC**
 
-```
+```bash
 curl -d '{
   "action": "get_name",
   "name": "NanoBull"
@@ -45,7 +45,7 @@ https://nano.to/Fosse?amount=50
 
 ## Double Panel
 
-```python
+```bash
 https://nano.to/Moon?plans=Tip:0.133,Small:1,Medium:10,Large:20,Gigantic:100
 ```
 
@@ -55,7 +55,7 @@ https://nano.to/Moon?plans=Tip:0.133,Small:1,Medium:10,Large:20,Gigantic:100
 
 ## Customize Colors
 
-```python
+```bash
 https://nano.to/Moon
 ?background=$0057b7:$ffd700
 &color=$FFF:$000
@@ -69,22 +69,22 @@ https://nano.to/Moon
 
 ## Available Options
 
-- **title** (string) : Replace checkout title.
-- **amount**, **p** (number) : Single panel, No plans.
-- **body** (string) : Custom checkout text body.
-- **plans** (string) : Plans separated by commas. Ex. Tip:30,Small:5
-- **goal** (string) : Show a funding meter based off balance.
-- **image** (image/url) : Display Image. Image URL.
-- **color** (string) : Text color. Ex red:blue
-- **background** (string) : Background color. Ex white:gray
-- **highlight** (string) : Box backgrounds value. Ex blue:red
-- **qrcode** (string) : Replace QR Code color. Ex white:black
-- **active** (string) : Background color of active plan.
-- **logo** (image/url) : Replace QR Code logo. Image URL.
-- **cancel** (string) : Redirect URL when pressed 'Cancel'
-- **redirect** (string) : Redirect URL on success.
-- **currency**, **c** (string) : ISO Currency Symbol. Ex JPY
-- **notify**, (string) : Email(s) or Discord Webhook URL
+- ```title``` (string) : Replace checkout title.
+- ```amount```, **p** (number) : Single panel, No plans.
+- ```body``` (string) : Custom checkout text body.
+- ```plans``` (string) : Plans separated by commas. Ex. Tip:30,Small:5
+- ```goal``` (string) : Show a funding meter based off balance.
+- ```image``` (image/url) : Display Image. Image URL.
+- ```color``` (string) : Text color. Ex red:blue
+- ```background``` (string) : Background color. Ex white:gray
+- ```highlight``` (string) : Box backgrounds value. Ex blue:red
+- ```qrcode``` (string) : Replace QR Code color. Ex white:black
+- ```active``` (string) : Background color of active plan.
+- ```logo``` (image/url) : Replace QR Code logo. Image URL.
+- ```cancel``` (string) : Redirect URL when pressed 'Cancel'
+- ```redirect``` (string) : Redirect URL on success.
+- ```currency```, **c** (string) : ISO Currency Symbol. Ex JPY
+- ```notify```, (string) : Email(s) or Discord Webhook URL
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
@@ -108,7 +108,7 @@ You can update your data anytime.
 https://nano.to/:USERNAME/update
 ```
 
-> Only original address may update.
+> Only original address may update. You can pre-configure URL params in the metadata field of update UI.
 
 ## Renew Name
 
