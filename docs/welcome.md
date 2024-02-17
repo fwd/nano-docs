@@ -6,14 +6,14 @@ We're on a mission to accelerate the use of Nano around the world.
 
 ## **Quick Links**
 
-  - [**Cloud Wallets**](/cloud) - Ephemeral Cloud Wallets
+  - [**Cloud Wallets**](/cloud) - Secure Programmatic Cloud Wallets
+  - [**Checkout API**](/checkout) - Non-custodial Checkout service.
+  - [**Username API**](/usernames) - Non-custodial Name service.
   - [**Blockchain RPC**](https://rpc.nano.to) - High Performance Blockchain RPC
-  - [**Usernames**](/usernames) - Non-custodial Name service.
-  - [**Checkout UI**](/checkout) - Non-custodial Checkout service.
   - [**Nault Pro**](https://nault.pro) - Nano.to's Nault Fork
-  - [**Setup Nano Node**](https://github.com/fwd/nano-docker) - Docker Image
+  - [**Setup Nano Node**](https://github.com/fwd/nano-docker) - Nano Docker Image
   - [**Common RPC Errors**](/errors) - Nano Node Troubleshooting Help
-  - [**Everything Nano**](/packages) - Collection of Nano Links
+  - [**Everything Else**](/packages) - Collection of Nano Links
 
 ## About Nano.to
 
