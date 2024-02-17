@@ -44,7 +44,25 @@ axios.post('https://rpc.nano.to', {
 }
 ```
 
-**Webhook:**
+## NanoPay.js Support
+
+NanoPay.js supports [Checkout API](/checkout) just pass the Checkout ```id```.
+
+```js
+// Pass the checkout.id to NanoPay.js
+NanoPay.open({ 
+    checkout: checkout.id,
+    debug: true,
+    qrcode: true, // always show qrcode
+    success: (block) => {
+        console.log(block)
+    }
+})
+```
+
+![](https://camo.githubusercontent.com/d2bdb483a89f85d5d2c9dc2a223e1732a468dd73dc22b7282e6d759333162951/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f465f344b366636586f4141597450453f666f726d61743d6a7067266e616d653d6d656469756d)
+
+## Private Webhook
 
 ```json
 {
@@ -96,7 +114,7 @@ curl -d '{
 }
 ```
 
-## Alerts 
+## Payment Alerts 
 
 ```js
 const axios = require('axios');
