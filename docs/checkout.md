@@ -21,9 +21,7 @@ axios.post('https://rpc.nano.to', {
   ],
   "webhook_url": "https://example/webhook/secret",
   "metadata": { "secret": "joe-doe" }
-}).then((res) => {
-  console.log(res.data);
-});
+})
 ```
 
 **Response:**
@@ -46,7 +44,7 @@ axios.post('https://rpc.nano.to', {
 NanoPay.open({ 
     checkout: checkout.id,
     success: (block) => {
-        console.log(block)
+      console.log(block)
     }
 })
 ```
