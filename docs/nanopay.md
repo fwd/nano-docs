@@ -96,11 +96,13 @@ NanoPay.open({
 - **currency**: (*string*) Fiat currency for Nano price conversion, default "USD".
 - **note**: (*string*) Custom note shown in admin email, default false.
 - **qrcode**: (*string*) Always show QR Code, default desktop only.
+- **checkout**: (*string*) Nano.to Checkout ID. [Read More](/checkout).
+- **email**: (*string*) Pre-configure user's email
+- **expiration**: (*number*) Duration for completion in milliseconds.
+- **mailing_address**: (*string*) Pre-configure user's shipping address
 - **success**: (*function*) Called when payment is successful.
 - **cancel**: (*function*) Called when popup is cancelled.
-- **checkout**: (*string*) Use custom Nano.to Checkout. [Read More](https://rpc.nano.to/#checkout).
-- **email**: (*string*) Pre-configure user's email
-- **mailing_address**: (*string*) Pre-configure user's shipping address
+- **expired**: (*function*) Called when popup has expired.
 
 
 ## Checkout Support
@@ -125,7 +127,6 @@ var checkout = (await axios.post('https://rpc.nano.to', {
 // Pass the checkout.id to NanoPay.js
 NanoPay.open({ 
     checkout: checkout.id,
-    debug: true,
     qrcode: true, // always show qrcode
     success: (block) => {
         console.log(block)
@@ -134,6 +135,36 @@ NanoPay.open({
 ```
 
 > [Read Checkout API Docs](/checkout)
+
+## Timed Checkout
+
+By default, NanoPay does not limit Checkout time. If you'd like to, you can use ```expiration``` and ```expired```. A countdown will be shown next to ```description```.
+
+```js
+function showNanoPay() {
+  NanoPay.open({ 
+    address: '@bank', // Your App's Address
+    amount: "0.13300XXXX", // Amount with random decimals
+    description: "Checkout",
+    expiration: 5 * 60, // 5 minutes in ms
+    currency: 'USD',
+    expired: () => {
+      showNanoPay() // call again to reset
+    },
+    success: (block) => {
+        // {
+        //     "hash": "D16FF348B634CDB3DF8...9D6F5B180CCD3B93F99A4D15203",
+        //     "address": "PAYEE_NANO_ADDRESS",
+        //     "username": "PAYEE_USERNAME",
+        //      ...
+        // }
+        console.log("Hello:", block.username || block.address)
+    }
+  })
+}
+
+showNanoPay() // call initially
+```
 
 ## Login with Nano
 
@@ -162,7 +193,7 @@ NanoPay.open({
 
 NanoPay includes an easy way to monetize any website client-side. 
 
-> Please note, this method does not require a back-end, as such it's not for keeping secrets from public. Google bots can still crawl content.
+> Please note, this method does not use a back-end, it's not for keeping secrets from public. Google bots can still crawl content.
 
 ```html
 <style>
