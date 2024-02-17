@@ -1,25 +1,8 @@
 # Cloud Wallets (Beta)
 
-Secure programmatic wallets for the Nano blockchain. 
+Secure programmatic wallets for the Nano blockchain.
 
-## Usage Pricing
-
-<table>
-    <thead>
-        <tr>
-            <th>Monthly API Calls</th>
-            <th>Cost Per Send</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr> <td> 0 - 1K </td> <td> FREE </td> </tr>
-        <tr> <td> 1K - 10K </td> <td> 0.0001 NANO </td> </tr>
-        <tr> <td> 10K - 100K </td> <td> 0.0005 NANO </td> </tr>
-        <tr> <td> 100K - 1M </td> <td> 0.001 NANO </td> </tr>
-    </tbody>
-</table>
-
-> A commercial-grade, high-capacity version (>1M) of this API is in development, expected Q2 2025.
+Build demanding applications with ease.
 
 ## Get Started
 
@@ -43,8 +26,7 @@ curl -d '{
   "api_key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C",
   "refund_address": "YOUR_ADDRESS",
   "expiration": "in 10 minutes",
-  "expiration_unix": 1710873173,
-  "encryption": "AES-256"
+  "expiration_unix": 1710873173
 }
 ```
 
@@ -72,8 +54,7 @@ curl -d '{
 curl -d '{
   "action": "cloud_wallet",
   "receive": "all",
-  "key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C",
-  "password": "my-secret-passphrase"
+  "key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C"
 }' \
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
@@ -99,8 +80,7 @@ curl -d '{
 curl -d '{
   "action": "cloud_wallet",
   "balance": "true",
-  "key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C",
-  "password": "my-secret-passphrase"
+  "key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C"
 }' \
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
@@ -130,8 +110,7 @@ curl -d '{
   "action": "cloud_wallet",
   "send": "@bank",
   "amount": "0.00001",
-  "key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C",
-  "password": "my-secret-passphrase"
+  "key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C"
 }' \
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
@@ -153,8 +132,7 @@ Manually trigger expiration.
 curl -d '{
   "action": "cloud_wallet",
   "delete": "true",
-  "key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C",
-  "password": "my-secret-passphrase"
+  "key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C"
 }' \
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
@@ -168,9 +146,36 @@ curl -d '{
 }
 ```
 
-## Public
+## Client-side Usage
 
-**For use client-side. No secret API key is returned.**
+**Use ```public``` for client-side use. No API_Key is returned.**
+
+```bash
+curl -d '{
+  "action": "cloud_wallet",
+  "public": "true",
+  "refund_address": "@faucet",
+  "expire": "5 minutes"
+}' \
+-H "Content-Type: application/json" \
+"https://rpc.nano.to"
+```
+
+**Response:**
+
+```json
+{
+  "balance": 0,
+  "address": "nano_1cxmn9dzx8kmkbcpedwi...4bzoh3pafk9grxndk88inkbe",
+  "refund_address": ["nano_1faucet7b6xjy...ska8kwopzf1ecbfmn35d1zey3ys"],
+  "expiration": "in 5 minutes",
+  "expiration_unix": 1710873173
+}
+```
+
+## Profit Sharing API
+
+Refund_address accepts an array. When address expires, funds are sent equally between configured accounts. 
 
 ```bash
 curl -d '{
@@ -185,15 +190,15 @@ curl -d '{
 
 **Response:**
 
-```json
+```js
 {
-  "balance": 0,
   "address": "nano_1cxmn9dzx8kmkbcpedwi...4bzoh3pafk9grxndk88inkbe",
   "refund_address": ["nano_1faucet7b6xjy...ska8kwopzf1ecbfmn35d1zey3ys", "nano_1bank7b6xjy...ska8kwopzf1ecbfmn35d1zey3ys"],
-  "expiration": "in 5 minutes",
-  "expiration_unix": 1710873173
+  // ...
 }
 ```
+
+> Support for split percentage configuration is in development.
 
 ## Dedicated Support
 
