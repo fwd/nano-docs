@@ -29,15 +29,22 @@
 .dark-mode code {
     background-color: #011627;
     border-radius: 4px;
-    color: #08a698 !important;
+    color: #e3e3e3 !important;
     line-height: 26px;
 }
+.dark-mode p code,
+.dark-mode li code,
+.dark-mode .hljs-keyword,
+.dark-mode .hljs-attr {
+    color: #59abff !important;
+}
 .dark-mode .hljs-comment {
-    color:  rgba(255, 255, 255, 0.33) !important;
+    color:  rgba(255, 255, 255, 0.50) !important;
 }
 
 .dark-mode .hljs-string {
-    /*color: red;*/
+    color: #ffda25;
+/*    color: #ec8554;*/
 }
 .dark-mode .accordion:not(.accordion-alternate) .card-header a.collapsed {
     background-color: #181b1f;
@@ -77,4 +84,12 @@
 
 .dark-mode table {
     color: #FFF;
+}
+
+.hljs-attr,
+.hljs-name,
+.hljs-number,
+.hljs-built_in,
+.hljs-literal {
+    color: #2979ea !important;
 }

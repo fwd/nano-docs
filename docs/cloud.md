@@ -200,7 +200,7 @@ curl -d '{
 }
 ```
 
-> Support for split percentage configuration is in development.
+> Support for split percentage configuration coming soon.
 
 ## Dedicated Support
 

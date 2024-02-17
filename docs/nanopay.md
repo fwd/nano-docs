@@ -81,7 +81,7 @@ NanoPay.open({
 
 ## All Options
 
-- **title**: (*string*) Show custom title shown in popup.
+- ```title```: (*string*) Show custom title shown in popup.
 - **address**: (*string*) Nano address or Nano.to @Username.
 - **contact**: (*string*) User's email address.
 - **shipping**: (*number or bool*) User's mailing address. 'true' for free shipping.

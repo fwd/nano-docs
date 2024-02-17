@@ -56,7 +56,7 @@ window.load = function() {
         });
 
     $('#back-to-top').on("click", function() {
-        $('html, body').animate({scrollTop:0}, 'slow');
+        $('html, body').animate({ scrollTop: 0 }, 'slow');
         return false;
     });
 
@@ -213,6 +213,31 @@ var app = new Vue({
         slug(text) {
             return text.toLowerCase().trim().replace(/[^\w\s-]/g, '').trim().replace(/[\s_-]+/g, '-')
         },
+
+        copyUrlAndDeepLinkId(h2Element) {
+            
+            // Construct the text to copy to clipboard
+            var textToCopy = window.location.href.split('#')[0] + '#' + h2Element.id
+            
+            // Create a textarea element to copy the text to clipboard
+            var tempTextArea = document.createElement("textarea");
+
+            tempTextArea.value = textToCopy;
+            
+            // Append the textarea to the document
+            document.body.appendChild(tempTextArea);
+            
+            // Select the text inside the textarea
+            tempTextArea.select();
+            
+            // Copy the selected text to clipboard
+            document.execCommand("copy");
+            
+            // Remove the temporary textarea
+            document.body.removeChild(tempTextArea);
+
+        },
+
         section(i, click) {
             var self = this
             if (!i) return
@@ -236,7 +261,6 @@ var app = new Vue({
                         self.active.titles = titles
                         self.$forceUpdate()
                         if (self.loaded) {
-                            // console.log( this.active, i )
                             if (click) self.pushstate('/' + i.slug + (window.location.hash ? window.location.hash : ''))
                         }
                         if (window.location.hash) {
@@ -244,7 +268,21 @@ var app = new Vue({
                                 self.scrollTo(null, window.location.hash.replace('#', ''))
                             }, 500)
                         }
+                        
                         document.title = i.title  + ' - ' + self.config.title;
+
+                        setTimeout(() => {
+                            
+                            // Add event listeners to all h2 elements on the page
+                            var h2Elements = document.querySelectorAll('h2');
+                            h2Elements.forEach(function(h2Element) {
+                                h2Element.addEventListener('click', function() {
+                                    self.copyUrlAndDeepLinkId(h2Element);
+                                });
+                            });
+
+                        }, 500)
+
                     }, 100)
                 })
                 return

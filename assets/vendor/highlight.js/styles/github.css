@@ -40,7 +40,7 @@ pre {
 .hljs-variable,
 .hljs-template-variable,
 .hljs-tag .hljs-attr {
-  color: #008080;
+  color: #a8c7fa;
 }
 
 .hljs-string,
@@ -68,7 +68,7 @@ pre {
 .hljs-tag,
 .hljs-name,
 .hljs-attribute {
-  color: #000080;
+  color: #7dacf8;
   font-weight: normal;
 }
 
