@@ -149,7 +149,9 @@ var app = new Vue({
 
                 var found = data.sections.find(a => {
                     var url = a.file || a.url
-                    return ('#' + self.slug(a.title).toLowerCase()) === hash.replace('/', '#') || url.includes(`pages/${hash.replace('/', '').replace('.md', '') + '.md'}`)
+                    return ('#' + self.slug(a.title).toLowerCase()) === hash.replace('/', '#') || 
+                           url.includes(`pages/${hash.replace('/', '').replace('.md', '') + '.md'}`) ||
+                           url.includes(hash) 
                 })
 
                 if (found) {
