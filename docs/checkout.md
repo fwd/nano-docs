@@ -16,8 +16,14 @@ axios.post('https://rpc.nano.to', {
   "success_message": "{{title}} Units purchased for {{value}} NANO. Thanks, come again.",
   "currency": "USD", // Default is NANO
   "plans": [
-    { "title": "100 Units", "value": "100.00XXXX",  "amount": 100 },
-    { "title": "1,000,000 Units", "value": "1000000.00XXX", "amount": 1000000 }
+    { 
+      "title": "100 Units", 
+      "value": "100.00XXXX"
+    },
+    { 
+      "title": "1,000,000 Units", 
+      "value": "1000.00XXX"
+    }
   ],
   "webhook_url": "https://example/webhook/secret",
   "metadata": { "secret": "joe-doe" }
@@ -34,7 +40,6 @@ axios.post('https://rpc.nano.to', {
     "json": "https://api.nano.to/checkout/CHECKOUT_ID"
 }
 ```
-
 
 ## Private Webhook
 
@@ -58,6 +63,28 @@ axios.post('https://rpc.nano.to', {
     "checkout": "https://api.nano.to/checkout/CHECKOUT_ID"
 }
 ```
+
+## NanoPay Support
+
+[NanoPay.js](/nanopay) supports secure made Checkouts, just pass the ```id```. 
+
+```html
+<script src="https://pay.nano.to/latest.js"></script>
+
+<script>
+  // Pass the checkout.id to NanoPay.js
+  NanoPay.open({ 
+      checkout: checkout.id,
+      success: (block) => {
+        console.log(block)
+      }
+  })
+</script>
+```
+
+![](https://camo.githubusercontent.com/d2bdb483a89f85d5d2c9dc2a223e1732a468dd73dc22b7282e6d759333162951/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f465f344b366636586f4141597450453f666f726d61743d6a7067266e616d653d6d656469756d)
+
+
 
 ## Unique Payments
 
@@ -128,27 +155,6 @@ axios.post('https://rpc.nano.to', {
 ```
 
 > To generate addresses locally, see [Developer Tools](https://hub.nano.org/developer-tools).
-
-## NanoPay Support
-
-[NanoPay.js](/nanopay) supports secure made Checkouts, just pass the ```id```. 
-
-```html
-<script src="https://pay.nano.to/latest.js"></script>
-
-<script>
-  // Pass the checkout.id to NanoPay.js
-  NanoPay.open({ 
-      checkout: checkout.id,
-      success: (block) => {
-        console.log(block)
-      }
-  })
-</script>
-```
-
-![](https://camo.githubusercontent.com/d2bdb483a89f85d5d2c9dc2a223e1732a468dd73dc22b7282e6d759333162951/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f465f344b366636586f4141597450453f666f726d61743d6a7067266e616d653d6d656469756d)
-
 
 ## Payment Alerts 
 
