@@ -1,4 +1,4 @@
-## NanoPay.js
+# NanoPay.js
 
 Open source, non-custodial Javascript payment library for the Nano blockchain. 
 

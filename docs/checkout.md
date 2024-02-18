@@ -1,4 +1,4 @@
-## Checkout API
+# Checkout API
 
 Free, non-custodial Checkout API for the Nano blockchain.
 
