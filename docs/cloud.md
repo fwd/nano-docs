@@ -2,7 +2,7 @@
 
 Secure programmatic wallets for the Nano blockchain.
 
-Build demanding applications with ease.
+Build demanding Nano applications with ease.
 
 ## Get Started
 
