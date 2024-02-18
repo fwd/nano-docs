@@ -2904,3 +2904,8 @@ h2 {
 /*    margin-top: 35px;*/
 /*    margin-bottom: 40px;*/
 }
+
+
+.hljs-variable {
+    color: #1147dd;
+}
