@@ -149,9 +149,10 @@ var app = new Vue({
 
                 var found = data.sections.find(a => {
                     var url = a.file || a.url
+                    var redirect = self.config.redirect.find(a => a.path.includes(hash.replace('/', '')))
                     return ('#' + self.slug(a.title).toLowerCase()) === hash.replace('/', '#') || 
                            url.includes(`pages/${hash.replace('/', '').replace('.md', '') + '.md'}`) ||
-                           url.includes(hash) 
+                           url.includes(hash) || (redirect && redirect.file === url)
                 })
 
                 if (found) {
