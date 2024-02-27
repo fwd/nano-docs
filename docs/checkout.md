@@ -66,9 +66,9 @@ axios.post('https://rpc.nano.to', {
 
 ## NanoPay Support
 
-[NanoPay.js](/nanopay) is a client-side Javascript library for secure Nano payments.
+[NanoPay.js](/nanopay) is a client-side Javascript library for elegant Nano payments.
 
-It supports Checkouts by simply passing the ```id```. 
+It supports this Checkout API by simply passing the ```id```. 
 
 ```html
 <script src="https://pay.nano.to/latest.js"></script>
