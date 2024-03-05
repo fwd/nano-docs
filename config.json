@@ -8,7 +8,6 @@
 	      "file": "/docs/welcome.md"
 	    },
 
-	 
 	    {
 			"title": "Username API",
 			"file": "/docs/username.md"
@@ -19,15 +18,16 @@
 			"url": "/docs/checkout.md"
 		},
 
+	    {
+			"title": "Cloud Wallets",
+			"url": "/docs/cloud.md"
+	    },
+
 		{
 			"title": "NanoPay.js",
 			"url": "/docs/nanopay.md"
 	    },
 	
-	    {
-			"title": "Cloud Wallets",
-			"url": "/docs/cloud.md"
-	    },
 	 
 	    {
 			"title": "Nano Node RPC",
