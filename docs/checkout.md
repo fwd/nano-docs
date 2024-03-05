@@ -1,8 +1,10 @@
-# Checkout API
+# Checkout
 
 Free, non-custodial Checkout API for the Nano blockchain.
 
-Build elaborate Nano currency checkouts with ease.
+Build elaborate applications with ease.
+
+## Usage
 
 ```js
 const axios = require('axios');

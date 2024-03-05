@@ -2,6 +2,7 @@ body, html {
     height: 100%;
     font: 19px/1.7 -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     scroll-behavior: smooth;
+    word-wrap: break-word;
 }
 body {
     /*background: #dddddd;*/
