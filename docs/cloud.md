@@ -4,7 +4,7 @@ Secure programmatic wallets for the Nano blockchain.
 
 Build demanding Nano applications with ease.
 
-> Nano.to [API KEY](https://rpc.nano.to) required.
+> Nano.to Cloud [WALLET API KEY](https://rpc.nano.to) required to use this API.
 
 ## Get Started
 
@@ -31,8 +31,6 @@ curl -d '{
   "expiration_unix": 1710873173
 }
 ```
-
-> Provided ```api_key``` is used to authenticate future API calls. Optionally, you can use ```seed``` to return the privateKey. Or use ```public``` when client-side to omit ```api_key``` from response.
 
 ## All Options
 
