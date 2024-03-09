@@ -4,7 +4,7 @@ Secure programmatic wallets for the Nano blockchain.
 
 Build demanding Nano applications with ease.
 
-> Nano.to Cloud [WALLET API KEY](https://rpc.nano.to) required to use this API.
+> Nano.to Cloud [WALLET API KEY](https://rpc.nano.to?signup) required to use this API.
 
 ## Get Started
 
