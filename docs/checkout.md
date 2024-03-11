@@ -4,7 +4,7 @@ Free, non-custodial Checkout API for the Nano blockchain.
 
 Build elaborate business applications with ease.
 
-## Basic Usage
+## Simple Usage
 
 ```html
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -12,9 +12,8 @@ Build elaborate business applications with ease.
 <script>
 axios.post('https://rpc.nano.to', {
   "action": "checkout",
-  "title": "Nano Bird Feeder",
-  "notify": "steve@apple.com",
-  "address": "@faucet"
+  "address": "@faucet",
+  "amount": "0.1330000XXXX"
 }).then((res) => {
   console.log(res.data)
 })
@@ -26,11 +25,14 @@ axios.post('https://rpc.nano.to', {
 ```json
 {
   "id": "CHECKOUT_ID",
-  "browser": "https://nano.to/id_CHECKOUT_ID",
+  "browser": "https://nano.to/CHECKOUT_ID",
   "json": "https://api.nano.to/checkout/CHECKOUT_ID",
   "check": "https://api.nano.to/check/CHECKOUT_ID",
   "address": "YOUR_ADDRESS",
-  "qrcode": "data:image/png;base64"
+  "amount": "0.13300004758",
+  "amount_raw": "133000047580000000000000000000",
+  "link": "nano:YOUR_ADDRESS?amount=133000047580000000000000000000",
+  "qrcode": "data:image/png;base64.."
 }
 ```
 
@@ -43,13 +45,13 @@ axios.post('https://rpc.nano.to', {
   "action": "checkout",
   "title": "Hello World",
   "address": "@faucet",
-  "currency": "USD", // Default is NANO
+  "currency": "USD", // default is NANO
   "plans": [
-    {  "title": "100 Units", "value": "100.00XXXX" },
+    { "title": "100 Units", "value": "100.00XXXX" },
     { "title": "1,000,000 Units", "value": "1000.00XXX" } 
   ],
   "webhook_url": "https://example/webhook/secret",
-  "metadata": { "secret": "joe-doe" }
+  "metadata": { "secret": "leroy-jenkins" }
 })
 ```
 
@@ -58,11 +60,26 @@ axios.post('https://rpc.nano.to', {
 ```js
 {
   "id": "CHECKOUT_ID",
-  "browser": "https://nano.to/id_CHECKOUT_ID",
+  "browser": "https://nano.to/CHECKOUT_ID",
   "json": "https://api.nano.to/checkout/CHECKOUT_ID",
   "check": "https://api.nano.to/check/CHECKOUT_ID",
   "address": "YOUR_ADDRESS",
-  "qrcode": "data:image/png;base64"
+  "plans": [
+    {
+      "title": "100 Units",
+      "value": "100.001845",
+      "value_raw": "100001845000000000000000000000000",
+      "link": "nano:YOUR_ADDRESS?amount=100001845000000000000000000000000",
+      "qrcode": "data:image/png;base64..."
+    },
+    {
+      "title": "1,000,000 Units",
+      "value": "1000.00763",
+      "value_raw": "1000007630000000000000000000000000",
+      "link": "nano:YOUR_ADDRESS?amount=1000007630000000000000000000000000",
+      "qrcode": "data:image/png;base64.."
+    }
+  ]
 }
 ```
 
@@ -143,23 +160,24 @@ curl -d '{
 
 ## Unique Address
 
-[Cloud Wallets](/cloud) makes generating unique payment addresses easy. 
+Nano.to [Cloud Wallets](/cloud) makes programmatic wallets easy. 
 
 ```js
 const axios = require('axios');
 
 axios.post('https://rpc.nano.to', {
   "action": "cloud_wallet",
-  "refund_address": "YOUR_ADDRESS",
-  "expire": "5 minutes"
-}).then((cloudWallet) => {
+  "refund_address": "YOUR_ADDRESS", // required
+  "vanity": "1temp", // optional (slower)
+  "expire": "5 minutes",
+  "key": "NANO-TO-WALLET-API-KEY", // required
+}).then((wallet) => {
 
-  console.log(cloudWallet.data);
+  console.log(wallet.data);
 
   // {
   //   "balance": 0,
   //   "address": "nano_1temp9dzx8kmkbcpedwi...4bzoh3pafk9grxndk88inkbe",
-  //   "api_key": "NANO-WALLET-API-KEY-67353C9E78A34474A977....591AAD07D37FB94F84C",
   //   "refund_address": "YOUR_ADDRESS",
   //   "expiration": "in 5 minutes",
   //   "expiration_unix": 1710873173,
@@ -167,9 +185,9 @@ axios.post('https://rpc.nano.to', {
 
   axios.post('https://rpc.nano.to', {
     "action": "checkout",
-    "address": cloudWallet.data.address, // Cloud Wallet Address
-    "random": "true",
-    "amount": "1" // Simple payment amount
+    "address": wallet.data.address, // Cloud Wallet Address
+    "random": false,
+    "amount": 1 // Single digit amount
   }).then((checkout) => {
 
     console.log(checkout.data);
@@ -179,10 +197,26 @@ axios.post('https://rpc.nano.to', {
 });
 ```
 
-> To generate addresses locally, see [Developer Tools](https://hub.nano.org/developer-tools).
+> To generate your own addresses locally, see [Developer Tools](https://hub.nano.org/developer-tools).
 
-## Payment Alerts 
+## Payment Notifications 
 
+**HTTP Webhook:**
+```js
+const axios = require('axios');
+
+axios.post('https://rpc.nano.to', {
+  "action": "checkout",
+  "address": "@esteban",
+  "amount": "0.133",
+  "webhook": "https://example.com/secret/webhook",
+  "metadata": { "note": 'Purchase', "userId": 123456789 }
+}).then((res) => {
+  console.log(res.data);
+});
+```
+
+**Email Alerts:**
 ```js
 const axios = require('axios');
 
@@ -202,6 +236,7 @@ axios.post('https://rpc.nano.to', {
     max-width: 510px;
 ">
 
+**Discord Alerts:**
 ```js
 const axios = require('axios');
 
