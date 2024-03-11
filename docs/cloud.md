@@ -4,7 +4,7 @@ Secure programmatic wallets for the Nano blockchain.
 
 Build demanding Nano applications with ease.
 
-> Nano.to Cloud [WALLET API KEY](https://rpc.nano.to?cloud) required to use this API.
+> Nano.to Cloud [WALLET API KEY](https://rpc.nano.to?cloud) required.
 
 ## Get Started
 
@@ -34,14 +34,15 @@ curl -d '{
 
 ## All Options
 
+- **```list```:** (*string or bool*) get all accounts. 
 - **```balance```:** (*string or bool*) get account balance and pending. 
 - **```receive```:** (*string or bool*) receive *all* pending blocks. 
 - **```send```:** (string, *@username or address*) Send funds. 
 - **```delete```:** (*string or bool*) Manually expire address. 
-- **```vanity```:** (*string or bool*) Generate custom address. Up to 5 characters.
-- **```seed```:** (*string or bool*) Return *privateKey* with first response. Provided only once.
+- **```vanity```:** (*string or bool*) Generate vanity address. Up to 5 characters.
+- **```seed```:** (*string or bool*) Return *privateKey* with first response. Provided once.
 - **```refund_address```** (*array or string*) account(s) that receive funds on expiration. 
-- **```expire```** (*number or string*) Control when the address expires. Min 5 minutes. Max 90 days.
+- **```expire```** (*number or string*) Configure address expiration delay. Min 5 minutes. Max 90 days.
     - 5 minutes
     - 1 hour
     - 1 day

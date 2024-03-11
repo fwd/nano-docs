@@ -107,7 +107,7 @@ img {
     width: 100%;
 }
 a, a:focus {
-    color: #04a798;
+    color: #007bff;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
@@ -744,7 +744,7 @@ blockquote {
     background: #efefef;
     margin-top: 30px;
     margin-bottom: 10px;
-    border-left: 5px solid #08a698;
+    border-left: 5px solid #007bff;
     padding: 10px 20px;
     margin: 30px 0;
 }
