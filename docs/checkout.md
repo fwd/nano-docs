@@ -2,9 +2,39 @@
 
 Free, non-custodial Checkout API for the Nano blockchain.
 
-Build elaborate applications with ease.
+Build elaborate business applications with ease.
 
-## Usage
+## Basic Usage
+
+```html
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+axios.post('https://rpc.nano.to', {
+  "action": "checkout",
+  "title": "Nano Bird Feeder",
+  "notify": "steve@apple.com",
+  "address": "@faucet"
+}).then((res) => {
+  console.log(res.data)
+})
+</script>
+```
+
+**Response:**
+
+```json
+{
+  "id": "CHECKOUT_ID",
+  "browser": "https://nano.to/id_CHECKOUT_ID",
+  "json": "https://api.nano.to/checkout/CHECKOUT_ID",
+  "check": "https://api.nano.to/check/CHECKOUT_ID",
+  "address": "YOUR_ADDRESS",
+  "qrcode": "data:image/png;base64"
+}
+```
+
+## Back-End Usage
 
 ```js
 const axios = require('axios');
@@ -13,19 +43,10 @@ axios.post('https://rpc.nano.to', {
   "action": "checkout",
   "title": "Hello World",
   "address": "@faucet",
-  "cancel_url": "https://example.com/cancel",
-  "success_url": "https://example.com/success",
-  "success_message": "{{title}} Units purchased for {{value}} NANO. Thanks, come again.",
   "currency": "USD", // Default is NANO
   "plans": [
-    { 
-      "title": "100 Units", 
-      "value": "100.00XXXX"
-    },
-    { 
-      "title": "1,000,000 Units", 
-      "value": "1000.00XXX"
-    }
+    {  "title": "100 Units", "value": "100.00XXXX" },
+    { "title": "1,000,000 Units", "value": "1000.00XXX" } 
   ],
   "webhook_url": "https://example/webhook/secret",
   "metadata": { "secret": "joe-doe" }
@@ -36,10 +57,12 @@ axios.post('https://rpc.nano.to', {
 
 ```js
 {
-    "id": "CHECKOUT_ID",
-    "browser": "https://nano.to/CHECKOUT_ID",
-    "check": "https://api.nano.to/check/CHECKOUT_ID",
-    "json": "https://api.nano.to/checkout/CHECKOUT_ID"
+  "id": "CHECKOUT_ID",
+  "browser": "https://nano.to/id_CHECKOUT_ID",
+  "json": "https://api.nano.to/checkout/CHECKOUT_ID",
+  "check": "https://api.nano.to/check/CHECKOUT_ID",
+  "address": "YOUR_ADDRESS",
+  "qrcode": "data:image/png;base64"
 }
 ```
 
@@ -87,8 +110,6 @@ It supports this Checkout API by simply passing the ```id```.
 ```
 
 ![](https://camo.githubusercontent.com/d2bdb483a89f85d5d2c9dc2a223e1732a468dd73dc22b7282e6d759333162951/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f465f344b366636586f4141597450453f666f726d61743d6a7067266e616d653d6d656469756d)
-
-
 
 ## Unique Payments
 
