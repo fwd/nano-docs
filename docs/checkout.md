@@ -36,6 +36,30 @@ axios.post('https://rpc.nano.to', {
 }
 ```
 
+## Payment Found
+
+```json
+{
+    "id": "35c89c84",
+    "success": true,
+    "block": "8CE82716B4B431A229...50174F2444E7B24EFD",
+    "amount": "0.0133001831",
+    "amount_raw": "13300183100000000000000000000",
+    "address": "PAYER_ADDRESS",
+    "nanolooker": "https://nanolooker.com/block/8CE82716B4B431A229...50174F2444E7B24EFD",
+    "json": "https://api.nano.to/checkout/35c89c84"
+}
+```
+
+## Payment Not Found
+
+```json
+{ 
+  "error": 404,
+  "message":"Payment not found."
+}
+```
+
 ## Back-End Usage
 
 ```js
