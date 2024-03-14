@@ -27,7 +27,7 @@ axios.post('https://rpc.nano.to', {
   "id": "CHECKOUT_ID",
   "browser": "https://nano.to/CHECKOUT_ID",
   "json": "https://api.nano.to/checkout/CHECKOUT_ID",
-  "check": "https://api.nano.to/check/CHECKOUT_ID",
+  "check": "https://api.nano.to/confirm/CHECKOUT_ID",
   "address": "YOUR_ADDRESS",
   "amount": "0.13300004758",
   "amount_raw": "133000047580000000000000000000",
@@ -36,7 +36,11 @@ axios.post('https://rpc.nano.to', {
 }
 ```
 
-## Payment Found
+## Confirm Payment
+
+> Perform a GET request on ```check``` URL to confirm payment.
+
+**Payment Found:**
 
 ```json
 {
@@ -51,7 +55,7 @@ axios.post('https://rpc.nano.to', {
 }
 ```
 
-## Payment Not Found
+**Payment Not Found**
 
 ```json
 { 
@@ -86,7 +90,7 @@ axios.post('https://rpc.nano.to', {
   "id": "CHECKOUT_ID",
   "browser": "https://nano.to/CHECKOUT_ID",
   "json": "https://api.nano.to/checkout/CHECKOUT_ID",
-  "check": "https://api.nano.to/check/CHECKOUT_ID",
+  "check": "https://api.nano.to/confirm/CHECKOUT_ID",
   "address": "YOUR_ADDRESS",
   "plans": [
     {
@@ -104,6 +108,29 @@ axios.post('https://rpc.nano.to', {
       "qrcode": "data:image/png;base64.."
     }
   ]
+}
+```
+
+## Confirm Payment
+
+> Perform a GET request on ```check``` URL to confirm payment.
+
+```json
+{
+    "id": "35c89c84",
+    "success": true,
+    "block": "8CE82716B4B431A229...50174F2444E7B24EFD",
+    "address": "PAYER_ADDRESS",
+    "nanolooker": "https://nanolooker.com/block/8CE82716B4B431A229...50174F2444E7B24EFD",
+    "json": "https://api.nano.to/checkout/35c89c84",
+    "amount": "1.001845",
+    "amount_raw": "0018450000000000000000000000000",
+    "plan": {
+        "title": "100 Units",
+        "value": "1.001845",
+        "discount": false,
+        "value_raw": "0018450000000000000000000000000"
+    }
 }
 ```
 
@@ -132,9 +159,9 @@ axios.post('https://rpc.nano.to', {
 
 ## NanoPay Support
 
-[NanoPay.js](/nanopay) is a client-side Javascript library for elegant Nano payments.
+[NanoPay.js](/nanopay) is a client-side Javascript library for easily accepting Nano payments.
 
-It supports this Checkout API by simply passing the ```id```. 
+Simply pass the Checkout response ```id```. 
 
 ```html
 <script src="https://pay.nano.to/latest.js"></script>
