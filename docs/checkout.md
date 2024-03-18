@@ -1,8 +1,8 @@
-# Checkout
+# Checkout API
 
 Free, non-custodial Checkout API for the Nano blockchain.
 
-Build elaborate business applications with ease.
+Build elaborate business applications with Nano.
 
 ## Simple Usage
 
@@ -115,6 +115,8 @@ axios.post('https://rpc.nano.to', {
 
 > Perform a GET request on ```check``` URL to confirm payment.
 
+**Payment Found:**
+
 ```json
 {
     "id": "35c89c84",
@@ -159,9 +161,9 @@ axios.post('https://rpc.nano.to', {
 
 ## NanoPay Support
 
-[NanoPay.js](/nanopay) is a client-side Javascript library for easily accepting Nano payments.
+[NanoPay.js](/nanopay) is a client-side Javascript library for easily adding Nano payments to any website.
 
-Simply pass the Checkout response ```id```. 
+Simply pass the Checkout ```id```. 
 
 ```html
 <script src="https://pay.nano.to/latest.js"></script>
@@ -188,7 +190,7 @@ If you'd like to receive payments that don't collide with other payments, you ha
 
 ## Unique Amount
 
-Simply add 'X' to the ```amount``` and the API will replace them with random numbers. 
+Simply add 'X' to ```amount``` and the API will replace them with random numbers. 
 
 ```bash
 curl -d '{
@@ -210,6 +212,8 @@ curl -d '{
 ```
 
 ## Unique Address
+
+Unique payment address allow for simple payment amounts. To generate your own addresses locally, see [Developer Tools](https://hub.nano.org/developer-tools)
 
 Nano.to [Cloud Wallets](/cloud) makes programmatic wallets easy. 
 
@@ -248,8 +252,6 @@ axios.post('https://rpc.nano.to', {
 });
 ```
 
-> To generate your own addresses locally, see [Developer Tools](https://hub.nano.org/developer-tools).
-
 ## Payment Notifications 
 
 **HTTP Webhook:**
@@ -275,7 +277,7 @@ axios.post('https://rpc.nano.to', {
   "action": "checkout",
   "address": "@esteban",
   "random": "true",
-  "note": "Nano Bird Feeder",
+  "note": "Hello World",
   "notify": "john@apple.com",
 }).then((res) => {
   console.log(res.data);
@@ -294,8 +296,7 @@ const axios = require('axios');
 axios.post('https://rpc.nano.to', {
   "action": "checkout",
   "address": "@esteban",
-  "random": "true",
-  "note": "Nano Pizza App",
+  "note": "Hello World",
   "notify": "https://discord.com/api/webhooks/11165660...",
 }).then((res) => {
   console.log(res.data);
@@ -309,7 +310,7 @@ axios.post('https://rpc.nano.to', {
 
 ## Nano.to Support
 
-- Email: support@nano.to
+- Email: business@nano.to
 - Twitter: [@nano2dev](https://twitter.com/nano2dev)
 - @nano2dev on [Nano's Discord](https://discord.com/invite/RNAE2R9) 
 

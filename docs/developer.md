@@ -1,4 +1,4 @@
-# Nano.to Reseller API
+# Nano.to Username API
 
 **Online:**
 
