@@ -36,6 +36,8 @@
 
 	],
 	"redirect": [
+		{ "path": "aliases", "file": "/docs/aliases.md" },
+		{ "path": "alias", "file": "/docs/aliases.md" },
 		{ "path": "pay", "file": "/docs/nanopay.md" },
 		{ "path": "nanopay", "file": "/docs/nanopay.md" },
 		{ "path": "nanopay.js", "file": "/docs/nanopay.md" },
