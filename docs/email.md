@@ -14,7 +14,7 @@ Powered by Nano.to Enterprise API.
 ```bash
 curl -d '{
   "action": "nano_email",
-  "emails": "john@apple.com",
+  "email": "john@apple.com",
   "refund_address": "YOUR_NANO_ADDRESS",
   "amount": 10,
   "expire": "30 days"
