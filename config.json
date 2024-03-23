@@ -18,10 +18,16 @@
 			"url": "/docs/checkout.md"
 		},
 
+
 	    {
 			"title": "Cloud Wallets",
 			"url": "/docs/cloud.md"
 	    },
+
+		{
+			"title": "Nano Email API",
+			"url": "/docs/email.md"
+		},
 
 		{
 			"title": "NanoPay.js",

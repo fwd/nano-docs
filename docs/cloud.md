@@ -2,8 +2,7 @@
 
 Secure programmatic wallets for the Nano blockchain.
 
-
-> Nano.to [WALLET API KEY](https://rpc.nano.to?cloud) required.
+> Nano.to [API KEY](https://rpc.nano.to?cloud) required.
 
 ## Get Started
 
@@ -31,7 +30,7 @@ curl -d '{
 }
 ```
 
-## All Options
+## Available Options
 
 - **```list```:** (*string or bool*) get all accounts. 
 - **```balance```:** (*string or bool*) get account balance and pending. 

@@ -82,27 +82,27 @@ NanoPay.open({
 ## All Options
 
 - ```title```: (*string*) Show custom title shown in popup.
-- **address**: (*string*) Nano address or Nano.to @Username.
-- **contact**: (*string*) User's email address.
-- **shipping**: (*number or bool*) User's mailing address. 'true' for free shipping.
-- **position**: (*string*) Control popup position (top, center, bottom).
-- **wallet**: (*string*) Custom wallet icon: natrium, nault, nautilus, cake
-- **button**: (*string*) Custom button text, default "Open Natrium".
-- **symbol**: (*string*) Custom NANO symbol, default "NANO".
-- **random**: (*bool*) Use unique payment amounts, default true.
-- **notify**: (*string*) Send email notification to admin, default false.
-- **amount**: (*string*) Custom popup amount, used for simple payments.
-- **line_items**: (*array*) List of products user is buying, replaces amount.
-- **currency**: (*string*) Fiat currency for Nano price conversion, default "USD".
-- **note**: (*string*) Custom note shown in admin email, default false.
-- **qrcode**: (*string*) Always show QR Code, default desktop only.
-- **checkout**: (*string*) Nano.to Checkout ID. [Read More](/checkout).
-- **email**: (*string*) Pre-configure user's email
-- **expiration**: (*number*) Duration for completion in milliseconds.
-- **mailing_address**: (*string*) Pre-configure user's shipping address
-- **success**: (*function*) Called when payment is successful.
-- **cancel**: (*function*) Called when popup is cancelled.
-- **expired**: (*function*) Called when popup has expired.
+- ```address```: (*string*) Nano address or Nano.to @Username.
+- ```contact```: (*string*) User's email address.
+- ```shipping```: (*number or bool*) User's mailing address. 'true' for free shipping.
+- ```position```: (*string*) Control popup position (top, center, bottom).
+- ```wallet```: (*string*) Custom wallet icon: natrium, nault, nautilus, cake
+- ```button```: (*string*) Custom button text, default "Open Natrium".
+- ```symbol```: (*string*) Custom NANO symbol, default "NANO".
+- ```random```: (*bool*) Use unique payment amounts, default true.
+- ```notify```: (*string*) Send email notification to admin, default false.
+- ```amount```: (*string*) Custom popup amount, used for simple payments.
+- ```line_items```: (*array*) List of products user is buying, replaces amount.
+- ```currency```: (*string*) Fiat currency for Nano price conversion, default "USD".
+- ```note```: (*string*) Custom note shown in admin email, default false.
+- ```qrcode```: (*string*) Always show QR Code, default desktop only.
+- ```checkout```: (*string*) Nano.to Checkout ID. [Read More](/checkout).
+- ```email```: (*string*) Pre-configure user's email
+- ```expiration```: (*number*) Duration for completion in milliseconds.
+- ```mailing_address```: (*string*) Pre-configure user's shipping address
+- ```success```: (*function*) Called when payment is successful.
+- ```cancel```: (*function*) Called when popup is cancelled.
+- ```expired```: (*function*) Called when popup has expired.
 
 
 ## Checkout Support
