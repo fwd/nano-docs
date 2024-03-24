@@ -2,11 +2,11 @@
 
 Send Nano to any Email Address on the internet. 
 
-Powered by Nano.to Enterprise API.
+> Powered by [Nano.to Business API](/business).
 
 ## Service Fee
 
-- **Single Email**: Free
+- **Single Email**: FREE
 - **Batch Sending**: 0.1 NANO PER EMAIL
 
 ## Single Email

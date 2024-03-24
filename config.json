@@ -30,6 +30,11 @@
 		},
 
 		{
+			"title": "Nano.to Business",
+			"url": "/docs/business.md"
+		},
+
+		{
 			"title": "NanoPay.js",
 			"url": "/docs/nanopay.md"
 	    },
@@ -42,6 +47,8 @@
 
 	],
 	"redirect": [
+		{ "path": "biz", "file": "/docs/business.md" },
+		{ "path": "business", "file": "/docs/business.md" },
 		{ "path": "aliases", "file": "/docs/aliases.md" },
 		{ "path": "alias", "file": "/docs/aliases.md" },
 		{ "path": "pay", "file": "/docs/nanopay.md" },
