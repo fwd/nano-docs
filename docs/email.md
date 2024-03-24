@@ -42,10 +42,6 @@ curl -d '{
     "qrcode": "data:image/png;base64,iVBORw0KGgoAAAAN...AAASUVORK5CYII=",
     "amount_raw": "10000000000000000000000000000000",
     "emails": [{
-        "balance": 0,
-        "address": "nano_15pcrp8qt3ohi7u4q14r3hccjcb1hfsoyk97p7ffm49hg7rft8b4a8znh7hf",
-        "expiration": "in a month",
-        "expiration_unix": 1713813910,
         "email": "john@apple.com",
         "amount": 10
     }]
@@ -93,21 +89,16 @@ curl -d '{
     "amount": 10.1,
     "qrcode": "data:image/png;base64,iVBORw0KGgoA...SuQmCC",
     "amount_raw": "10100000000000000000000000000000",
-    "emails": [{
-        "balance": 0,
-        "address": "nano_1ps6gf1uox5ep5cy93xr9fdswnguos86m3uthbusarmgy5ejx7cwpghx71ip",
-        "expiration": "in a month",
-        "expiration_unix": 1713814147,
-        "email": "john@apple.com",
-        "amount": 5
-    }, {
-        "balance": 0,
-        "address": "nano_14jz9e3mgi95mw915yg1fysty86kazbszhsgbj13438if7uo3mcj1yf9yb6k",
-        "expiration": "in a month",
-        "expiration_unix": 1713814147,
-        "email": "jane@apple.com",
-        "amount": 5
-    }]
+    "emails": [
+        {
+            "email": "john@apple.com",
+            "amount": 5
+        }, 
+        {
+            "email": "jane@apple.com",
+            "amount": 5
+        }
+    ]
 }
 ```
 
@@ -118,8 +109,7 @@ curl -d '{
 ```json
 {
     "sent": true,
-    "id": "35c89c84",
-    "status": "https://api.nano.to/email/35c89c84"
+    "id": "35c89c84"
 }
 ```
 
