@@ -2,6 +2,10 @@
 
 Send Nano to any email address on the internet. 
 
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+<img src="https://github.com/fwd/nano-docs/raw/master/images/nano-email.png">
+![line](https://github.com/fwd/n2/raw/master/.github/line.png)
+
 ## Online UI
 
 [https://email.nano.to ](https://email.nano.to )
