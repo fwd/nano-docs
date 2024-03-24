@@ -1,8 +1,15 @@
 # Nano Email
 
-Send Nano to any Email Address on the internet. 
+Send Nano to any email address on the internet. 
 
-> Powered by [Nano.to Business API](/business).
+<img src="https://github.com/fwd/nano-docs/raw/master/images/nano-email.png" alt="line" style="
+    height: auto;
+    max-width: 510px;
+">
+
+## Online UI
+
+[https://email.nano.to ](https://email.nano.to )
 
 ## Service Fee
 

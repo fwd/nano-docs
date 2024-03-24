@@ -6,6 +6,7 @@ We're on a mission to accelerate the use of Nano around the world.
 
 ## **Quick Links**
 
+  - [**Nano Email**](/email) - Send Nano to any Email address.
   - [**Cloud Wallets**](/cloud) - Secure Programmatic Cloud Wallets
   - [**Checkout API**](/checkout) - Non-custodial Checkout service.
   - [**Username API**](/usernames) - Non-custodial Name service.
