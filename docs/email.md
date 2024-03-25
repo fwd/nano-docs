@@ -64,16 +64,6 @@ curl -d '{
 "https://rpc.nano.to"
 ```
 
-## Available Options
-
-- **```emails```:** (*string or array*) Email of recipient(s).
-- **```from```:** (*string*) Optional, Name or Email. Inform recipients who sent the Nano.
-- **```amount```:** (*number*) Amount being sent. If multiple recipients, amount will be split evenly.
-- **```message```:** (*string*) Add special message to email recipients.
-- **```refund_address```:** (*string*) Your Nano address or @Username for refund of expired funds.
-- **```expire```:** (*string*) Configure when funds expire and are returned to sender, in days.
-
-
 **Response:**
 
 ```json
@@ -112,6 +102,16 @@ curl -d '{
     "id": "35c89c84"
 }
 ```
+
+## Available Options
+
+- **```emails```:** (*string or array*) Email of recipient(s).
+- **```from```:** (*string*) Optional, Name or Email. Inform recipients who sent the Nano.
+- **```amount```:** (*number*) Amount being sent. If multiple recipients, amount will be split evenly.
+- **```message```:** (*string*) Add special message to email recipients.
+- **```refund_address```:** (*string*) Your Nano address or @Username for refund of expired funds.
+- **```expire```:** (*string*) Configure when funds expire and are returned to sender, in days.
+
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
