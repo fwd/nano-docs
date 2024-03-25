@@ -1,6 +1,6 @@
 # Nano Email
 
-Send Nano to any email address on the internet. 
+Send nano to any email address on the internet. Nano on-boarding made easy.
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 <img src="https://github.com/fwd/nano-docs/raw/master/images/nano-email.png">
@@ -13,7 +13,7 @@ Send Nano to any email address on the internet.
 ## Service Fee
 
 - **Single Email**: FREE
-- **Batch Sending**: 0.1 NANO PER EMAIL
+- **Batch Sending**: 0.1 NANO / EMAIL
 
 ## Single Email
 
