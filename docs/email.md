@@ -96,13 +96,6 @@ curl -d '{
 
 > Send funds to ```address``` and perform a GET request on ```check``` to complete.
 
-```json
-{
-    "sent": true,
-    "id": "35c89c84"
-}
-```
-
 ## Available Options
 
 - **```emails```:** (*string or array*) Email of recipient(s).
