@@ -1,6 +1,6 @@
 # Nano Email
 
-Send nano to any email address on the internet. Nano on-boarding made easy.
+Send nano to any email address on the internet. On-boarding made easy.
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 <img src="https://github.com/fwd/nano-docs/raw/master/images/nano-email.png">
