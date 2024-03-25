@@ -264,13 +264,13 @@ axios.post('https://rpc.nano.to', {
 
 [Nano.to/Development](https://nano.to/development)
 
-## Nano.to Support
-
-Bugs, Questions & Installation Support:
+## Source Code
 
 - Github: [Source Code](https://github.com/fwd/nano-pay)
 - Issues: [Issues](https://github.com/fwd/nano-pay/issues)
-- Support: [support@nano.to](mailto:support@nano.to)
+
+## Dedicated Support
+
+- Email: business@nano.to
 - Twitter: [@nano2dev](https://twitter.com/nano2dev)
-- Mastodon: [Xno.Social](https://xno.social/@nano2dev)
 - @nano2dev on [Nano's Discord](https://discord.com/invite/RNAE2R9) 

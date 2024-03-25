@@ -308,7 +308,7 @@ axios.post('https://rpc.nano.to', {
     max-width: 510px;
 ">
 
-## Nano.to Support
+## Dedicated Support
 
 - Email: business@nano.to
 - Twitter: [@nano2dev](https://twitter.com/nano2dev)

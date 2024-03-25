@@ -115,7 +115,7 @@ curl -d '{
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
-## Business Support
+## Dedicated Support
 
 - Email: business@nano.to
 - Twitter: [@nano2dev](https://twitter.com/nano2dev)
