@@ -23,7 +23,8 @@ curl -d '{
   "email": "john@apple.com",
   "refund_address": "YOUR_NANO_ADDRESS",
   "amount": 10,
-  "expire": "30 days"
+  "expire": "30 days",
+  "email_receipt": "OPTIONAL_YOUR_EMAIL"
 }' \
 -H "Content-Type: application/json" \
 "https://rpc.nano.to"
@@ -104,7 +105,32 @@ curl -d '{
 - **```message```:** (*string*) Add special message to email recipients.
 - **```refund_address```:** (*string*) Your Nano address or @Username for refund of expired funds.
 - **```expire```:** (*string*) Configure when funds expire and are returned to sender, in days.
+- **```email_receipt```:** (*string*) Get notified via email when funds are accepted.
+- **```webhook_url```:** (*string*) Notify your app when funds are accepted.
 
+## Webhook POST
+
+```json
+{
+    "id": "f524bf87",
+    "success": true,
+    "checkout": "https://api.nano.to/checkout/f524bf87",
+    "recipients": [
+        {
+            "email": "john@apple.com",
+            "amount": 5,
+            "hash": "E2FB233EF4554...78AB89917D3",
+            "explorer": "https://nanobrowse.com/block/E2FB233EF4554...78AB89917D3"
+        },
+        {
+            "email": "jane@apple.com",
+            "amount": 5,
+            "hash": "67D9F9F035...3CEA098FBF49D",
+            "explorer": "https://nanobrowse.com/block/67D9F9F035...3CEA098FBF49D"
+        }
+    ]
+}
+```
 
 ![line](https://github.com/fwd/n2/raw/master/.github/line.png)
 
