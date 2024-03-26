@@ -10,11 +10,11 @@ Easily add nano payments to any website.
 
 [https://pay.nano.to](https://pay.nano.to)
 
-## Edit on CodePen
+## CodePen
 
 [https://codepen.io/nano2dev/pen/VwRQypE](https://codepen.io/nano2dev/pen/VwRQypE)
 
-## Installation
+## Install
 
 **CDN:**
 ```html
@@ -30,7 +30,7 @@ Download [latest](https://pay.nano.to/latest.js) version.
 
 ## Simple Usage
 
-Payment buttons can be created with basic HTML. No javascript code required. 
+Created with basic HTML
 
 ```html
 <a 
@@ -44,7 +44,7 @@ Tip 0.133 NANO</a>
 
 ## JavaScript API
 
-Configure and open popup programmatically with *NanoPay.open()* method.
+Configure and open popup with *NanoPay.open()*.
 
 ```javascript
 NanoPay.open({ 
