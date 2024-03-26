@@ -1,8 +1,6 @@
 # NanoPay.js
 
-Non-custodial web payment library for the Nano blockchain. 
-
-Easily create elaborate payment flows.
+Nano web payment library. Easily add nano to any website.
 
 ![](https://camo.githubusercontent.com/d2bdb483a89f85d5d2c9dc2a223e1732a468dd73dc22b7282e6d759333162951/68747470733a2f2f7062732e7477696d672e636f6d2f6d656469612f465f344b366636586f4141597450453f666f726d61743d6a7067266e616d653d6d656469756d)
 
@@ -104,7 +102,6 @@ NanoPay.open({
 - ```cancel```: (*function*) Called when popup is cancelled.
 - ```expired```: (*function*) Called when popup has expired.
 
-
 ## Checkout Support
 
 NanoPay.js supports [Checkout API](/checkout). Securely create Checkouts in the back-end, then pass the Checkout ID to NanoPay.js 
@@ -189,8 +186,6 @@ NanoPay.open({
 
 ## HTML Content Paywall
 
-![](../images/nano-blog/hero-small.jpg)
-
 NanoPay includes an easy way to monetize any website client-side. 
 
 > Please note, this method does not use a back-end, it's not for keeping secrets from public. Google bots can still crawl content.
@@ -255,16 +250,7 @@ axios.post('https://rpc.nano.to', {
 
 ![](https://github.com/fwd/nano-docs/raw/master/images/discord.jpeg)
 
-## eCommerce Intergration
-
-- **Shopify: In Development**
-- **Wordpress: TBD**
-
-**I work on Nano part-time. Please consider helping fund this kind of work.**
-
-[Nano.to/Development](https://nano.to/development)
-
-## Source Code
+## Open Source Code
 
 - Github: [Source Code](https://github.com/fwd/nano-pay)
 - Issues: [Issues](https://github.com/fwd/nano-pay/issues)
